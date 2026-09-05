@@ -1,0 +1,69 @@
+{
+  "_comment": "Live logprob-study endpoints on 8x B300. Populated as models come up. All expose OpenAI-compatible /v1/completions + /v1/chat/completions with logprobs=True/top_logprobs and prompt_logprobs (echo=True). vLLM 0.25.1, torch 2.11+cu130, sm_103a. KV cache bf16 (NEVER fp8). --max-logprobs 25.",
+  "host": "127.0.0.1",
+  "serving_stack": "vllm==0.25.1",
+  "status": "live",
+  "fp8_fidelity": {
+    "measured": "2026-07-20",
+    "model": "Llama-3.3-70B bf16(unsloth) vs fp8-dynamic(RedHatAI)",
+    "mean_abs_delta_logprob_nats": 0.0332,
+    "median_nats": 0.0098, "p95_nats": 0.136, "p99_nats": 0.237, "max_nats": 0.623,
+    "top1_rank_flip_rate": 0.0151,
+    "bf16_vs_bf16_control_nats": 0.0,
+    "sentinel_clamps": 0,
+    "verdict": "fp8 SAFE for logprob deltas; noise ~0.03 nats << expected debate-round shift; DeepSeek native fp8 OK"
+  },
+  "models": {
+    "llama70b": {
+      "hf_repo": "unsloth/Llama-3.3-70B-Instruct",
+      "url": "http://127.0.0.1:8003/v1",
+      "port": 8003,
+      "gpus": "6,7",
+      "tensor_parallel": 2,
+      "dtype": "bfloat16",
+      "note": "ungated mirror of meta-llama/Llama-3.3-70B-Instruct (config verified identical). Study reference (clean bf16).",
+      "live": true,
+      "verified": "2026-07-21T00:07Z chat-logprobs OK (agree/disagree/partially all measurable); TP=2 NCCL on B300 OK",
+      "reasoning_model": false,
+      "answer_surface": "space",
+      "surface_note": "NOT a reasoning model. Rendered ctx ends mid-line ('My rating (A-G):') → model emits a SPACE-prefixed letter ' A' (id 362), UNLIKE Qwen/DeepSeek (bare). ' A'.. ' G' target reads 1.0 mass. MOST RLHF-saturated of the roster: letter margin ~10.75 nats, p(argmax)~0.99998 — argmax-flip DV dead, needs T~8 for continuous range."
+    },
+    "qwen3_235b": {
+      "hf_repo": "Qwen/Qwen3-235B-A22B",
+      "url": "http://127.0.0.1:8002/v1",
+      "port": 8002,
+      "gpus": "4,5",
+      "tensor_parallel": 2,
+      "dtype": "bfloat16",
+      "live": true,
+      "verified": "2026-07-21T00:45Z chat-logprobs OK; TP=2 NCCL on B300 OK",
+      "reasoning_model": true,
+      "reasoning_note": "HYBRID REASONING MODEL: emits <think> as the FIRST token unless disabled. For the max_tokens=1 stance/letter read you MUST pass chat_template_kwargs={\"enable_thinking\": false}, else the next-token read scores <think> not a letter. With thinking off, letters A-G appear normally. Far LESS RLHF-saturated than Llama-70B (letter margin ~1.6 nats, p(argmax)~0.72 vs Llama 10.75 nats/0.99998)."
+    },
+    "deepseek_v3": {
+      "hf_repo": "deepseek-ai/DeepSeek-V3",
+      "url": "http://127.0.0.1:8001/v1",
+      "port": 8001,
+      "gpus": "0,1,2,3",
+      "tensor_parallel": 4,
+      "dtype": "fp8 (native e4m3, block-wise)",
+      "note": "fp8 is the reference format. TP=4 (128 heads; TP=2 impossible at 335GB/GPU).",
+      "live": true,
+      "verified": "2026-07-21T00:55Z chat-logprobs OK; TP=4 NCCL+DeepGEMM MoE JIT on B300 OK",
+      "reasoning_model": false,
+      "answer_surface": "bare",
+      "surface_note": "NOT a reasoning model (no <think> in chat_template). Rendered ctx ends '...(A-G):<|Assistant|>' → model emits a BARE letter 'C' (no leading space), like Qwen-think-off, UNLIKE Llama (space-prefixed ' A'). LEAST RLHF-saturated of the roster: letter margin ~0.0-0.77 nats, p(argmax)~0.46 (near-uniform over C/D). The discrete/argmax read is fully alive here."
+    },
+    "qwen7b": {
+      "hf_repo": "Qwen/Qwen2.5-7B-Instruct",
+      "url": "http://127.0.0.1:8005/v1",
+      "port": 8005,
+      "gpus": "5",
+      "tensor_parallel": 1,
+      "dtype": "bfloat16",
+      "note": "BONUS pilot endpoint (not in the 3-model roster). Gate-Zero validator; TORN DOWN 2026-07-21 to free GPU5 for Qwen3-235B (GPU4-5). Port :8005 is DEAD — do not route here.",
+      "live": false,
+      "verified": "2026-07-20T23:57Z chat-logprobs + teacher-forced prompt_logprobs both OK (before teardown)"
+    }
+  }
+}

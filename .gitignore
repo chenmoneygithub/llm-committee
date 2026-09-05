@@ -1,0 +1,122 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# uv
+.uv/
+uv.lock
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Claude Code
+.claude/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ruff
+.ruff_cache/
+
+# Distribution / packaging
+*.whl
+
+# Logs
+*.log
+
+# Database (SQLite instances and related files)
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm        # SQLite shared memory file
+*.db-wal        # SQLite write-ahead log
+*.sqlite-shm
+*.sqlite-wal
+
+# MLflow tracking
+mlruns/
+mlartifacts/
+
+# Saved evaluations and trajectories
+*.json
+!pyproject.toml  # But keep pyproject.toml
+!simpleqa_experiment/supplement/manifests/livebrowsecomp_web_cli*.json
+saved_results/
+trajectories/
+
+# Benchmark plaintext/ciphertext stays local. Public experiment manifests contain only IDs/hashes.
+simpleqa_experiment/supplement/data/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Experiment outputs (raw per-question trajectory JSONs, generated reports, MLflow, eval CSVs).
+# Rendered reports we want to keep live under top-level reports/<date>/ instead.
+simpleqa_experiment/results/
+gaia_committee_results/
+gaia_baseline_results/
+eval_results/
+mlruns/
+*.heapsnapshot
+
+# EXCEPTION — preserved raw experiment data. LLM debates are expensive and non-reproducible
+# (endpoints drift, models deprecate), so every committed run archives its raw per-question
+# trajectory JSONs as compressed .jsonl.gz under reports/<date>/raw/. These must survive the
+# blanket *.json and results/ rules above, so we force-include the raw archive tree.
+!reports/**/raw/
+!reports/**/raw/**
+
+# LaTeX/PDF toolchain (self-contained tectonic binary + downloads — do not commit)
+.tooling/
+
+.claude/skills/
+venue.txt
