@@ -4,9 +4,10 @@ Multi-agent LLM debate with **measurable disagreement**. A committee of models d
 under a configurable tone, the full debate trajectory is captured, and four evaluator layers let
 you check whether the disagreement is *real* — instead of trusting any single signal.
 
-Built for the paper *"LLM debate readily changes what agents say — the evidence that it changes
-what they persistently endorse, or improves the final answer, is much weaker"* (arXiv: https://arxiv.org/abs/2609.08016),
-where these four layers measurably come apart.
+Built for the paper *"What Does Multi-Agent LLM Debate Actually Change? A Layered Analysis of
+Disagreement and Answer Quality"* (arXiv: https://arxiv.org/abs/2609.08016), where these four
+layers measurably come apart: debate readily changes what agents say, but the evidence that it
+changes what they persistently endorse — or improves the final answer — is much weaker.
 
 ## The flow
 
