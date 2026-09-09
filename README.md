@@ -5,7 +5,7 @@ under a configurable tone, the full debate trajectory is captured, and four eval
 you check whether the disagreement is *real* — instead of trusting any single signal.
 
 Built for the paper *"LLM debate readily changes what agents say — the evidence that it changes
-what they persistently endorse, or improves the final answer, is much weaker"* (link forthcoming),
+what they persistently endorse, or improves the final answer, is much weaker"* (arXiv: https://arxiv.org/abs/2609.08016),
 where these four layers measurably come apart.
 
 ## The flow
