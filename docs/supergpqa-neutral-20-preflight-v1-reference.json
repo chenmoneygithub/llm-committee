@@ -1,0 +1,185 @@
+{
+  "questions": 1,
+  "initial_disagreement_questions": 0,
+  "initial_disagreement_denominator": 1,
+  "models": [
+    {
+      "model": "gpt-5.6-terra",
+      "initial_n": 1,
+      "initial_correct": 1,
+      "endpoint_n": 2,
+      "endpoint_correct": 2,
+      "endpoint_initial_correct": 2,
+      "transitions": {
+        "right_to_right": 2
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.8-27B",
+      "initial_n": 1,
+      "initial_correct": 1,
+      "endpoint_n": 2,
+      "endpoint_correct": 2,
+      "endpoint_initial_correct": 2,
+      "transitions": {
+        "right_to_right": 2
+      }
+    },
+    {
+      "model": "thinkingmachines/Inkling",
+      "initial_n": 1,
+      "initial_correct": 1,
+      "endpoint_n": 2,
+      "endpoint_correct": 2,
+      "endpoint_initial_correct": 2,
+      "transitions": {
+        "right_to_right": 2
+      }
+    }
+  ],
+  "chairman": [
+    {
+      "pair": "AB",
+      "n": 1,
+      "baseline_correct": 1,
+      "debate_correct": 1,
+      "transitions": {
+        "right_to_right": 1
+      }
+    },
+    {
+      "pair": "CA",
+      "n": 1,
+      "baseline_correct": 1,
+      "debate_correct": 1,
+      "transitions": {
+        "right_to_right": 1
+      }
+    },
+    {
+      "pair": "BC",
+      "n": 1,
+      "baseline_correct": 1,
+      "debate_correct": 1,
+      "transitions": {
+        "right_to_right": 1
+      }
+    }
+  ],
+  "C_conditional": [
+    {
+      "previous_label": "strongly_agree",
+      "current_label": "strongly_agree",
+      "n": 9,
+      "option_changes": 0,
+      "transitions": {
+        "right_to_right": 9
+      }
+    }
+  ],
+  "D1_conditional": [
+    {
+      "model": "Qwen/Qwen3.8-27B",
+      "previous_label": "strongly_agree",
+      "current_label": "strongly_agree",
+      "n": 3,
+      "mean_tv": 0.3267963558371188,
+      "median_tv": 0.0010484092100120333,
+      "mean_correct_probability_change_pp": 32.67872849199314
+    },
+    {
+      "model": "thinkingmachines/Inkling",
+      "previous_label": "strongly_agree",
+      "current_label": "strongly_agree",
+      "n": 2,
+      "mean_tv": 2.01700034035035e-09,
+      "median_tv": 2.01700034035035e-09,
+      "mean_correct_probability_change_pp": -1.9046181298776332e-07
+    }
+  ],
+  "protocol_version": "supergpqa-neutral-public-history-2026-09-28-v1",
+  "source": "/Users/Chen/Documents/research/llm-committee/runs/supergpqa-neutral-20-20260928/live",
+  "progress": {
+    "kind": "paid_supergpqa_pilot",
+    "protocol_version": "supergpqa-neutral-public-history-2026-09-28-v1",
+    "status": "completed_with_failures",
+    "pid": 55324,
+    "updated_at_utc": "2026-09-29T04:47:25.548812+00:00",
+    "elapsed_this_process_seconds": 46.32,
+    "target_this_phase": 1,
+    "planned_counts": {
+      "by_purpose": {
+        "d_choice": 200,
+        "debate": 240,
+        "initial": 60,
+        "synthesis": 120
+      },
+      "logical_calls": 620,
+      "questions": 20,
+      "trajectories": 60
+    },
+    "completed_questions": 1,
+    "successful_questions": 0,
+    "question_statuses": {
+      "supergpqa-c363067c2bec418c94776f8622488a43": "completed_with_failures"
+    },
+    "trajectory_statuses": {
+      "completed": 3
+    },
+    "call_status_counts": {
+      "completed": 30,
+      "invalid": 4
+    },
+    "charged_or_reserved_usd": 0.14867573,
+    "cost_note": "Token-based estimate including retries/reservations, not a provider invoice",
+    "max_inflight_requests": 16,
+    "question_workers": 8,
+    "task_failures": {
+      "supergpqa-c363067c2bec418c94776f8622488a43/supergpqa-neutral-public-history-2026-09-28-v1/D1/initial/2": {
+        "key": "supergpqa-c363067c2bec418c94776f8622488a43/supergpqa-neutral-public-history-2026-09-28-v1/D1/initial/2",
+        "attempt_keys": [
+          "supergpqa-c363067c2bec418c94776f8622488a43/supergpqa-neutral-public-history-2026-09-28-v1/D1/initial/2",
+          "supergpqa-c363067c2bec418c94776f8622488a43/supergpqa-neutral-public-history-2026-09-28-v1/D1/initial/2::format-retry:1",
+          "supergpqa-c363067c2bec418c94776f8622488a43/supergpqa-neutral-public-history-2026-09-28-v1/D1/initial/2::format-retry:2"
+        ],
+        "reason": "Response status: incomplete",
+        "status": "failed_after_format_retries",
+        "purpose": "d_choice",
+        "model": "thinkingmachines/Inkling"
+      }
+    },
+    "fatal_errors": {},
+    "active_question_ids": [],
+    "in_flight_requests": 0,
+    "peak_in_flight_requests": 9,
+    "peak_active_questions": 1,
+    "request_retries": {
+      "additional_attempts": 3,
+      "recovered_logical_requests": 1,
+      "exhausted_logical_requests": 1
+    },
+    "format_retries": {
+      "additional_attempts": 3,
+      "recovered_logical_requests": 1,
+      "exhausted_logical_requests": 1
+    },
+    "transport_retries": {
+      "additional_attempts": 0,
+      "recovered_logical_requests": 0,
+      "exhausted_logical_requests": 0
+    },
+    "output_limit_retries": {
+      "additional_attempts": 0,
+      "recovered_logical_requests": 0,
+      "exhausted_logical_requests": 0
+    }
+  },
+  "scope": "Curated engineering/diagnostic pilot, not a random estimate of full SuperGPQA accuracy. No independent human/expert validation claimed.",
+  "received_response_estimate_usd": 0.14867573,
+  "unresolved_reserved_usd": 0,
+  "attempt_statuses": {
+    "completed": 30,
+    "invalid": 4
+  },
+  "incomplete_response_attempts": 3
+}

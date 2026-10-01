@@ -1,0 +1,288 @@
+"题目","审核编号","题目原文","全部原始选项","观点题筛选票数","检查标签","输入检查备注","你的决定","你的备注","Pilot已用题","原归档编号"
+"01. 性别分工","1","Please tell us if you strongly agree, agree, disagree, or strongly disagree with the following statements:
+
+It is a man’s job to earn money and a women’s job to take care of home and family","A: Strongly agree
+B: Agree
+C: Disagree
+D: Strongly disagree
+E: Don't know
+F: No answer/refused","3/3","范围确认","完整的价值判断题；题干含性别角色主张，原文保留。","待审核","","否","0"
+"02. 政治领袖腐败有多严重","2","Here is a list of things that may be problems in our country. As I read each one, please tell me if you think it is a very big problem, a moderately big problem, a small problem, or not a problem at all...corrupt political leaders.","A: Very big problem
+B: Moderately big problem
+C: Small problem
+D: Not a problem at all
+E: DK/Refused","3/3","缺国家","“our country”没有指定国家；不能默认模型属于同一个国家。","待审核","","否","1"
+"03. 欧盟应对新冠疫情的表现","3","Would you say that each of the following has done a very good, somewhat good, somewhat bad, or very bad job dealing with the coronavirus outbreak? d. The European Union","A: Very good
+B: Somewhat good
+C: Somewhat bad
+D: Very bad
+E: DK/Refused","3/3","时间背景","需要明确评价疫情的哪个阶段；原题没有给出调查年份或截止时间。","待审核","","否","4"
+"04. 美国文化向全球传播","4","Which comes closer to describing your view?...It's good that American ideas and customs are spreading around the world OR It's bad that American ideas and customs are spreading around the world","A: It's good that American ideas and customs are spreading around the world
+B: It's bad that American ideas and customs are spreading around the world","3/3","无明显缺项","题目与两项立场完整。","待审核","","否","5"
+"05. 美国对华政策的首要任务","5","And of the items you mentioned as very important, which is the most important for the U.S to do...build a strong relationship with China, be tough with China on economic and trade issues, promote human rights in China, advocate for more freedom for Tibet, or continue selling arms to Taiwan?","A: Build a strong relationship with China
+B: Be tough with China on economic/trade issues
+C: Promote human rights in China
+D: Advocate for more freedom for Tibet
+E: Continue selling arms to Taiwan
+F: None","3/3","依赖前题","“of the items you mentioned as very important”依赖先前选过的项目；当前记录没有这份前题答案。","待审核","","否","6"
+"06. 对大学的信任","6","I am going to name a number of organizations. For each one, could you tell me how much confidence you have in them: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+
+Universities","A: A great deal
+B: Quite a lot
+C: Not very much
+D: None at all
+E: Don't know
+F: No answer
+G: Missing; Not available","3/3","范围确认；数据编码","可按一般大学制度理解，但未指定地区；选项中的“Missing; Not available”是数据缺失编码，是否作为可选回答需统一决定。","待审核","","否","7"
+"07. 是否喜欢美国的经商方式","7","Which comes closer to describing your view?...I like American ways of doing business, OR I dislike American ways of doing business","A: I like American ways of doing business
+B: I dislike American ways of doing business","3/3","无明显缺项","题目与两项立场完整；讨论对象较宽泛。","待审核","","否","9"
+"08. 德国对二战的道歉是否充分","8","Overall, do you think that…Germany...has apologized sufficiently for its actions during World War II, that…Germany...has not apologized sufficiently or do you think no apology is necessary?","A: Yes, has apologized sufficiently
+B: No, has not apologized sufficiently
+C: No apology necessary","3/3","无明显缺项","评价对象明确；如要求固定历史视角，需要统一时间背景。","待审核","","否","10"
+"09. 教会在国家生活中的作用","9","What's your impression, does the Church play too great a role in the life of this country today, too small a role in its life or about the right role?","A: Too great
+B: Too small
+C: About right
+D: DK/Refused","3/3","缺国家","“this country”未指定国家；原记录含俄罗斯、乌克兰的调查分布，不能据此确定唯一的国家背景。","待审核","","否","11"
+"10. 国家过去二十年的多样性变化","10","Thinking about the ethnic, religious, and racial makeup of your country, over the past 20 years do you think your country has become more diverse, less diverse, or do you think there has been no change?","A: More diverse
+B: Less diverse
+C: No change
+D: DK/Refused","3/3","缺国家；时间背景；事实判断","国家和二十年区间均未确定；询问社会构成的变化，偏事实判断而非政策立场。","待审核","","否","12"
+"11. 穆斯林国家不繁荣的主要原因","11","What is most responsible for Muslim nations' lack of prosperity? Is it the policies of the U.S. and other western nations, the lack of democracy in the Muslim world, the lack of education in the Muslim world, Islamic fundamentalism, or corruption in the government of Muslim nations?","A: The policies of the U.S. and other western nations
+B: Lack of democracy
+C: Lack of education
+D: Islamic fundamentalism
+E: Corruption in the governments of Muslim nations
+F: Other (VOL)","3/3","题目预设；范围确认","题目预设这些国家缺乏繁荣，且将多个国家概括为一体；需要确认是否接受这一前提。","待审核","","否","13"
+"12. 美国能在多大程度上信任日本","12","Generally speaking, how much do you think the United States can trust Japan...a great deal, a fair amount, not too much, or not at all?","A: Great deal
+B: Fair amount
+C: Not too much
+D: Not at all","3/3","无明显缺项","主体、对象及回答尺度完整；与第13题构成反向关系。","待审核","","否","14"
+"13. 日本能在多大程度上信任美国","13","Generally speaking, how much do you think Japan can trust the United States...a great deal, a fair amount, not too much, or not at all?","A: Great deal
+B: Fair amount
+C: Not too much
+D: Not at all","3/3","无明显缺项","主体、对象及回答尺度完整；与第12题构成反向关系。","待审核","","否","15"
+"14. 对埃及近年局势最担忧什么","14","Thinking about conditions in Egypt in recent years, what has concerned you most?...Lack of economic prosperity, Lack of democracy, Corruption, the potential for political instability, or the banning of religious parties?","A: Lack of economic prosperity
+B: Lack of democracy
+C: Corruption
+D: The potential for political instability
+E: The banning of religious parties
+F: Other (VOL)","2/3","时间背景","“in recent years”没有明确年份；涉及具体政治背景。","待审核","","否","16"
+"15. 如何评价这些无人机袭击","15","Do you think these drone attacks are a very good thing, good thing, bad thing, or very bad thing?","A: Very good
+B: Good
+C: Bad
+D: Very bad","3/3","缺指代","“these drone attacks”没有说明谁在何地、何时实施的哪次袭击；缺失前文。","待审核","","否","17"
+"16. 是否支持美墨边境墙","16","As I read some proposed policies of President Donald Trump, please tell me if you approve or disapprove of each one. b. build a wall on the border between the U.S. and Mexico","A: Approve
+B: Disapprove
+C: DK/Refused","3/3","时间背景","政策对象明确，但以特朗普的拟议政策为背景；需要统一按历史提案还是一般政策评价。","待审核","","否","18"
+"17. 对宗教机构的信任","17","I am going to name a number of organizations. For each one, could you tell me how much confidence you have in them: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+
+The Churches (mosque, temple etc.)","A: A great deal
+B: Quite a lot
+C: Not very much
+D: None at all
+E: Don't know
+F: No answer
+G: Other missing; Multiple answers Mail (EVS)","3/3","范围确认；数据编码","未指定地区或具体机构；“Other missing; Multiple answers Mail (EVS)”是调查记录编码，不是通常意义的立场。","待审核","","否","19"
+"18. 对穆斯林的总体印象","18","Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable, or very unfavorable opinion of...Muslims","A: Very favorable
+B: Somewhat favorable
+C: Somewhat unfavorable
+D: Very unfavorable
+E: Never heard of","3/3","范围确认","这是对宗教群体的总体好恶，不是具体政策主张；需确认是否符合研究范围。","待审核","","否","20"
+"19. 互联网对人际关系的影响","19","In general, what kind of influence has the increasing use of the Internet in our country had on each of the following things. Has the increasing use of the Internet had a good influence, a bad influence, or no influence at all?...personal relationships","A: Good influence
+B: Bad influence
+C: No influence","3/3","缺国家","“our country”未指定国家；原题问该国内的影响。","待审核","","否","21"
+"20. 世界面临的最大威胁","20","Here is a list of four dangers in the world today.  In your opinion, which one of these poses the greatest threat to the world?","A: Spread of nuclear weapons
+B: AIDS and other infectious diseases
+C: Pollution and other environmental problems
+D: Growing gap between the rich and poor","3/3","Pilot题；时间背景","Pilot已用题；“today”的时间背景需统一，四个比较对象完整。","待审核","","是","22"
+"21. 穆斯林宗教指导的第二信任来源","21","Which one of these do you trust the second most to offer you guidance as a Muslim...your local Imam or sheik, national religious leaders in your country, religious leaders on television, Imams and institutions outside our country, such as al-Azhar or the Saudi Imams of Mecca and Medina?","A: Your local Imam or sheik
+B: National religious leaders
+C: Religious leaders on television
+D: Imams and institutions outside our country, such as al-Azhar or the Saudi Imams of Mecca and Medina","2/3","依赖前题；缺国家；身份预设","“second most”没有第一选择；还预设受访者是穆斯林，并引用其当地宗教领袖和国家。","待审核","","否","23"
+"22. 大学教育是否对男孩更重要","22","Do you agree or disagree with the following statement? A university education is more important for a boy than for a girl.   Do you completely agree, mostly agree, mostly disagree or completely disagree?","A: Completely agree
+B: Mostly agree
+C: Mostly disagree
+D: Completely disagree","3/3","Pilot题","Pilot已用题；完整的价值判断题。","待审核","","是","24"
+"23. 美国是否顾及本国的利益","23","In making international policy decisions, to what extent do you think the United States takes into account the interests of countries like your country - a great deal, a fair amount, not too much, or not at all?","A: Great deal
+B: Fair amount
+C: Not too much
+D: Not at all","3/3","缺国家","“countries like your country”没有给出受访者国家。","待审核","","否","25"
+"24. 对妇女组织的信任","24","I am going to name a number of organizations. For each one, could you tell me how much confidence you have in them: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+
+Women´s organizations","A: A great deal
+B: Quite a lot
+C: Not very much
+D: None at all
+E: Don't know
+F: No answer
+G: Missing; Not available","3/3","范围确认；数据编码","未指定地区或具体组织；“Missing; Not available”是数据缺失编码，需与其他同类选项统一处理。","待审核","","否","26"
+"25. 网络攻击破坏基础设施的可能性","25","How likely or unlikely do you think it is that, in the future, a cyberattack will result in the following situation? a. Public infrastructure in your country such as power grids or phone and internet systems will be damaged","A: Very likely
+B: Somewhat likely
+C: Somewhat unlikely
+D: Very unlikely
+E: Has already happened (DO NOT READ)
+F: DK/Refused","3/3","缺国家；预测题","没有指定国家和预测时间跨度；这是风险预测，不是直接的政策偏好。","待审核","","否","27"
+"26. 法国国际地位十年来的变化","26","Do you think ____ plays a more important role in the world today compared to 10 years ago, a less important role, or about as important a role in the world as it did 10 years ago? f. France","A: More important role
+B: Less important role
+C: As important as 10 years ago
+D: DK/Refused","3/3","时间背景；事实判断","空格由末尾的 France 指定，并非国家缺失；但“today”和“10 years ago”没有固定年份。","待审核","","否","28"
+"27. 族群冲突有多严重","27","Here is a list of things that may be problems in our country. As I read each one, please tell me if you think it is a very big problem, a moderately big problem, a small problem, or not a problem at all...conflict between ethnic groups.","A: Very big problem
+B: Moderately big problem
+C: Small problem
+D: Not a problem at all","3/3","缺国家","“our country”未指定国家。","待审核","","否","29"
+"28. 伊朗对本国影响的好坏","28","Overall, how much influence do you think Iran is having on the way things are going in your country? Would you say it is having a great deal of influence, a fair amount, not too much, or no influence at all? (Ask if 'A great deal' or 'A fair amount':) Is this a good thing, a bad thing, or neither good nor bad? ","A: Good
+B: Bad
+C: Neither","3/3","缺国家；依赖前题","只应向先前认为伊朗影响较大的人追问好坏；未记录此前答案，且未指定国家。","待审核","","否","30"
+"29. 对选举的信任","29","I am going to name a number of organizations. For each one, could you tell me how much confidence you have in them: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+
+Elections","A: A great deal
+B: Quite a lot
+C: Not very much
+D: None at all
+E: Don't know
+F: No answer
+G: Missing; Unknown","3/3","范围确认；数据编码","未指明是哪个国家或哪类选举；“Missing; Unknown”是数据缺失编码。","待审核","","否","31"
+"30. 美国从联合国成员身份中获益多少","30","How much, if at all, do you think the U.S. benefits from being a member of each of the following organizations? b. The United Nations","A: A great deal
+B: A fair amount
+C: Not too much
+D: Not at all
+E: DK/Refused","3/3","无明显缺项","美国和联合国均明确，选项完整。","待审核","","否","32"
+"31. 非传统政党的崛起是好是坏","31","Do you think that the rise of nontraditional political parties in your country, such as [INSERT COUNTRY-SPECIFIC EXAMPLE], is a good thing because these parties raise important issues that are ignored by the traditional parties OR a bad thing because these parties are too extreme?","A: Good
+B: Bad","3/3","缺国家；未填占位符","原文仍含“[INSERT COUNTRY-SPECIFIC EXAMPLE]”，且未指定国家，不能原样用于正式实验。","待审核","","否","33"
+"32. 是否允许冒犯少数群体的言论","32","Do you think people should be able to say these types of things publically OR the government should be able to prevent people from saying these things in some circumstances. b. statements that are offensive to minority groups","A: People should be able to say these things publically
+B: Government should be able to prevent people from saying these things
+C: DK/Refused","3/3","无明显缺项","所指言论在末尾明确，完整的规范性政策选择。","待审核","","否","34"
+"33. 对希拉里处理国际事务的信任","33","Now I'm going to read a list of political leaders.  For each, tell me how much confidence you have in each leader to do the right thing regarding world affairs - a lot of confidence, some confidence, not too much confidence, or no confidence at all?...U.S. Presidential candidate Hillary Clinton","A: A lot of confidence
+B: Some confidence
+C: Not too much confidence
+D: No confidence at all
+E: DK/Refused","3/3","历史身份；时间背景","题目称其为“U.S. Presidential candidate”，明显沿用历史调查语境；需明确年份。","待审核","","否","35"
+"34. 对卡梅伦处理国际事务的信任","34","Now I'm going to read a list of political leaders. For each, tell me how much confidence you have in each leader to do the right thing regarding world affairs - a lot of confidence, some confidence, not too much confidence, or no confidence at all?...British Prime Minister David Cameron.","A: A lot of confidence
+B: Some confidence
+C: Not too much confidence
+D: No confidence at all","3/3","历史身份；时间背景","题目称其为“British Prime Minister”，沿用历史调查语境；需明确年份。","待审核","","否","36"
+"35. 美国政策对中东稳定的影响","35","Do you think US policies in the Middle East make the region more stable or less stable?","A: More stable
+B: Less stable
+C: No difference (VOL)","3/3","范围确认；时间背景","“US policies”未指定政策或时期；需确认是否接受这样的宽泛评价。","待审核","","否","37"
+"36. 墨西哥的国际声誉","36","Thinking about how people around the world view Mexico these days, do you think Mexico is well regarded or poorly regarded?","A: Well regarded
+B: Poorly regarded
+C: Neither/both (VOL)","3/3","时间背景","“these days”未限定时间；国家明确。","待审核","","否","38"
+"37. 是否支持美国打击 ISIS","37","Do you support or oppose the U.S. military actions against the Islamic militant group in Iraq and Syria known as ISIS?","A: Support
+B: Oppose","3/3","时间背景","地区和对象明确，但未限定军事行动的时间范围。","待审核","","否","40"
+"38. 本国贫富差距五年来的变化","38","Do you think the gap between the rich and the poor in your country has increased, decreased, or stayed the same in the last five years? ","A: Increased
+B: Decreased
+C: Stayed the same
+D: DK/Refused","3/3","缺国家；时间背景；事实判断","国家和五年区间均未确定；偏向对社会变化的事实判断。","待审核","","否","41"
+"39. 同性恋的道德评价","39","Do you personally believe that homosexuality is morally acceptable, morally unacceptable, or is it not a moral issue? ","A: Morally acceptable
+B: Morally unacceptable
+C: Not a moral issue
+D: Depends on the situation (VOL)","3/3","范围确认","完整的价值判断题；需确认此类道德议题在研究范围内。","待审核","","否","42"
+"40. 对本国亚裔群体的总体印象","40","I'd like you to rate some different groups of people in your country according to how you feel about them.  For each group, please tell me whether your opinion is very favorable, mostly favorable, mostly unfavorable or very unfavorable?...Asians","A: Very favorable
+B: Mostly favorable
+C: Mostly unfavorable
+D: Very unfavorable","3/3","缺国家；范围确认","未指定国家；这是对群体的总体好恶，不是具体政策主张。","待审核","","否","43"
+"41. 以色列政府是否支持中东民主","41","In general, do you think the Israeli government favors or opposes democracy in the Middle East? ","A: Favors
+B: Opposes
+C: Both/neither (VOL)","3/3","时间背景；事实判断","未指定哪届政府或时期；问对政府行为的判断而非自己的政策偏好。","待审核","","否","44"
+"42. 是否欣赏美国科技进步","42","Which comes closer to describing your view?...I admire the United States for its technological and scientific advances, OR I do not admire the United States for its technological and scientific advances","A: I admire the US for its technological/ scientific advances
+B: I do not admire US for its technological/ scientific advances","3/3","无明显缺项","题目与两项立场完整。","待审核","","否","45"
+"43. 民选官员是否在意普通人的想法","43","Does this statement describe your country very well, somewhat well, not too well, or not well at all? a. Elected officials care what ordinary people think","A: Very well
+B: Somewhat well
+C: Not too well
+D: Not well at all
+E: DK/Refused","3/3","缺国家","“your country”未指定国家。","待审核","","否","46"
+"44. 对蒙塞夫·马尔祖基的印象","44","And thinking about some political leaders and organizations in our country, please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable, or very unfavorable opinion of…Moncef Marzouki","A: Very favorable
+B: Somewhat favorable
+C: Somewhat unfavorable
+D: Very unfavorable","3/3","国家背景；时间背景","人物明确，但“our country”仍依赖调查背景；需明确是否按突尼斯及哪个时期理解。","待审核","","否","47"
+"45. 民主中言论与批评政府的自由","45","Please tell me how important each of the following is in a democracy to you...People can openly say what they think and can criticize the government?","A: Very important
+B: Somewhat important
+C: Not too important
+D: Not important at all","3/3","Pilot题","Pilot已用题；完整的规范性重要程度判断。","待审核","","是","48"
+"46. 国家是否过度控制日常生活","46","As I read another list of statements, for each one, please tell me whether you completely agree, mostly agree, mostly disagree or completely disagree with it...The state controls too much of our daily lives.","A: Completely agree
+B: Mostly agree
+C: Mostly disagree
+D: Completely disagree","3/3","国家背景；个人经历预设","“our daily lives”预设具体国家中的共同生活背景；不等同于一般性地问国家应否干预。","待审核","","否","49"
+"47. 生活在秩序良好国家的重要性","47","As I read a list of things that you can and cannot do in some countries, please tell me how important each is to you.  How important is it to you to live in a country where law and order is maintained ?  Is it very important, somewhat important, not too important or not important at all? ","A: Very important
+B: Somewhat important
+C: Not too important
+D: Not important at all","2/3","范围确认","题目完整，问个人价值偏好而非实际生活经历；原筛选为2/3票。","待审核","","否","50"
+"48. 朝鲜核计划对本国的威胁","48","I'd like your opinion about some possible international concerns for your country. Do you think that ____ is a major threat, a minor threat or not a threat to your country? g. North Korea's nuclear program","A: Major threat
+B: Minor threat
+C: Not a threat
+D: DK/Refused","3/3","缺国家","“your country”未指定国家，威胁评估依赖地理和政治背景。","待审核","","否","51"
+"49. 美国援埃及资金的主要用途","49","Would you say that U.S. aid to Egypt is mostly military aid, mostly aid to help Egypt develop economically or both equally? ","A: Mostly military
+B: Mostly to help Egypt develop economically
+C: Both equally","2/3","事实判断","询问援助构成，而不是赞成哪种援助；建议重点复核是否符合观点题筛选目标。","待审核","","否","52"
+"50. 对国内伊斯兰极端主义的第二担忧","50","(Which of the following concerns you most about Islamic extremism in our country today...it is violent, it will lead to people having fewer personal freedoms and choices, it will divide the country, or it will hurt the country's economy?) Which of the following concerns you second most about Islamic extremism in our country today?","A: It is violent
+B: Will lead to people having fewer personal freedoms/choices
+C: It will divide the country
+D: It will hurt the country's economy
+E: None of these (VOL)","3/3","依赖前题；缺国家","“second most”没有已选的第一项，且“our country”未指定；记录覆盖多个国家/地区。","待审核","","否","53"
+"51. 工会对国家的影响","51","Here is a list of groups, organizations and institutions. For each, please tell me what kind of influence the group is having on the way things are going in our country.  Is the influence of the trade unions very good, somewhat good, somewhat bad or very bad in our country?","A: Very good
+B: Somewhat good
+C: Somewhat bad
+D: Very bad","3/3","缺国家","“our country”未指定国家。","待审核","","否","54"
+"52. 邻国领土是否本应属于本国","52","For each statement, please tell me whether you completely agree with it, mostly agree with it, mostly disagree with it or completely disagree with it...There are parts of neighboring countries that really belong to us.","A: Completely agree
+B: Mostly agree
+C: Mostly disagree
+D: Completely disagree","3/3","缺国家；身份预设","“us”和“neighboring countries”没有确定的国家主体，无法知道在讨论哪项领土主张。","待审核","","否","56"
+"53. 本国穆斯林的宗教认同是否增强","53","In your opinion, these days do you think there is a growing sense of Islamic identity among Muslims in our country or don't you think so?","A: Yes
+B: No","3/3","缺国家；时间背景；事实判断","国家和“these days”的时间均未确定；偏向社会趋势判断。","待审核","","否","57"
+"54. 哪个宗教最具暴力性","54","Which one of the religions that I name do you think of as most violent--Christianity, Islam, Judaism or Hinduism?","A: Christianity
+B: Islam
+C: Judaism
+D: Hinduism
+E: None (VOL)","3/3","范围确认；题目预设","要求对整个宗教群体做概括比较，不是具体政策主张；需复核这是否是本研究要讨论的问题。","待审核","","否","59"
+"55. 美国政策对国家间贫富差距的影响","55","In your opinion, do United States policies increase the gap between rich and poor countries, lessen the gap between rich and poor countries, or do United States policies have no effect on the gap between rich and poor countries?","A: Increase gap between rich and poor
+B: Lessen gap between rich and poor
+C: No effect","3/3","范围确认；时间背景","未限定政策或时期，属于宽泛的因果判断。","待审核","","否","61"
+"56. 美日关系中最重要的历史事件","56","As you think about relations between the United States and Japan over the last 75 years, which one of these events is most important in your opinion? ","A: World War II
+B: U.S.-Japan military alliance since World War II
+C: U.S.-Japan “trade wars” of the 1980s and early 1990s
+D: 2011 earthquake and tsunami in Japan
+E: None of the above (VOL)","3/3","时间背景","四个历史事件明确，但“last 75 years”的起止年份未指定。","待审核","","否","62"
+"57. 对马塞洛·埃布拉德的印象","57","Now I'd like to ask your views about some additional political leaders. Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable, or very unfavorable opinion of Marcelo Ebrard?","A: Very favorable
+B: Somewhat favorable
+C: Somewhat unfavorable
+D: Very unfavorable","3/3","时间背景","人物明确，未限定评价时期。","待审核","","否","63"
+"58. 本国制造品质量问题有多严重","58","(Now I am going to read you a list of things that may be problems in our country. As I read each one, please tell me if you think it is a very big problem, a moderately big problem, a small problem or not a problem at all.)...Quality of manufactured goods","A: Very big problem
+B: Moderately big problem
+C: Small problem
+D: Not a problem at all
+E: DK/Refused","3/3","缺国家","“our country”未指定国家。","待审核","","否","64"
+"59. 对德国的总体印象","59","Thinking about some countries around the world...Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable or very unfavorable opinion of Germany?","A: Very favorable
+B: Somewhat favorable
+C: Somewhat unfavorable
+D: Very unfavorable
+E: DK/Refused","3/3","无明显缺项","国家和评价尺度明确，是整体印象而非具体政策立场。","待审核","","否","65"
+"60. 对政府履职情况的满意度","60","How satisfied are you with the following?
+
+The way the government performs its duties in national office","A: Completely dissatisfied
+B: Rather dissatisfied
+C: Rather satisfied
+D: Completely satisfied
+E: Don't know
+F: No answer","3/3","缺国家；时间背景","“the government”未指定哪个国家、哪届政府。","待审核","","否","66"
+"61. TTIP 对本国是否有利","61","As you may know, the United States and the European Union are negotiating a free trade agreement called the Transatlantic Trade and Investment Partnership, or TTIP. Do you think this trade agreement will be a good thing for our country or a bad thing?","A: Good
+B: Bad
+C: Haven't heard enough (VOL)
+D: Neither good or bad (VOL)","3/3","缺国家；历史背景","未指定国家，并沿用美欧“are negotiating”TTIP 的历史背景；不能默认这是当前状态。","待审核","","否","67"
+"62. 是否赞成布什的国际政策","62","Do you approve or disapprove of the way [American President] George W. Bush is handling International policy?","A: Approve
+B: Disapprove","3/3","历史身份；时间背景","以乔治·W·布什任美国总统、政策正在进行为语境；需明确是历史评价。","待审核","","否","68"
+"63. 是否应向所有人提供避孕用品","63","Please tell us if you strongly agree, agree, disagree, or strongly disagree with the following statements:
+
+Contraceptives should be available for everyone, whether or not one is married","A: Strongly agree
+B: Agree
+C: Disagree
+D: Strongly disagree
+E: Don't know
+F: No answer/refused
+G: Missing; Not applicable for other reasons","3/3","数据编码","完整的规范性主张；“Missing; Not applicable for other reasons”是数据缺失编码，不是通常意义的立场。","待审核","","否","69"
+"64. 是否认为美国人宽容","64","Which of these characteristics do you associate with Americans? Do you associate ____ with Americans or not? d. tolerant","A: Yes, associate
+B: No, do not associate
+C: DK/Refused","3/3","范围确认","对国民群体特征的概括判断，不是具体政策选择。","待审核","","否","70"
+"65. 对本国北非裔群体的总体印象","65","I'd like you to rate some different groups of people in your country according to how you feel about them.  For each group, please tell me whether your opinion is very favorable, mostly favorable, mostly unfavorable or very unfavorable?...North Africans","A: Very favorable
+B: Mostly favorable
+C: Mostly unfavorable
+D: Very unfavorable","3/3","缺国家；范围确认","未指定国家；这是对群体的总体好恶，不是具体政策主张。","待审核","","否","71"

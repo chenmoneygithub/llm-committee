@@ -1,0 +1,2592 @@
+{
+  "mode": "field (real pilot turns)",
+  "judges": [
+    "opus-4.8",
+    "gpt-5.5"
+  ],
+  "families": [
+    "anthropic",
+    "openai"
+  ],
+  "human_calibrated": false,
+  "gate": "A-field (inter-judge reliability on real turns)",
+  "results_dir": "results/pilot_openended",
+  "n_total_turns": 1189,
+  "n_sampled": 40,
+  "sample_stance_breakdown": {
+    "neutral": 32,
+    "hostile": 7,
+    "friendly": 1
+  },
+  "sample_selfreport_breakdown": {
+    "partially_agreed": 8,
+    "fully_agreed": 12,
+    "partially_disagreed": 20
+  },
+  "n_orders": 2,
+  "degeneracy_max_share": 0.95,
+  "layer_b_stance": {
+    "n": 40,
+    "q": 3,
+    "categories": [
+      "fully_agreed",
+      "partially_agreed",
+      "partially_disagreed"
+    ],
+    "p_o": 0.975,
+    "cohen_kappa": 0.96,
+    "cohen_band": "almost perfect",
+    "ac1": 0.964,
+    "ac1_band": "almost perfect",
+    "pabak": 0.962,
+    "confusion": [
+      [
+        11,
+        0,
+        0
+      ],
+      [
+        1,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "weighted_kappa": 0.983,
+    "weighted_band": "almost perfect",
+    "spearman": 0.989,
+    "spearman_p": 0.0,
+    "primary_metric": "weighted_kappa",
+    "primary_ci95": [
+      0.943,
+      1.0
+    ],
+    "ac1_ci95": [
+      0.889,
+      1.0
+    ]
+  },
+  "layer_b_move": {
+    "n": 40,
+    "q": 5,
+    "categories": [
+      "challenge",
+      "concession",
+      "new_argument",
+      "refinement",
+      "restatement"
+    ],
+    "p_o": 0.825,
+    "cohen_kappa": 0.758,
+    "cohen_band": "substantial",
+    "ac1": 0.787,
+    "ac1_band": "substantial",
+    "pabak": 0.781,
+    "confusion": [
+      [
+        17,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        7,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        5
+      ]
+    ],
+    "primary_metric": "ac1",
+    "primary_ci95": [
+      0.631,
+      0.913
+    ],
+    "ac1_ci95": [
+      0.631,
+      0.913
+    ]
+  },
+  "layer_c_argmax": {
+    "n": 40,
+    "q": 18,
+    "categories": [
+      "A lot",
+      "Both equally (VOL)",
+      "Build a strong relationship with China",
+      "Disagree",
+      "Hindu",
+      "I dislike American ways of doing business",
+      "I like American ways of doing business",
+      "It's bad that American ideas and customs are spreading around the world",
+      "It's good that American ideas and customs are spreading around the world",
+      "No position / refusal",
+      "Not much",
+      "Not very much",
+      "Quite a lot",
+      "Somewhat bad",
+      "Somewhat closely",
+      "Somewhat good",
+      "Strongly disagree",
+      "Very big problem"
+    ],
+    "p_o": 0.9,
+    "cohen_kappa": 0.89,
+    "cohen_band": "almost perfect",
+    "ac1": 0.894,
+    "ac1_band": "almost perfect",
+    "pabak": 0.894,
+    "confusion": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        4,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    ],
+    "primary_metric": "ac1",
+    "primary_ci95": [
+      0.787,
+      0.973
+    ],
+    "ac1_ci95": [
+      0.787,
+      0.973
+    ]
+  },
+  "label_distributions": {
+    "stance": {
+      "opus-4.8": {
+        "n": 40,
+        "counts": {
+          "partially_agreed": 9,
+          "fully_agreed": 11,
+          "partially_disagreed": 20
+        },
+        "distinct": 3,
+        "top_label": "partially_disagreed",
+        "top_share": 0.5,
+        "entropy_bits": 1.496,
+        "degenerate": false
+      },
+      "gpt-5.5": {
+        "n": 40,
+        "counts": {
+          "partially_agreed": 8,
+          "fully_agreed": 12,
+          "partially_disagreed": 20
+        },
+        "distinct": 3,
+        "top_label": "partially_disagreed",
+        "top_share": 0.5,
+        "entropy_bits": 1.485,
+        "degenerate": false
+      }
+    },
+    "move": {
+      "opus-4.8": {
+        "n": 40,
+        "counts": {
+          "refinement": 4,
+          "restatement": 6,
+          "new_argument": 9,
+          "challenge": 18,
+          "concession": 3
+        },
+        "distinct": 5,
+        "top_label": "challenge",
+        "top_share": 0.45,
+        "entropy_bits": 2.026,
+        "degenerate": false
+      },
+      "gpt-5.5": {
+        "n": 40,
+        "counts": {
+          "new_argument": 9,
+          "restatement": 5,
+          "challenge": 17,
+          "concession": 8,
+          "refinement": 1
+        },
+        "distinct": 5,
+        "top_label": "challenge",
+        "top_share": 0.425,
+        "entropy_bits": 1.981,
+        "degenerate": false
+      }
+    },
+    "argmax": {
+      "opus-4.8": {
+        "n": 40,
+        "counts": {
+          "Both equally (VOL)": 1,
+          "Quite a lot": 1,
+          "No position / refusal": 6,
+          "Somewhat bad": 3,
+          "Somewhat closely": 1,
+          "It's bad that American ideas and customs are spreading around the world": 1,
+          "Strongly disagree": 3,
+          "Disagree": 1,
+          "I dislike American ways of doing business": 5,
+          "Somewhat good": 4,
+          "A lot": 1,
+          "Very big problem": 2,
+          "I like American ways of doing business": 6,
+          "Not much": 2,
+          "Build a strong relationship with China": 2,
+          "Hindu": 1
+        },
+        "distinct": 16,
+        "top_label": "No position / refusal",
+        "top_share": 0.15,
+        "entropy_bits": 3.668,
+        "degenerate": false
+      },
+      "gpt-5.5": {
+        "n": 40,
+        "counts": {
+          "Both equally (VOL)": 1,
+          "Not very much": 1,
+          "Quite a lot": 1,
+          "Somewhat bad": 3,
+          "Somewhat closely": 1,
+          "No position / refusal": 4,
+          "It's bad that American ideas and customs are spreading around the world": 1,
+          "Strongly disagree": 4,
+          "I dislike American ways of doing business": 5,
+          "Somewhat good": 4,
+          "A lot": 1,
+          "Very big problem": 2,
+          "I like American ways of doing business": 6,
+          "Not much": 2,
+          "Build a strong relationship with China": 2,
+          "It's good that American ideas and customs are spreading around the world": 1,
+          "Hindu": 1
+        },
+        "distinct": 17,
+        "top_label": "I like American ways of doing business",
+        "top_share": 0.15,
+        "entropy_bits": 3.775,
+        "degenerate": false
+      }
+    }
+  },
+  "verdicts": {
+    "stance": [
+      "GO",
+      "non-degenerate marginals + AC1=0.964 (CI_lo=0.889), p_o=0.975. Field reliability floor met (provisional; NOT human-validated — Gate B κ still required). [opus-4.8: top=partially_disagreed@0.5 (H=1.496b, 3 labels), gpt-5.5: top=partially_disagreed@0.5 (H=1.485b, 3 labels)]"
+    ],
+    "move": [
+      "GO",
+      "non-degenerate marginals + AC1=0.787 (CI_lo=0.631), p_o=0.825. Field reliability floor met (provisional; NOT human-validated — Gate B κ still required). [opus-4.8: top=challenge@0.45 (H=2.026b, 5 labels), gpt-5.5: top=challenge@0.425 (H=1.981b, 5 labels)]"
+    ],
+    "argmax": [
+      "GO",
+      "non-degenerate marginals + AC1=0.894 (CI_lo=0.787), p_o=0.9. Field reliability floor met (provisional; NOT human-validated — Gate B κ still required). [opus-4.8: top=No position / refusal@0.15 (H=3.668b, 16 labels), gpt-5.5: top=I like American ways of doing business@0.15 (H=3.775b, 17 labels)]"
+    ]
+  },
+  "parse_ok_rate": {
+    "layer_b": {
+      "opus-4.8": 1.0,
+      "gpt-5.5": 1.0
+    },
+    "layer_c": {
+      "opus-4.8": 1.0,
+      "gpt-5.5": 1.0
+    }
+  },
+  "raw": {
+    "layer_b": {
+      "opus-4.8": [
+        {
+          "node_id": "296b0f5c-0553-4aa9-a02c-729d1d3965b2",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "refinement",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "5fdfdc83-8cf0-4e3a-8766-2d6e878209aa",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "restatement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "4a3c286b-5f8b-47ab-b473-a870109f7bcf",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "b8a453a2-9000-4e4b-9f39-5c2972bc225d",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "c586f4d0-6ed6-4ea7-bb77-0a66cff75fff",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "37ce3a08-5c79-4a70-aa74-0bdd9c3b1b9c",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "concession",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "58a69934-1bfc-4d04-9fe6-f8a56af4ef3a",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "5a624a8f-1049-4f35-ba80-cb02ffb3b992",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "b1c5eae2-e790-4e0e-a80d-18ab2d747022",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "42b06f81-08d9-4502-bbfb-2df7e5691f2d",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "concession",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "3d3b365c-80e1-4626-bd57-6ec226d12c7f",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "7f58630a-da47-44b0-a89e-246d8ca8ad2b",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "refinement",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "04cba7f6-eeb0-4c77-83ca-dfb1dd14f503",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "193e6021-4146-48f5-b2cc-75ce42f61792",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "bd3e2d1a-ede2-456d-b624-e5dd3937081f",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "8cf0b9e4-ea4c-41bc-8638-5d54ef49aefe",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "restatement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "1c969733-f2d6-4845-bb58-19dd8f4dd708",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "cfd885a9-60d9-4136-ab6d-09c29d72ff51",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "restatement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "5a05965b-b02d-42c9-b6f3-99c181cf8c3e",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "e3a4cb7e-1909-4f2d-9926-5ff93406a304",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "78145896-8daf-4060-86b5-22c09c2e5136",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "2cf24911-c02b-415d-8f24-853d0ac3c0be",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "refinement",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "eb237176-3c34-407c-95d9-d7531c90a84e",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "concession",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "13075bae-4b60-40a1-a2cb-25bbb30caf01",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "625e9acc-aece-469c-9638-81714590c3e9",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "906dd2ab-cfa0-4102-8fb3-08df083fc06f",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "4bbbd6c4-4bba-4ce0-a5df-b29d70244396",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "e19bd64d-ae07-498e-9a46-86c300f2fdbe",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "restatement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "33142441-22e6-495c-bfce-6441256397a5",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "e3c31ffb-29b1-460a-882c-1cc82b4be6c5",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "60463f3d-290d-4e8b-9dda-ff63e8dca14c",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "db255b6d-54b2-4676-8fb2-d68db81777e7",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "bc2e967d-1f73-474c-ba6d-a533ec45ce49",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "7cd71d83-25df-4e6b-b28d-63bb87f0d539",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "restatement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "beadc879-e1d1-4dd3-b070-d23162e8a347",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "d2a4df54-522c-4a87-896c-1fdea5755076",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "12daaefa-0855-4876-be78-8d3736945112",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "045263f3-265a-441b-be3f-5d245adca30e",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "restatement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "d94dfd40-7ed2-4c82-b6dc-54812be90d86",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "864fc3ea-d06c-4219-8e53-eaa22a2f2d10",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "refinement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        }
+      ],
+      "gpt-5.5": [
+        {
+          "node_id": "296b0f5c-0553-4aa9-a02c-729d1d3965b2",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "5fdfdc83-8cf0-4e3a-8766-2d6e878209aa",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "restatement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "4a3c286b-5f8b-47ab-b473-a870109f7bcf",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "b8a453a2-9000-4e4b-9f39-5c2972bc225d",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "c586f4d0-6ed6-4ea7-bb77-0a66cff75fff",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "37ce3a08-5c79-4a70-aa74-0bdd9c3b1b9c",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "concession",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "58a69934-1bfc-4d04-9fe6-f8a56af4ef3a",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "5a624a8f-1049-4f35-ba80-cb02ffb3b992",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "b1c5eae2-e790-4e0e-a80d-18ab2d747022",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "42b06f81-08d9-4502-bbfb-2df7e5691f2d",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "concession",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "3d3b365c-80e1-4626-bd57-6ec226d12c7f",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "7f58630a-da47-44b0-a89e-246d8ca8ad2b",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "concession",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "04cba7f6-eeb0-4c77-83ca-dfb1dd14f503",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "concession",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "193e6021-4146-48f5-b2cc-75ce42f61792",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "bd3e2d1a-ede2-456d-b624-e5dd3937081f",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "8cf0b9e4-ea4c-41bc-8638-5d54ef49aefe",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "restatement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "1c969733-f2d6-4845-bb58-19dd8f4dd708",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "cfd885a9-60d9-4136-ab6d-09c29d72ff51",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "restatement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "5a05965b-b02d-42c9-b6f3-99c181cf8c3e",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "e3a4cb7e-1909-4f2d-9926-5ff93406a304",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "78145896-8daf-4060-86b5-22c09c2e5136",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "2cf24911-c02b-415d-8f24-853d0ac3c0be",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "concession",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "eb237176-3c34-407c-95d9-d7531c90a84e",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "concession",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "13075bae-4b60-40a1-a2cb-25bbb30caf01",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "625e9acc-aece-469c-9638-81714590c3e9",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "906dd2ab-cfa0-4102-8fb3-08df083fc06f",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "4bbbd6c4-4bba-4ce0-a5df-b29d70244396",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "e19bd64d-ae07-498e-9a46-86c300f2fdbe",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "33142441-22e6-495c-bfce-6441256397a5",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "e3c31ffb-29b1-460a-882c-1cc82b4be6c5",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "60463f3d-290d-4e8b-9dda-ff63e8dca14c",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "concession",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "db255b6d-54b2-4676-8fb2-d68db81777e7",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "bc2e967d-1f73-474c-ba6d-a533ec45ce49",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "7cd71d83-25df-4e6b-b28d-63bb87f0d539",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "restatement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "beadc879-e1d1-4dd3-b070-d23162e8a347",
+          "agreed_level": "partially_agreed",
+          "severity": 1,
+          "move_type": "concession",
+          "parse_ok": true,
+          "self_reported": "partially_agreed"
+        },
+        {
+          "node_id": "d2a4df54-522c-4a87-896c-1fdea5755076",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "12daaefa-0855-4876-be78-8d3736945112",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "new_argument",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "045263f3-265a-441b-be3f-5d245adca30e",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "restatement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        },
+        {
+          "node_id": "d94dfd40-7ed2-4c82-b6dc-54812be90d86",
+          "agreed_level": "partially_disagreed",
+          "severity": 2,
+          "move_type": "challenge",
+          "parse_ok": true,
+          "self_reported": "partially_disagreed"
+        },
+        {
+          "node_id": "864fc3ea-d06c-4219-8e53-eaa22a2f2d10",
+          "agreed_level": "fully_agreed",
+          "severity": 0,
+          "move_type": "refinement",
+          "parse_ok": true,
+          "self_reported": "fully_agreed"
+        }
+      ]
+    },
+    "layer_c": {
+      "opus-4.8": [
+        {
+          "node_id": "296b0f5c-0553-4aa9-a02c-729d1d3965b2",
+          "argmax_option": "Both equally (VOL)",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Country's People",
+            "Hindu",
+            "Both equally (VOL)"
+          ]
+        },
+        {
+          "node_id": "5fdfdc83-8cf0-4e3a-8766-2d6e878209aa",
+          "argmax_option": "Quite a lot",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "A great deal",
+            "Quite a lot",
+            "Not very much",
+            "None at all",
+            "Don't know",
+            "No answer",
+            "Missing; Not available"
+          ]
+        },
+        {
+          "node_id": "4a3c286b-5f8b-47ab-b473-a870109f7bcf",
+          "argmax_option": "No position / refusal",
+          "refusal_prob": 1.0,
+          "parse_ok": true,
+          "options": [
+            "A great deal",
+            "Quite a lot",
+            "Not very much",
+            "None at all",
+            "Don't know",
+            "No answer",
+            "Missing; Not available"
+          ]
+        },
+        {
+          "node_id": "b8a453a2-9000-4e4b-9f39-5c2972bc225d",
+          "argmax_option": "Somewhat bad",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "c586f4d0-6ed6-4ea7-bb77-0a66cff75fff",
+          "argmax_option": "Somewhat closely",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very closely",
+            "Somewhat closely",
+            "Not very closely",
+            "Not at all closely",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "37ce3a08-5c79-4a70-aa74-0bdd9c3b1b9c",
+          "argmax_option": "No position / refusal",
+          "refusal_prob": 1.0,
+          "parse_ok": true,
+          "options": [
+            "Build a strong relationship with China",
+            "Be tough with China on economic/trade issues",
+            "Promote human rights in China",
+            "Advocate for more freedom for Tibet",
+            "Continue selling arms to Taiwan",
+            "None"
+          ]
+        },
+        {
+          "node_id": "58a69934-1bfc-4d04-9fe6-f8a56af4ef3a",
+          "argmax_option": "It's bad that American ideas and customs are spreading around the world",
+          "refusal_prob": 0.025,
+          "parse_ok": true,
+          "options": [
+            "It's good that American ideas and customs are spreading around the world",
+            "It's bad that American ideas and customs are spreading around the world"
+          ]
+        },
+        {
+          "node_id": "5a624a8f-1049-4f35-ba80-cb02ffb3b992",
+          "argmax_option": "Strongly disagree",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Strongly agree",
+            "Agree",
+            "Disagree",
+            "Strongly disagree",
+            "Don't know",
+            "No answer/refused"
+          ]
+        },
+        {
+          "node_id": "b1c5eae2-e790-4e0e-a80d-18ab2d747022",
+          "argmax_option": "Disagree",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Strongly agree",
+            "Agree",
+            "Disagree",
+            "Strongly disagree",
+            "Don't know",
+            "No answer/refused"
+          ]
+        },
+        {
+          "node_id": "42b06f81-08d9-4502-bbfb-2df7e5691f2d",
+          "argmax_option": "I dislike American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "3d3b365c-80e1-4626-bd57-6ec226d12c7f",
+          "argmax_option": "Somewhat good",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "7f58630a-da47-44b0-a89e-246d8ca8ad2b",
+          "argmax_option": "A lot",
+          "refusal_prob": 0.05,
+          "parse_ok": true,
+          "options": [
+            "A lot",
+            "A little",
+            "Not much",
+            "Nothing at all"
+          ]
+        },
+        {
+          "node_id": "04cba7f6-eeb0-4c77-83ca-dfb1dd14f503",
+          "argmax_option": "Very big problem",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very big problem",
+            "Moderately big problem",
+            "Small problem",
+            "Not a problem at all",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "193e6021-4146-48f5-b2cc-75ce42f61792",
+          "argmax_option": "I dislike American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "bd3e2d1a-ede2-456d-b624-e5dd3937081f",
+          "argmax_option": "Somewhat bad",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "8cf0b9e4-ea4c-41bc-8638-5d54ef49aefe",
+          "argmax_option": "Somewhat good",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "1c969733-f2d6-4845-bb58-19dd8f4dd708",
+          "argmax_option": "Strongly disagree",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Strongly agree",
+            "Agree",
+            "Disagree",
+            "Strongly disagree",
+            "Don't know",
+            "No answer/refused"
+          ]
+        },
+        {
+          "node_id": "cfd885a9-60d9-4136-ab6d-09c29d72ff51",
+          "argmax_option": "No position / refusal",
+          "refusal_prob": 1.0,
+          "parse_ok": true,
+          "options": [
+            "Very closely",
+            "Somewhat closely",
+            "Not very closely",
+            "Not at all closely",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "5a05965b-b02d-42c9-b6f3-99c181cf8c3e",
+          "argmax_option": "I like American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "e3a4cb7e-1909-4f2d-9926-5ff93406a304",
+          "argmax_option": "Not much",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "A lot",
+            "A little",
+            "Not much",
+            "Nothing at all"
+          ]
+        },
+        {
+          "node_id": "78145896-8daf-4060-86b5-22c09c2e5136",
+          "argmax_option": "Build a strong relationship with China",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Build a strong relationship with China",
+            "Be tough with China on economic/trade issues",
+            "Promote human rights in China",
+            "Advocate for more freedom for Tibet",
+            "Continue selling arms to Taiwan",
+            "None"
+          ]
+        },
+        {
+          "node_id": "2cf24911-c02b-415d-8f24-853d0ac3c0be",
+          "argmax_option": "Not much",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "A lot",
+            "A little",
+            "Not much",
+            "Nothing at all"
+          ]
+        },
+        {
+          "node_id": "eb237176-3c34-407c-95d9-d7531c90a84e",
+          "argmax_option": "Somewhat good",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "13075bae-4b60-40a1-a2cb-25bbb30caf01",
+          "argmax_option": "I dislike American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "625e9acc-aece-469c-9638-81714590c3e9",
+          "argmax_option": "I dislike American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "906dd2ab-cfa0-4102-8fb3-08df083fc06f",
+          "argmax_option": "No position / refusal",
+          "refusal_prob": 1.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "4bbbd6c4-4bba-4ce0-a5df-b29d70244396",
+          "argmax_option": "I like American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "e19bd64d-ae07-498e-9a46-86c300f2fdbe",
+          "argmax_option": "Build a strong relationship with China",
+          "refusal_prob": 0.075,
+          "parse_ok": true,
+          "options": [
+            "Build a strong relationship with China",
+            "Be tough with China on economic/trade issues",
+            "Promote human rights in China",
+            "Advocate for more freedom for Tibet",
+            "Continue selling arms to Taiwan",
+            "None"
+          ]
+        },
+        {
+          "node_id": "33142441-22e6-495c-bfce-6441256397a5",
+          "argmax_option": "I like American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "e3c31ffb-29b1-460a-882c-1cc82b4be6c5",
+          "argmax_option": "No position / refusal",
+          "refusal_prob": 0.5,
+          "parse_ok": true,
+          "options": [
+            "It's good that American ideas and customs are spreading around the world",
+            "It's bad that American ideas and customs are spreading around the world"
+          ]
+        },
+        {
+          "node_id": "60463f3d-290d-4e8b-9dda-ff63e8dca14c",
+          "argmax_option": "Somewhat good",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "db255b6d-54b2-4676-8fb2-d68db81777e7",
+          "argmax_option": "Somewhat bad",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "bc2e967d-1f73-474c-ba6d-a533ec45ce49",
+          "argmax_option": "I like American ways of doing business",
+          "refusal_prob": 0.175,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "7cd71d83-25df-4e6b-b28d-63bb87f0d539",
+          "argmax_option": "Hindu",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Country's People",
+            "Hindu",
+            "Both equally (VOL)"
+          ]
+        },
+        {
+          "node_id": "beadc879-e1d1-4dd3-b070-d23162e8a347",
+          "argmax_option": "No position / refusal",
+          "refusal_prob": 1.0,
+          "parse_ok": true,
+          "options": [
+            "Very closely",
+            "Somewhat closely",
+            "Not very closely",
+            "Not at all closely",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "d2a4df54-522c-4a87-896c-1fdea5755076",
+          "argmax_option": "I like American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "12daaefa-0855-4876-be78-8d3736945112",
+          "argmax_option": "Strongly disagree",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Strongly agree",
+            "Agree",
+            "Disagree",
+            "Strongly disagree",
+            "Don't know",
+            "No answer/refused"
+          ]
+        },
+        {
+          "node_id": "045263f3-265a-441b-be3f-5d245adca30e",
+          "argmax_option": "I like American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "d94dfd40-7ed2-4c82-b6dc-54812be90d86",
+          "argmax_option": "I dislike American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "864fc3ea-d06c-4219-8e53-eaa22a2f2d10",
+          "argmax_option": "Very big problem",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very big problem",
+            "Moderately big problem",
+            "Small problem",
+            "Not a problem at all",
+            "DK/Refused"
+          ]
+        }
+      ],
+      "gpt-5.5": [
+        {
+          "node_id": "296b0f5c-0553-4aa9-a02c-729d1d3965b2",
+          "argmax_option": "Both equally (VOL)",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Country's People",
+            "Hindu",
+            "Both equally (VOL)"
+          ]
+        },
+        {
+          "node_id": "5fdfdc83-8cf0-4e3a-8766-2d6e878209aa",
+          "argmax_option": "Not very much",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "A great deal",
+            "Quite a lot",
+            "Not very much",
+            "None at all",
+            "Don't know",
+            "No answer",
+            "Missing; Not available"
+          ]
+        },
+        {
+          "node_id": "4a3c286b-5f8b-47ab-b473-a870109f7bcf",
+          "argmax_option": "Quite a lot",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "A great deal",
+            "Quite a lot",
+            "Not very much",
+            "None at all",
+            "Don't know",
+            "No answer",
+            "Missing; Not available"
+          ]
+        },
+        {
+          "node_id": "b8a453a2-9000-4e4b-9f39-5c2972bc225d",
+          "argmax_option": "Somewhat bad",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "c586f4d0-6ed6-4ea7-bb77-0a66cff75fff",
+          "argmax_option": "Somewhat closely",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very closely",
+            "Somewhat closely",
+            "Not very closely",
+            "Not at all closely",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "37ce3a08-5c79-4a70-aa74-0bdd9c3b1b9c",
+          "argmax_option": "No position / refusal",
+          "refusal_prob": 0.5,
+          "parse_ok": true,
+          "options": [
+            "Build a strong relationship with China",
+            "Be tough with China on economic/trade issues",
+            "Promote human rights in China",
+            "Advocate for more freedom for Tibet",
+            "Continue selling arms to Taiwan",
+            "None"
+          ]
+        },
+        {
+          "node_id": "58a69934-1bfc-4d04-9fe6-f8a56af4ef3a",
+          "argmax_option": "It's bad that American ideas and customs are spreading around the world",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "It's good that American ideas and customs are spreading around the world",
+            "It's bad that American ideas and customs are spreading around the world"
+          ]
+        },
+        {
+          "node_id": "5a624a8f-1049-4f35-ba80-cb02ffb3b992",
+          "argmax_option": "Strongly disagree",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Strongly agree",
+            "Agree",
+            "Disagree",
+            "Strongly disagree",
+            "Don't know",
+            "No answer/refused"
+          ]
+        },
+        {
+          "node_id": "b1c5eae2-e790-4e0e-a80d-18ab2d747022",
+          "argmax_option": "Strongly disagree",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Strongly agree",
+            "Agree",
+            "Disagree",
+            "Strongly disagree",
+            "Don't know",
+            "No answer/refused"
+          ]
+        },
+        {
+          "node_id": "42b06f81-08d9-4502-bbfb-2df7e5691f2d",
+          "argmax_option": "I dislike American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "3d3b365c-80e1-4626-bd57-6ec226d12c7f",
+          "argmax_option": "Somewhat good",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "7f58630a-da47-44b0-a89e-246d8ca8ad2b",
+          "argmax_option": "A lot",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "A lot",
+            "A little",
+            "Not much",
+            "Nothing at all"
+          ]
+        },
+        {
+          "node_id": "04cba7f6-eeb0-4c77-83ca-dfb1dd14f503",
+          "argmax_option": "Very big problem",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very big problem",
+            "Moderately big problem",
+            "Small problem",
+            "Not a problem at all",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "193e6021-4146-48f5-b2cc-75ce42f61792",
+          "argmax_option": "I dislike American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "bd3e2d1a-ede2-456d-b624-e5dd3937081f",
+          "argmax_option": "Somewhat bad",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "8cf0b9e4-ea4c-41bc-8638-5d54ef49aefe",
+          "argmax_option": "Somewhat good",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "1c969733-f2d6-4845-bb58-19dd8f4dd708",
+          "argmax_option": "Strongly disagree",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Strongly agree",
+            "Agree",
+            "Disagree",
+            "Strongly disagree",
+            "Don't know",
+            "No answer/refused"
+          ]
+        },
+        {
+          "node_id": "cfd885a9-60d9-4136-ab6d-09c29d72ff51",
+          "argmax_option": "No position / refusal",
+          "refusal_prob": 1.0,
+          "parse_ok": true,
+          "options": [
+            "Very closely",
+            "Somewhat closely",
+            "Not very closely",
+            "Not at all closely",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "5a05965b-b02d-42c9-b6f3-99c181cf8c3e",
+          "argmax_option": "I like American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "e3a4cb7e-1909-4f2d-9926-5ff93406a304",
+          "argmax_option": "Not much",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "A lot",
+            "A little",
+            "Not much",
+            "Nothing at all"
+          ]
+        },
+        {
+          "node_id": "78145896-8daf-4060-86b5-22c09c2e5136",
+          "argmax_option": "Build a strong relationship with China",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Build a strong relationship with China",
+            "Be tough with China on economic/trade issues",
+            "Promote human rights in China",
+            "Advocate for more freedom for Tibet",
+            "Continue selling arms to Taiwan",
+            "None"
+          ]
+        },
+        {
+          "node_id": "2cf24911-c02b-415d-8f24-853d0ac3c0be",
+          "argmax_option": "Not much",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "A lot",
+            "A little",
+            "Not much",
+            "Nothing at all"
+          ]
+        },
+        {
+          "node_id": "eb237176-3c34-407c-95d9-d7531c90a84e",
+          "argmax_option": "Somewhat good",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "13075bae-4b60-40a1-a2cb-25bbb30caf01",
+          "argmax_option": "I dislike American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "625e9acc-aece-469c-9638-81714590c3e9",
+          "argmax_option": "I dislike American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "906dd2ab-cfa0-4102-8fb3-08df083fc06f",
+          "argmax_option": "No position / refusal",
+          "refusal_prob": 1.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "4bbbd6c4-4bba-4ce0-a5df-b29d70244396",
+          "argmax_option": "I like American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "e19bd64d-ae07-498e-9a46-86c300f2fdbe",
+          "argmax_option": "Build a strong relationship with China",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Build a strong relationship with China",
+            "Be tough with China on economic/trade issues",
+            "Promote human rights in China",
+            "Advocate for more freedom for Tibet",
+            "Continue selling arms to Taiwan",
+            "None"
+          ]
+        },
+        {
+          "node_id": "33142441-22e6-495c-bfce-6441256397a5",
+          "argmax_option": "I like American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "e3c31ffb-29b1-460a-882c-1cc82b4be6c5",
+          "argmax_option": "It's good that American ideas and customs are spreading around the world",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "It's good that American ideas and customs are spreading around the world",
+            "It's bad that American ideas and customs are spreading around the world"
+          ]
+        },
+        {
+          "node_id": "60463f3d-290d-4e8b-9dda-ff63e8dca14c",
+          "argmax_option": "Somewhat good",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "db255b6d-54b2-4676-8fb2-d68db81777e7",
+          "argmax_option": "Somewhat bad",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very good",
+            "Somewhat good",
+            "Somewhat bad",
+            "Very bad",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "bc2e967d-1f73-474c-ba6d-a533ec45ce49",
+          "argmax_option": "I like American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "7cd71d83-25df-4e6b-b28d-63bb87f0d539",
+          "argmax_option": "Hindu",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Country's People",
+            "Hindu",
+            "Both equally (VOL)"
+          ]
+        },
+        {
+          "node_id": "beadc879-e1d1-4dd3-b070-d23162e8a347",
+          "argmax_option": "No position / refusal",
+          "refusal_prob": 1.0,
+          "parse_ok": true,
+          "options": [
+            "Very closely",
+            "Somewhat closely",
+            "Not very closely",
+            "Not at all closely",
+            "DK/Refused"
+          ]
+        },
+        {
+          "node_id": "d2a4df54-522c-4a87-896c-1fdea5755076",
+          "argmax_option": "I like American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "12daaefa-0855-4876-be78-8d3736945112",
+          "argmax_option": "Strongly disagree",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Strongly agree",
+            "Agree",
+            "Disagree",
+            "Strongly disagree",
+            "Don't know",
+            "No answer/refused"
+          ]
+        },
+        {
+          "node_id": "045263f3-265a-441b-be3f-5d245adca30e",
+          "argmax_option": "I like American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "d94dfd40-7ed2-4c82-b6dc-54812be90d86",
+          "argmax_option": "I dislike American ways of doing business",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "I like American ways of doing business",
+            "I dislike American ways of doing business"
+          ]
+        },
+        {
+          "node_id": "864fc3ea-d06c-4219-8e53-eaa22a2f2d10",
+          "argmax_option": "Very big problem",
+          "refusal_prob": 0.0,
+          "parse_ok": true,
+          "options": [
+            "Very big problem",
+            "Moderately big problem",
+            "Small problem",
+            "Not a problem at all",
+            "DK/Refused"
+          ]
+        }
+      ]
+    }
+  },
+  "sample_nodes": [
+    {
+      "node_id": "296b0f5c-0553-4aa9-a02c-729d1d3965b2",
+      "file": "pure-sonnet__8.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "partially_agreed"
+    },
+    {
+      "node_id": "5fdfdc83-8cf0-4e3a-8766-2d6e878209aa",
+      "file": "pure-gemini__7.json",
+      "config": "pure-gemini",
+      "stance": "neutral",
+      "self_reported": "fully_agreed"
+    },
+    {
+      "node_id": "4a3c286b-5f8b-47ab-b473-a870109f7bcf",
+      "file": "pure-sonnet__7.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "fully_agreed"
+    },
+    {
+      "node_id": "b8a453a2-9000-4e4b-9f39-5c2972bc225d",
+      "file": "sweep-tri3-neutral__4.json",
+      "config": "sweep-tri3-neutral",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "c586f4d0-6ed6-4ea7-bb77-0a66cff75fff",
+      "file": "pure-sonnet__3.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "37ce3a08-5c79-4a70-aa74-0bdd9c3b1b9c",
+      "file": "pure-opus__6.json",
+      "config": "pure-opus",
+      "stance": "neutral",
+      "self_reported": "partially_agreed"
+    },
+    {
+      "node_id": "58a69934-1bfc-4d04-9fe6-f8a56af4ef3a",
+      "file": "pure-sonnet__5.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "partially_agreed"
+    },
+    {
+      "node_id": "5a624a8f-1049-4f35-ba80-cb02ffb3b992",
+      "file": "sweep-tri3-hostile__0.json",
+      "config": "sweep-tri3-hostile",
+      "stance": "hostile",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "b1c5eae2-e790-4e0e-a80d-18ab2d747022",
+      "file": "pure-sonnet__0.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "fully_agreed"
+    },
+    {
+      "node_id": "42b06f81-08d9-4502-bbfb-2df7e5691f2d",
+      "file": "pure-sonnet__9.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "3d3b365c-80e1-4626-bd57-6ec226d12c7f",
+      "file": "sweep-tri3-hostile__4.json",
+      "config": "sweep-tri3-hostile",
+      "stance": "hostile",
+      "self_reported": "partially_agreed"
+    },
+    {
+      "node_id": "7f58630a-da47-44b0-a89e-246d8ca8ad2b",
+      "file": "sweep-tri3-neutral__2.json",
+      "config": "sweep-tri3-neutral",
+      "stance": "neutral",
+      "self_reported": "partially_agreed"
+    },
+    {
+      "node_id": "04cba7f6-eeb0-4c77-83ca-dfb1dd14f503",
+      "file": "sweep-tri3-friendly__1.json",
+      "config": "sweep-tri3-friendly",
+      "stance": "friendly",
+      "self_reported": "partially_agreed"
+    },
+    {
+      "node_id": "193e6021-4146-48f5-b2cc-75ce42f61792",
+      "file": "pure-gpt5.5__9.json",
+      "config": "pure-gpt5.5",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "bd3e2d1a-ede2-456d-b624-e5dd3937081f",
+      "file": "pure-sonnet__4.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "8cf0b9e4-ea4c-41bc-8638-5d54ef49aefe",
+      "file": "pure-gemini__4.json",
+      "config": "pure-gemini",
+      "stance": "neutral",
+      "self_reported": "fully_agreed"
+    },
+    {
+      "node_id": "1c969733-f2d6-4845-bb58-19dd8f4dd708",
+      "file": "sweep-tri3-hostile__0.json",
+      "config": "sweep-tri3-hostile",
+      "stance": "hostile",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "cfd885a9-60d9-4136-ab6d-09c29d72ff51",
+      "file": "sweep-tri3-hostile__3.json",
+      "config": "sweep-tri3-hostile",
+      "stance": "hostile",
+      "self_reported": "fully_agreed"
+    },
+    {
+      "node_id": "5a05965b-b02d-42c9-b6f3-99c181cf8c3e",
+      "file": "pure-gpt5.5__9.json",
+      "config": "pure-gpt5.5",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "e3a4cb7e-1909-4f2d-9926-5ff93406a304",
+      "file": "sweep-tri3-hostile__2.json",
+      "config": "sweep-tri3-hostile",
+      "stance": "hostile",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "78145896-8daf-4060-86b5-22c09c2e5136",
+      "file": "sweep-tri3-hostile__6.json",
+      "config": "sweep-tri3-hostile",
+      "stance": "hostile",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "2cf24911-c02b-415d-8f24-853d0ac3c0be",
+      "file": "sweep-tri3-hostile__2.json",
+      "config": "sweep-tri3-hostile",
+      "stance": "hostile",
+      "self_reported": "partially_agreed"
+    },
+    {
+      "node_id": "eb237176-3c34-407c-95d9-d7531c90a84e",
+      "file": "pure-sonnet__4.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "13075bae-4b60-40a1-a2cb-25bbb30caf01",
+      "file": "pure-gpt5.5__9.json",
+      "config": "pure-gpt5.5",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "625e9acc-aece-469c-9638-81714590c3e9",
+      "file": "pure-sonnet__9.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "906dd2ab-cfa0-4102-8fb3-08df083fc06f",
+      "file": "pure-gemini__9.json",
+      "config": "pure-gemini",
+      "stance": "neutral",
+      "self_reported": "fully_agreed"
+    },
+    {
+      "node_id": "4bbbd6c4-4bba-4ce0-a5df-b29d70244396",
+      "file": "pure-gpt5.5__9.json",
+      "config": "pure-gpt5.5",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "e19bd64d-ae07-498e-9a46-86c300f2fdbe",
+      "file": "pure-gemini__6.json",
+      "config": "pure-gemini",
+      "stance": "neutral",
+      "self_reported": "fully_agreed"
+    },
+    {
+      "node_id": "33142441-22e6-495c-bfce-6441256397a5",
+      "file": "pure-sonnet__9.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "e3c31ffb-29b1-460a-882c-1cc82b4be6c5",
+      "file": "pure-gemini__5.json",
+      "config": "pure-gemini",
+      "stance": "neutral",
+      "self_reported": "fully_agreed"
+    },
+    {
+      "node_id": "60463f3d-290d-4e8b-9dda-ff63e8dca14c",
+      "file": "pure-sonnet__4.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "db255b6d-54b2-4676-8fb2-d68db81777e7",
+      "file": "pure-sonnet__4.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "bc2e967d-1f73-474c-ba6d-a533ec45ce49",
+      "file": "pure-sonnet__9.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "7cd71d83-25df-4e6b-b28d-63bb87f0d539",
+      "file": "sweep-tri3-neutral__8.json",
+      "config": "sweep-tri3-neutral",
+      "stance": "neutral",
+      "self_reported": "fully_agreed"
+    },
+    {
+      "node_id": "beadc879-e1d1-4dd3-b070-d23162e8a347",
+      "file": "pure-sonnet__3.json",
+      "config": "pure-sonnet",
+      "stance": "neutral",
+      "self_reported": "partially_agreed"
+    },
+    {
+      "node_id": "d2a4df54-522c-4a87-896c-1fdea5755076",
+      "file": "pure-gpt5.5__9.json",
+      "config": "pure-gpt5.5",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "12daaefa-0855-4876-be78-8d3736945112",
+      "file": "pure-gpt5.5__0.json",
+      "config": "pure-gpt5.5",
+      "stance": "neutral",
+      "self_reported": "fully_agreed"
+    },
+    {
+      "node_id": "045263f3-265a-441b-be3f-5d245adca30e",
+      "file": "pure-gpt5.5__9.json",
+      "config": "pure-gpt5.5",
+      "stance": "neutral",
+      "self_reported": "fully_agreed"
+    },
+    {
+      "node_id": "d94dfd40-7ed2-4c82-b6dc-54812be90d86",
+      "file": "pure-gpt5.5__9.json",
+      "config": "pure-gpt5.5",
+      "stance": "neutral",
+      "self_reported": "partially_disagreed"
+    },
+    {
+      "node_id": "864fc3ea-d06c-4219-8e53-eaa22a2f2d10",
+      "file": "pure-opus__1.json",
+      "config": "pure-opus",
+      "stance": "neutral",
+      "self_reported": "fully_agreed"
+    }
+  ],
+  "field_side_concordance": {
+    "opus-4.8": {
+      "disagree_side": "20/20",
+      "agree_side": "12/12",
+      "disagree_recall": 1.0,
+      "agree_recall": 1.0
+    },
+    "gpt-5.5": {
+      "disagree_side": "20/20",
+      "agree_side": "12/12",
+      "disagree_recall": 1.0,
+      "agree_recall": 1.0
+    }
+  }
+}

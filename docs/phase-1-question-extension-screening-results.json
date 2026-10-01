@@ -1,0 +1,2150 @@
+{
+  "purpose": "question_screening_evidence_not_debate_results",
+  "plan_file": "docs/phase-1-question-extension-screening-plan.json",
+  "plan_sha256": "4fb6250b83aae6e11f9f4b9ee9cf1165ab08cd48508f07b0c1bcd3dd43956c6a",
+  "journal_file": "runs/question-bank-extension-20260925/screen.sqlite3",
+  "journal_sha256": "4c6c01ad4714a74cc7e15939af10f8e50df4a1084012c41315cb6f14f0b4285c",
+  "selection_rule": "Continue random.Random(0).shuffle of original CSV rows from candidate order index 72; stop at first 20 with passed context review and >=2/3 debatable_opinion votes. Process in that fixed order.",
+  "last_candidate_order_index": 108,
+  "candidate_prefix_size": 37,
+  "context_rejected_count": 15,
+  "context_rejected": [
+    {
+      "candidate_order_index": 72,
+      "dataset_row_zero_based": 840,
+      "question": "Compared with 20 years ago, do you think the financial situation of average people in your country is better, worse, or do you think there has been no change?",
+      "options": [
+        "Better",
+        "Worse",
+        "No change",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 76,
+      "dataset_row_zero_based": 1592,
+      "question": "Would you favor or oppose further talks between your country and (India/Pakistan) to try to reduce tensions between the two countries?",
+      "options": [
+        "Favor",
+        "Oppose"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 77,
+      "dataset_row_zero_based": 959,
+      "question": "Thinking about your country's future, how important is it that: a. anyone can openly criticize the government? Is it very important, somewhat important, not too important or not important at all?",
+      "options": [
+        "Very important",
+        "Somewhat important",
+        "Not too important",
+        "Not important at all"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 79,
+      "dataset_row_zero_based": 1062,
+      "question": "Have the changes that have taken place in your country since 1991 had a very good influence, a good influence, a bad influence or a very bad influence on the following: The standard of living?",
+      "options": [
+        "Very good influence",
+        "Good influence",
+        "Bad influence",
+        "Very bad influence",
+        "No influence (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 80,
+      "dataset_row_zero_based": 1102,
+      "question": "Which statement comes closer to your own views, even if neither is exactly right? Most people can succeed if they are willing to work hard OR Hard work is no guarantee of success for most people.",
+      "options": [
+        "Most people can succeed if they are willing to work hard",
+        "Hard work is no guarantee of success for most people",
+        "Neither/Both equally (VOL)",
+        "If (survey country) had cooperated more with other countries, the number of coronavirus cases would have been lower in this country",
+        "Many of the problems facing our country can be solved by working with other countries",
+        "No amount of cooperation between (survey country) and other countries would have reduced the number of coronavirus cases in this country",
+        "Few of the problems facing our country can be solved by working with other countries",
+        "DK/Refused",
+        "When dealing with major international issues, our country should take into account the interests of other countries, even if it means making compromises with them",
+        "When dealing with major international issues, our country should follow its own interests, even when other countries strongly disagree"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "this country"
+          },
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "survey country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 82,
+      "dataset_row_zero_based": 1188,
+      "question": "Does Statement #1 or Statement #2 comes closer to your own views: c. refugees will increase the likelihood of terrorism in our country OR refugees will not increase the likelihood of terrorism in our country",
+      "options": [
+        "Statement 1",
+        "Statement 2",
+        "Neither/Both equally (VOL)",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 86,
+      "dataset_row_zero_based": 2380,
+      "question": "How frequently do the following things occur in your neighborhood?\n\nRacist behavior",
+      "options": [
+        "Very Frequently",
+        "Quite frequently",
+        "Not frequently",
+        "Not at all frequently",
+        "Don't know",
+        "No answer",
+        "Missing; Not available"
+      ],
+      "survey_source": "WVS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_respondent_location",
+            "evidence": "your neighborhood"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 87,
+      "dataset_row_zero_based": 2230,
+      "question": "In the city or area where you live, are you satisfied or dissatisfied with the quality of the following?\n\nThe quality of air",
+      "options": [
+        "Very satisfied",
+        "Fairly satisfied",
+        "Fairly Dissatisfied",
+        "Very dissatisfied",
+        "Don't know",
+        "No answer"
+      ],
+      "survey_source": "WVS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_respondent_location",
+            "evidence": "where you live"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 90,
+      "dataset_row_zero_based": 906,
+      "question": "Thinking about your country's future, how important is it that: b. honest elections are held regularly with a choice of at least two political parties? Is it very important, somewhat important, not too important or not important at all?",
+      "options": [
+        "Very important",
+        "Somewhat important",
+        "Not too important",
+        "Not important at all"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 91,
+      "dataset_row_zero_based": 2108,
+      "question": "(In your opinion, is Islam playing a greater or lesser role in politics in this country compared to a few years ago?) Is this good or bad for our country?",
+      "options": [
+        "Good",
+        "Bad",
+        "Neither (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "this country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 94,
+      "dataset_row_zero_based": 1021,
+      "question": "And thinking about some political leaders and organizations in our country, please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable or very unfavorable opinion of ____? d. The Taliban",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 104,
+      "dataset_row_zero_based": 1917,
+      "question": "Overall, how much influence do you think Saudi Arabia is having on the way things are going in your country? Would you say it is having a great deal of influence, a fair amount, not too much, or no influence at all? (Ask if 'A great deal' or 'A fair amount':) Is this a good thing, a bad thing, or neither good nor bad?",
+      "options": [
+        "Good",
+        "Bad",
+        "Neither"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 105,
+      "dataset_row_zero_based": 386,
+      "question": "In general, what kind of influence has the increasing use of the Internet in our country had on each of the following things. Has the increasing use of the Internet had a good influence, a bad influence, or no influence at all?...morality ",
+      "options": [
+        "Good influence",
+        "Bad influence",
+        "No influence"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 106,
+      "dataset_row_zero_based": 1857,
+      "question": "How much influence do you think China is having on the way things are going in our country? Would you say it is having a great deal of influence, a fair amount, not too much, or no influence at all?",
+      "options": [
+        "Great deal",
+        "Fair amount",
+        "Not too much",
+        "No influence at all"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 107,
+      "dataset_row_zero_based": 1581,
+      "question": "Now I am going to read you a list of things that may be problems in our country.  As I read each one, please tell me if you think it is a very big problem, a moderately big problem, a small problem or not a problem at all...Social inequality",
+      "options": [
+        "Very big problem",
+        "Moderately big problem",
+        "Small problem",
+        "Not a problem at all"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    }
+  ],
+  "screened_count": 22,
+  "accepted_count": 20,
+  "accepted_candidate_order_indices": [
+    73,
+    74,
+    75,
+    78,
+    81,
+    83,
+    85,
+    88,
+    89,
+    92,
+    93,
+    95,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    108
+  ],
+  "total_calls": 66,
+  "estimated_cost_usd": 0.32831287500000006,
+  "cost_note": "Dated estimates at $0.07/DBU using Databricks published standard rates; 10% regional uplift included, Gemini promotional discount/cache discounts not assumed. Not invoice figures.",
+  "price_source": "https://www.databricks.com/product/pricing/proprietary-foundation-model-serving",
+  "screening_judges": [
+    "gpt-5.5",
+    "opus-4.8",
+    "gemini-3.5-flash"
+  ],
+  "per_candidate": [
+    {
+      "candidate_order_index": 73,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 73,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "1f0769fdea97b2b174127974726b182934624e5af31af75325aad06d8411e616",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an evaluation of political responsibility for a complex geopolitical situation, which is a matter of intense debate rather than a report of personal behavior or identity."
+          },
+          "usage": {
+            "completion_tokens": 60,
+            "prompt_tokens": 640,
+            "reasoning_tokens": 60,
+            "total_tokens": 760
+          },
+          "estimated_cost_usd": 0.002805
+        },
+        {
+          "candidate_order_index": 73,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "1f0769fdea97b2b174127974726b182934624e5af31af75325aad06d8411e616",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJ681hGmYmmdYa2l4YvkEhNC0Ci",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for a judgment about responsibility for an external political situation, which reasonable people could argue about with evidence and reasoning."
+          },
+          "usage": {
+            "completion_tokens": 40,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 626,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 666
+          },
+          "estimated_cost_usd": 0.004763
+        },
+        {
+          "candidate_order_index": 73,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "14fc6f104e29d8202fbf8cd97317588c1cbe034725fb5e37ffd7e55d958f75fa",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_xfpf6o5yy4bckstxxarfzzjcwrbao2t6nd7emx2bdc5chc4i7u5q",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for a judgment about who bears responsibility for an external political situation, which reasonable people could argue opposing sides of."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 62,
+            "prompt_tokens": 961,
+            "total_tokens": 1023
+          },
+          "estimated_cost_usd": 0.006990500000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 74,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 74,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "c80763c716e825fe03823edbcad9ae1f4091eaaa37c08bd73deaf2ea22a38a74",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an evaluation of the importance of international relations between Pakistan and India, which is a matter of opinion that can be debated."
+          },
+          "usage": {
+            "completion_tokens": 56,
+            "prompt_tokens": 632,
+            "reasoning_tokens": 58,
+            "total_tokens": 746
+          },
+          "estimated_cost_usd": 0.00271425
+        },
+        {
+          "candidate_order_index": 74,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "c80763c716e825fe03823edbcad9ae1f4091eaaa37c08bd73deaf2ea22a38a74",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJTXZoyqxrF12wBjYpZA0DdHRXr",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative judgment about the importance of improving relations between two countries, which can be argued with reasons."
+          },
+          "usage": {
+            "completion_tokens": 63,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 17,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 617,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 680
+          },
+          "estimated_cost_usd": 0.0054725
+        },
+        {
+          "candidate_order_index": 74,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "bec333c15120d91889daf3d4e7b30bba631cc1716590a0df22c27948edaea664",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_jttextmu3pqd3jqoqkds2pw3zxy4sluhwcoofrwg7b2rt3npbndq",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative judgment about the importance of improved relations between two countries, a contestable priority independent of the respondent's personal facts."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 68,
+            "prompt_tokens": 928,
+            "total_tokens": 996
+          },
+          "estimated_cost_usd": 0.006974000000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 75,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 75,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "768c9afed83a57043f78efccbe772dd90da573c8ac98e0a5f9f761cfbd517e6e",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks respondents to agree or disagree with an evaluative statement about whether life has improved for most people, which is a contestable claim about society."
+          },
+          "usage": {
+            "completion_tokens": 59,
+            "prompt_tokens": 641,
+            "reasoning_tokens": 71,
+            "total_tokens": 771
+          },
+          "estimated_cost_usd": 0.0029308125000000003
+        },
+        {
+          "candidate_order_index": 75,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "768c9afed83a57043f78efccbe772dd90da573c8ac98e0a5f9f761cfbd517e6e",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJWeDz0pQpYiv5dgtoZXaEF3mZv",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for agreement with a contestable claim about society and living standards, which can be argued with evidence and reasoning."
+          },
+          "usage": {
+            "completion_tokens": 65,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 19,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 627,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 692
+          },
+          "estimated_cost_usd": 0.0055935
+        },
+        {
+          "candidate_order_index": 75,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "646ac51457c1ae7195d64d3c34297e6944e4ee5930906942e6c2a9655c10b8f0",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_wicpt5xpd3ixaa6bfecu3z46uivc22puyyeiso4lxptfoc3curjq",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for agreement with a contestable claim about whether most people have a better life now, an external proposition debaters could argue for or against."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 63,
+            "prompt_tokens": 955,
+            "total_tokens": 1018
+          },
+          "estimated_cost_usd": 0.006985000000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 78,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 78,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "8bc0427924fcd6038e995548a01a38038ba83a0aa2094250ca2f39cdddb3d09c",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an evaluation of the geopolitical motivations behind a U.S. foreign policy, which is a contestable claim that can be argued with evidence."
+          },
+          "usage": {
+            "completion_tokens": 60,
+            "prompt_tokens": 624,
+            "reasoning_tokens": 58,
+            "total_tokens": 742
+          },
+          "estimated_cost_usd": 0.00274725
+        },
+        {
+          "candidate_order_index": 78,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "8bc0427924fcd6038e995548a01a38038ba83a0aa2094250ca2f39cdddb3d09c",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJZGCSww1P7QH765whEz1hIHLNO",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks respondents to assess an external claim about U.S. motives, which can be argued for or against with evidence."
+          },
+          "usage": {
+            "completion_tokens": 72,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 26,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 609,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 681
+          },
+          "estimated_cost_usd": 0.0057255000000000006
+        },
+        {
+          "candidate_order_index": 78,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "7a0b902e24287af024b59e0ff43a98c0fa7e77330e3992d398c011e3097961dc",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_usenxppxwb23zjrmi52qcbu7vjddfco3hbho3dayongodzmu5rwa",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluation of whether controlling Mideast oil is a genuine motive for US policy, a contestable claim about the world."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 66,
+            "prompt_tokens": 918,
+            "total_tokens": 984
+          },
+          "estimated_cost_usd": 0.006864000000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 81,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 81,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "d22c31f05cd7726597266c33d1ea011bd2298f686892e2900a6caedd2389554e",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks the respondent to evaluate the importance of a specific U.S. foreign policy goal, which is a contestable priority that can be argued from multiple viewpoints."
+          },
+          "usage": {
+            "completion_tokens": 62,
+            "prompt_tokens": 658,
+            "reasoning_tokens": 59,
+            "total_tokens": 779
+          },
+          "estimated_cost_usd": 0.0028545000000000003
+        },
+        {
+          "candidate_order_index": 81,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "d22c31f05cd7726597266c33d1ea011bd2298f686892e2900a6caedd2389554e",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJeIVJPxTjuk92ubGdZ4C0yiz1q",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative judgment about the importance of a U.S. policy priority toward China, which reasonable people could debate."
+          },
+          "usage": {
+            "completion_tokens": 42,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 643,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 685
+          },
+          "estimated_cost_usd": 0.0049225
+        },
+        {
+          "candidate_order_index": 81,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "40f477934e70ab1f51092eb69663d1c84d0e176a40227b03e1da913a91869554",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_epdoh4dbxojwhsgookgme6iwgvvfykewxt4ernz2jdnoqdsukaiq",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluation of how important a specific U.S. foreign policy priority is, which reasonable people could argue for and against."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 64,
+            "prompt_tokens": 962,
+            "total_tokens": 1026
+          },
+          "estimated_cost_usd": 0.007051000000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 83,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 83,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "065a83af806e288e772051d7666ce2b57c10cc9a5a470e6768548091921d7b9c",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an evaluative opinion about an external entity (Japan), which represents a subjective attitude that can be debated rather than a report of personal behavior or identity."
+          },
+          "usage": {
+            "completion_tokens": 62,
+            "prompt_tokens": 638,
+            "reasoning_tokens": 69,
+            "total_tokens": 769
+          },
+          "estimated_cost_usd": 0.0029370000000000004
+        },
+        {
+          "candidate_order_index": 83,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "065a83af806e288e772051d7666ce2b57c10cc9a5a470e6768548091921d7b9c",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJifTcYauYAbHH4Frsx6J6tFYMr",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative attitude toward an external country, which people could debate with reasons."
+          },
+          "usage": {
+            "completion_tokens": 56,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 15,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 623,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 679
+          },
+          "estimated_cost_usd": 0.0052745
+        },
+        {
+          "candidate_order_index": 83,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "da71c019caf53162a9f3a9bcff3caa8e66aafc9e671d1faf700faed8713175e7",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_qo5yjrhyjouiv3jf3nihtrhjs3bdz2swg2wu3vpsxqiuu2cntz6a",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative opinion about an external object (Japan) that could be defended or contested with reasons."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 57,
+            "prompt_tokens": 969,
+            "total_tokens": 1026
+          },
+          "estimated_cost_usd": 0.006897000000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 84,
+      "opinion_votes": 0,
+      "keep": false,
+      "calls": [
+        {
+          "candidate_order_index": 84,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "c6c5367d0f156da29721f2596e254ea805f84bd0f991d80920499d326adfaa1e",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "personal_report",
+            "reason": "The question asks the respondent to report on a personal past experience regarding their own social media interactions."
+          },
+          "usage": {
+            "completion_tokens": 45,
+            "prompt_tokens": 627,
+            "reasoning_tokens": 76,
+            "total_tokens": 748
+          },
+          "estimated_cost_usd": 0.0027905625
+        },
+        {
+          "candidate_order_index": 84,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "c6c5367d0f156da29721f2596e254ea805f84bd0f991d80920499d326adfaa1e",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJl6W9HMHFuykurtAGcgE57jaDU",
+          "verdict": {
+            "question_class": "personal_report",
+            "reason": "It asks whether the respondent has personally experienced learning about someone’s political beliefs from a social networking post."
+          },
+          "usage": {
+            "completion_tokens": 57,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 18,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 611,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 668
+          },
+          "estimated_cost_usd": 0.0052415
+        },
+        {
+          "candidate_order_index": 84,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "a7ae2a0cbc0181a3100c4ea3838d1fe366480a54ee7af0435d86b193cf7d2da5",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_fwyli4hwwwu74b2tt7x7cornpmopubfynfemmel772sfsyk34xca",
+          "verdict": {
+            "question_class": "personal_report",
+            "reason": "It asks whether the respondent has personally experienced a specific event, which is a fact about themselves."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 50,
+            "prompt_tokens": 921,
+            "total_tokens": 971
+          },
+          "estimated_cost_usd": 0.006440500000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 85,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 85,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "db90eb3b078be79ff8b088204b3c08f493dcb23ad8c8475b42d49280d259277a",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an evaluative judgment regarding a world leader's trustworthiness and ability to handle world affairs, which is a matter of opinion rather than a personal fact."
+          },
+          "usage": {
+            "completion_tokens": 62,
+            "prompt_tokens": 658,
+            "reasoning_tokens": 51,
+            "total_tokens": 771
+          },
+          "estimated_cost_usd": 0.0027555
+        },
+        {
+          "candidate_order_index": 85,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "db90eb3b078be79ff8b088204b3c08f493dcb23ad8c8475b42d49280d259277a",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJniq2ojc6Hiy1FgY3dvciADcGB",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative judgment about an external political leader’s trustworthiness in world affairs, which can be debated with reasons."
+          },
+          "usage": {
+            "completion_tokens": 64,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 16,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 644,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 708
+          },
+          "estimated_cost_usd": 0.005654000000000001
+        },
+        {
+          "candidate_order_index": 85,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "2b30217286453103da686c6a622738c7fd6d03c588c0447088278b273bb73fda",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_xtojqmgrlvorezrbb6agsd5kwtsbct6uzs2bnv3et2yrsz6pzb2a",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative judgment of trust in an external leader's conduct in world affairs, which reasonable people could argue for or against."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 66,
+            "prompt_tokens": 979,
+            "total_tokens": 1045
+          },
+          "estimated_cost_usd": 0.007199500000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 88,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 88,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "604e894798d670b8e0fb8303ca96bda53894fbb50b991548019438a02900b31e",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for the respondent's support or opposition regarding a specific trade policy, which is a debatable topic that can be argued from opposing viewpoints."
+          },
+          "usage": {
+            "completion_tokens": 58,
+            "prompt_tokens": 655,
+            "reasoning_tokens": 52,
+            "total_tokens": 765
+          },
+          "estimated_cost_usd": 0.0027121875
+        },
+        {
+          "candidate_order_index": 88,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "604e894798d670b8e0fb8303ca96bda53894fbb50b991548019438a02900b31e",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJpsQyyod6Riy03eDxCLe8OoHx6",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for support or opposition to a trade policy affecting U.S.-EU investment, which can be debated with reasons."
+          },
+          "usage": {
+            "completion_tokens": 60,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 14,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 640,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 700
+          },
+          "estimated_cost_usd": 0.0055
+        },
+        {
+          "candidate_order_index": 88,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "b220f9dd34d6b8feb91de043bd03941489820ea9ff4831f8b1b78a1aed2f95bd",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_2kjqovc6sgqm32wztkcrcastewefoayku6dmj7h2hw7uneqifwya",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for support or opposition to a policy proposal, an evaluative stance on an external issue that could be argued both ways."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 61,
+            "prompt_tokens": 978,
+            "total_tokens": 1039
+          },
+          "estimated_cost_usd": 0.007056500000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 89,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 89,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "d8b62e529a5fb8721d2c25f5ee1864d527f478062c12004a3f2c518074ff5723",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for a moral evaluation and value judgment on whether suicide can be justified, which is a highly debated ethical topic."
+          },
+          "usage": {
+            "completion_tokens": 53,
+            "prompt_tokens": 672,
+            "reasoning_tokens": 46,
+            "total_tokens": 771
+          },
+          "estimated_cost_usd": 0.002611125
+        },
+        {
+          "candidate_order_index": 89,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "d8b62e529a5fb8721d2c25f5ee1864d527f478062c12004a3f2c518074ff5723",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJsHh2l65NaLgGSBvntLirIv0Zq",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for a moral judgment about whether suicide can be justified, which reasonable people could debate."
+          },
+          "usage": {
+            "completion_tokens": 35,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 657,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 692
+          },
+          "estimated_cost_usd": 0.0047685
+        },
+        {
+          "candidate_order_index": 89,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "18346bf28dae0a99048f87827d765f479fef5f79ee76b62279e82ca4de9f5203",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_4mxspfy33rq367ro2x6d2ixppkhrls7ztxfm5hpyx5pyho5bespa",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for a moral evaluation of whether suicide can be justified, a value judgment about an external issue that can be argued for and against."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 64,
+            "prompt_tokens": 979,
+            "total_tokens": 1043
+          },
+          "estimated_cost_usd": 0.007144500000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 92,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 92,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "cf4a1c81c5dc25b790390f68703555a969c6e9b7185370c83babccb4efcc9fd0",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an evaluation of a political leader's performance on the economy, which is a matter of opinion that can be debated with arguments and evidence."
+          },
+          "usage": {
+            "completion_tokens": 60,
+            "prompt_tokens": 615,
+            "reasoning_tokens": 47,
+            "total_tokens": 722
+          },
+          "estimated_cost_usd": 0.0025925625
+        },
+        {
+          "candidate_order_index": 92,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "cf4a1c81c5dc25b790390f68703555a969c6e9b7185370c83babccb4efcc9fd0",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJuROgtcQHbNPzRf3UWqK6hXdoY",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative judgment about an external political leader's handling of the economy, which reasonable people could argue for or against."
+          },
+          "usage": {
+            "completion_tokens": 43,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 600,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 643
+          },
+          "estimated_cost_usd": 0.004719
+        },
+        {
+          "candidate_order_index": 92,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "11a740560e9de9a3e658357025c8ccff5fa49894f0f705974a1e7581acc3b445",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_2dwbxlom6peqnyvyhhvtkn7i6uh2vpid5dfdiye2qb6jgg76ijpq",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluation of a leader's handling of the economy, which debaters could argue for or against with evidence."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 59,
+            "prompt_tokens": 919,
+            "total_tokens": 978
+          },
+          "estimated_cost_usd": 0.006677000000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 93,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 93,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "fd04fc41a15ff3991d1468e97e72048650e6a266413078dbd677014748924ead",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an evaluation of a political leader's performance regarding foreign relations, which is a matter of opinion that can be debated with reasons."
+          },
+          "usage": {
+            "completion_tokens": 58,
+            "prompt_tokens": 618,
+            "reasoning_tokens": 43,
+            "total_tokens": 719
+          },
+          "estimated_cost_usd": 0.0025245
+        },
+        {
+          "candidate_order_index": 93,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "fd04fc41a15ff3991d1468e97e72048650e6a266413078dbd677014748924ead",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJxApxtmkiMNpm1LyusG3MEGkHp",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative judgment about a political leader's handling of foreign relations, which can be argued for or against with reasons."
+          },
+          "usage": {
+            "completion_tokens": 64,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 15,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 602,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 666
+          },
+          "estimated_cost_usd": 0.005423
+        },
+        {
+          "candidate_order_index": 93,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "ae010ae9f1da9fe82c83d5fbf2f4eff234ff866cf249459474d412d1a94aa4f6",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_spgk4dijql2uzfph65q3uksjitrfog345erjia64io3i6ynydpca",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluation of Modi's handling of relations with Pakistan, a stance about external policy that could be argued for or against."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 65,
+            "prompt_tokens": 924,
+            "total_tokens": 989
+          },
+          "estimated_cost_usd": 0.006869500000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 95,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 95,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "524cea8ba3162d5b8e2cc9aea40b19bd6e239ed6c3c9a4a69c23541c571688bb",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an evaluation of the Mexican government's progress against drug traffickers, which is an external policy issue that reasonable people can debate."
+          },
+          "usage": {
+            "completion_tokens": 56,
+            "prompt_tokens": 643,
+            "reasoning_tokens": 50,
+            "total_tokens": 749
+          },
+          "estimated_cost_usd": 0.0026379375
+        },
+        {
+          "candidate_order_index": 95,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "524cea8ba3162d5b8e2cc9aea40b19bd6e239ed6c3c9a4a69c23541c571688bb",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFJz0AUbcRKC1cbjMfEU9iYWN93O",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative judgment about the Mexican government's campaign against drug traffickers, an external matter that could be argued with evidence."
+          },
+          "usage": {
+            "completion_tokens": 64,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 15,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 629,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 693
+          },
+          "estimated_cost_usd": 0.0055715
+        },
+        {
+          "candidate_order_index": 95,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "0dcd9543e4d8e7bc935ffdaf8928c3a3b3ec76ed64504505a32bd4ddd4adebd2",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_cycteyq2vjmhrbpoaz5epj444sk4ijpjgofct5jsjuux2h2y5kaa",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluation of the Mexican government's external performance against drug traffickers, a claim reasonable people could argue for or against with evidence."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 70,
+            "prompt_tokens": 944,
+            "total_tokens": 1014
+          },
+          "estimated_cost_usd": 0.007117000000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 96,
+      "opinion_votes": 0,
+      "keep": false,
+      "calls": [
+        {
+          "candidate_order_index": 96,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "0cf0e46f02bfce89b64f5dfc097d3de45ba00421e6405a614bcc81f1149709b4",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "personal_report",
+            "reason": "The question asks the respondent to report on their own behavior regarding their social media usage and sharing habits."
+          },
+          "usage": {
+            "completion_tokens": 46,
+            "prompt_tokens": 618,
+            "reasoning_tokens": 60,
+            "total_tokens": 724
+          },
+          "estimated_cost_usd": 0.002586375
+        },
+        {
+          "candidate_order_index": 96,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "0cf0e46f02bfce89b64f5dfc097d3de45ba00421e6405a614bcc81f1149709b4",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFK1JcZ9WE4WMR7SfN4mWTCQnj35",
+          "verdict": {
+            "question_class": "personal_report",
+            "reason": "It asks whether the respondent personally uses social networking sites for a particular behavior."
+          },
+          "usage": {
+            "completion_tokens": 60,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 26,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 603,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 663
+          },
+          "estimated_cost_usd": 0.0052965
+        },
+        {
+          "candidate_order_index": 96,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "251238e5fbeaa42524a666c0ac79ad503564c797aa04276e5ac92119b381d8c6",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_7wr3eg5mn3k3xd2o6z5566ck5mb2h72ig33xbg2qtqdqb257pjha",
+          "verdict": {
+            "question_class": "personal_report",
+            "reason": "It asks whether the respondent personally engages in a specific behavior (using social media to share views about products), a private fact about them."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 57,
+            "prompt_tokens": 914,
+            "total_tokens": 971
+          },
+          "estimated_cost_usd": 0.0065945000000000005
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 97,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 97,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "a6cccd260a58fba68ca0e67a2f83ea7c9fa1df5c79213cdf2364e3b849cefce2",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for the respondent's stance on a controversial foreign policy decision, which is a debatable topic that can be argued with reasons."
+          },
+          "usage": {
+            "completion_tokens": 56,
+            "prompt_tokens": 608,
+            "reasoning_tokens": 50,
+            "total_tokens": 714
+          },
+          "estimated_cost_usd": 0.00256575
+        },
+        {
+          "candidate_order_index": 97,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "a6cccd260a58fba68ca0e67a2f83ea7c9fa1df5c79213cdf2364e3b849cefce2",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFK4HWBthvcAJiZ1rDr5jpKo0XKJ",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for a stance on an external policy issue that reasonable people could argue for or against."
+          },
+          "usage": {
+            "completion_tokens": 35,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 593,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 628
+          },
+          "estimated_cost_usd": 0.0044165
+        },
+        {
+          "candidate_order_index": 97,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "81b18e55b6d06b2ec5e751cd94aa1cf537275ba9d2ad51d256ef486fce5e53b4",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_hibubsmytv7b6elxoplxveokd5olutl644pyplegcky736k2swxa",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for a stance on a contestable policy proposition (Ukraine joining NATO) that could be argued for or against."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 61,
+            "prompt_tokens": 906,
+            "total_tokens": 967
+          },
+          "estimated_cost_usd": 0.006660500000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 98,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 98,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "fca74f772d69dc3f1c13cfdf4fa10f1c7f6a636bab10b8344e40752ca521e1c0",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an evaluation of China's trade policy as fair or unfair, which is a contestable judgment about an external entity."
+          },
+          "usage": {
+            "completion_tokens": 56,
+            "prompt_tokens": 625,
+            "reasoning_tokens": 36,
+            "total_tokens": 717
+          },
+          "estimated_cost_usd": 0.0024275625
+        },
+        {
+          "candidate_order_index": 98,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "fca74f772d69dc3f1c13cfdf4fa10f1c7f6a636bab10b8344e40752ca521e1c0",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFK6yAk9lQ66h0H8tG00qy4FbLjz",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative judgment about China’s trade policy toward the United States, which people could argue for or against with reasons."
+          },
+          "usage": {
+            "completion_tokens": 63,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 14,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 609,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 672
+          },
+          "estimated_cost_usd": 0.0054285
+        },
+        {
+          "candidate_order_index": 98,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "5496261b8a9f2744ffec9e5ac76d7f599d076374854783b5fd5bea9f3cc1f3b8",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_rnzeaok5yrfywgg43yjbwwljj2eu5the3m2mz4jgp5s6d2wqsqoa",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluation of China's trade policy, an external matter one could argue for or against with evidence."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 56,
+            "prompt_tokens": 926,
+            "total_tokens": 982
+          },
+          "estimated_cost_usd": 0.006633000000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 99,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 99,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "ea3313e7d71fb9ab92950e1c8f234b07a72358da5a353989e480ec209046c0b3",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks the respondent to evaluate the severity of an external economic issue, which is a matter of opinion and debate rather than a report of personal behavior or identity."
+          },
+          "usage": {
+            "completion_tokens": 61,
+            "prompt_tokens": 672,
+            "reasoning_tokens": 54,
+            "total_tokens": 787
+          },
+          "estimated_cost_usd": 0.002809125
+        },
+        {
+          "candidate_order_index": 99,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "ea3313e7d71fb9ab92950e1c8f234b07a72358da5a353989e480ec209046c0b3",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFK8lku3IDQieMZeX75NKGzUIoSX",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks respondents to evaluate how serious an external issue—the US trade deficit with China—is, which people could argue about with reasons."
+          },
+          "usage": {
+            "completion_tokens": 42,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 657,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 699
+          },
+          "estimated_cost_usd": 0.0049995
+        },
+        {
+          "candidate_order_index": 99,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "d9cd8b3bf1a1d947c44274f19e8adb1871762a985690ae682d901b1abd326ac0",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_6v72fr43wx7hbikbdpmm2oz26wbj7jj7dy3i3auhmovqcgxrnota",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluation of how serious an external issue (the US-China trade deficit) is, which reasonable people could argue about."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 64,
+            "prompt_tokens": 981,
+            "total_tokens": 1045
+          },
+          "estimated_cost_usd": 0.007155500000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 100,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 100,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "51b93d4b9fff25883276a6b0b05183f44e093fcccd31ff2df12646259e9787e7",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an opinion on a policy decision regarding international sanctions, which is a topic that can be debated with arguments and evidence."
+          },
+          "usage": {
+            "completion_tokens": 55,
+            "prompt_tokens": 629,
+            "reasoning_tokens": 51,
+            "total_tokens": 735
+          },
+          "estimated_cost_usd": 0.0026090625
+        },
+        {
+          "candidate_order_index": 100,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "51b93d4b9fff25883276a6b0b05183f44e093fcccd31ff2df12646259e9787e7",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFKB1QpwMmHtUtSEkVxRKFMZaMBX",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for a contestable policy preference about economic sanctions on Russia, which reasonable people could argue for or against."
+          },
+          "usage": {
+            "completion_tokens": 39,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 615,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 654
+          },
+          "estimated_cost_usd": 0.0046695
+        },
+        {
+          "candidate_order_index": 100,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "c1e7351279b1d123d852379beb60c964f543bfd2a15f480fa8e61e5288721a3e",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_uravbcs3thijaplmrvawrvarblf2ykh6hzv4uknyx4tfqabtxjuq",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for a value judgment on a policy (whether sanctions should change), which reasonable people could argue for and against."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 59,
+            "prompt_tokens": 929,
+            "total_tokens": 988
+          },
+          "estimated_cost_usd": 0.006732000000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 101,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 101,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "33d4c36f3f9f9da3c8ea1d976ee18c644ca2b5b0fefc409394ed3f64890f0b0f",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an evaluation of a political leader's trustworthiness and capability in world affairs, which is a matter of opinion and debate."
+          },
+          "usage": {
+            "completion_tokens": 56,
+            "prompt_tokens": 669,
+            "reasoning_tokens": 53,
+            "total_tokens": 778
+          },
+          "estimated_cost_usd": 0.0027286875
+        },
+        {
+          "candidate_order_index": 101,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "33d4c36f3f9f9da3c8ea1d976ee18c644ca2b5b0fefc409394ed3f64890f0b0f",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFKEQjq8zYtq5UgnLcagsPA4wdCk",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative judgment about an external political leader’s trustworthiness in world affairs."
+          },
+          "usage": {
+            "completion_tokens": 54,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 13,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 653,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 707
+          },
+          "estimated_cost_usd": 0.0053735
+        },
+        {
+          "candidate_order_index": 101,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "07f0b786634c20fcbbf86011a13560874a7e1a01022929070629291ff76b8e28",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_mmqszcoeijj73zjqw66niyu34yijzo3frnwlw42fo5rpcen6vegq",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative judgment of confidence in an external leader, which reasonable people could argue for or against."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 58,
+            "prompt_tokens": 993,
+            "total_tokens": 1051
+          },
+          "estimated_cost_usd": 0.007056500000000001
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 102,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 102,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "12699556f07d8c8cec2bf7746287be86d2ad5fc08d961217410a83eb993f9136",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an evaluation of a political leader's performance on a policy issue, which is a matter of opinion that can be debated with reasons and evidence."
+          },
+          "usage": {
+            "completion_tokens": 61,
+            "prompt_tokens": 627,
+            "reasoning_tokens": 45,
+            "total_tokens": 733
+          },
+          "estimated_cost_usd": 0.0026049375
+        },
+        {
+          "candidate_order_index": 102,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "12699556f07d8c8cec2bf7746287be86d2ad5fc08d961217410a83eb993f9136",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFKHHQ6bCKfCMuKwCZ1DzINhbqIt",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative judgment about how President Pena Nieto is handling relations with the US, which reasonable people could debate."
+          },
+          "usage": {
+            "completion_tokens": 61,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 13,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 613,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 674
+          },
+          "estimated_cost_usd": 0.0053845
+        },
+        {
+          "candidate_order_index": 102,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "0c837a7dcdf87512d89d7b6ea18500b1c93031a16054e6855f466e9f8799d446",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_mdbaidz7auwiat5ex2lyqc7rrzefcnprf3c6ovkze4exksz73keq",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluation of a leader's job performance, which reasonable people could argue for or against."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 54,
+            "prompt_tokens": 929,
+            "total_tokens": 983
+          },
+          "estimated_cost_usd": 0.0065945000000000005
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 103,
+      "opinion_votes": 3,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 103,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "2123407fde0b963f6a7202527af5ac8c865e5faabfb0d43ac6b688d8b7bfba89",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for an evaluative opinion (favorable or unfavorable) about an external group, which represents a value judgment rather than a report of personal behavior or identity."
+          },
+          "usage": {
+            "completion_tokens": 62,
+            "prompt_tokens": 638,
+            "reasoning_tokens": 56,
+            "total_tokens": 756
+          },
+          "estimated_cost_usd": 0.002776125
+        },
+        {
+          "candidate_order_index": 103,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "2123407fde0b963f6a7202527af5ac8c865e5faabfb0d43ac6b688d8b7bfba89",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFKJQ6vrzWt9xunzZ12Ng3tYk0WY",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative attitude toward an external group, which reasonable people could debate."
+          },
+          "usage": {
+            "completion_tokens": 54,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 14,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 623,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 677
+          },
+          "estimated_cost_usd": 0.0052085
+        },
+        {
+          "candidate_order_index": 103,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "3eceb257587c883a14ca8b43e465d339dcb2dbb9362afa2c502fb978bd926f78",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_hncpsdywhhugmzyivzblmdxve2tz6nnx6rvfvn63pqrncp2alm6a",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an evaluative attitude toward an external group, which reasonable people could argue for or against."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 54,
+            "prompt_tokens": 967,
+            "total_tokens": 1021
+          },
+          "estimated_cost_usd": 0.0068035000000000005
+        }
+      ]
+    },
+    {
+      "candidate_order_index": 108,
+      "opinion_votes": 2,
+      "keep": true,
+      "calls": [
+        {
+          "candidate_order_index": 108,
+          "model": "gemini-3.5-flash",
+          "endpoint": "databricks-gemini-3-5-flash",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "8c82dd2a60df7a78fb22cbde0bd26dd79e82413d21ce04e44eb9b6e9be93c6b7",
+          "response_model": "gemini-3.5-flash",
+          "response_id": null,
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "The question asks for the respondent's attitude and preference regarding having a specific external group as neighbors, which reflects a value judgment."
+          },
+          "usage": {
+            "completion_tokens": 54,
+            "prompt_tokens": 639,
+            "reasoning_tokens": 205,
+            "total_tokens": 898
+          },
+          "estimated_cost_usd": 0.0045230625
+        },
+        {
+          "candidate_order_index": 108,
+          "model": "gpt-5.5",
+          "endpoint": "databricks-gpt-5-5",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "8c82dd2a60df7a78fb22cbde0bd26dd79e82413d21ce04e44eb9b6e9be93c6b7",
+          "response_model": "gpt-5.5-2026-04-23",
+          "response_id": "chatcmpl-ESFKLZjGKyCwxdHZdZgVr0cOmneax",
+          "verdict": {
+            "question_class": "debatable_opinion",
+            "reason": "It asks for an attitude or preference toward an external group as neighbors, which can be contested as a value judgment."
+          },
+          "usage": {
+            "completion_tokens": 84,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 39,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens": 622,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 706
+          },
+          "estimated_cost_usd": 0.006193000000000001
+        },
+        {
+          "candidate_order_index": 108,
+          "model": "opus-4.8",
+          "endpoint": "databricks-claude-opus-4-8",
+          "status": "completed",
+          "http_status": 200,
+          "request_sha256": "1bd95506c2b5b927fe63aa99ffb0560999060f7e0f33a8760651cb135f4eae09",
+          "response_model": "global.anthropic.claude-opus-4-8",
+          "response_id": "msg_bdrk_6suvpdiitc2lv2gpwiczjjh5rugbsmmucujfqxkmqvhpv6nrjfxa",
+          "verdict": {
+            "question_class": "personal_report",
+            "reason": "It asks respondents to report their own personal preference about who they would not want as neighbors, a private fact about themselves rather than a contestable external proposition."
+          },
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "completion_tokens": 66,
+            "prompt_tokens": 938,
+            "total_tokens": 1004
+          },
+          "estimated_cost_usd": 0.006974000000000001
+        }
+      ]
+    }
+  ]
+}

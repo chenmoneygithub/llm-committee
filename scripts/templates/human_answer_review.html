@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Blind answer review</title>
+<style>
+:root{color-scheme:light;--ink:#22392f;--muted:#64736b;--line:#d4dfd8;--accent:#216748;--paper:#fffefb}
+*{box-sizing:border-box}body{margin:0;background:#f1f4ef;color:var(--ink);font:16px/1.6 system-ui,sans-serif}main{max-width:1220px;margin:auto;padding:26px 28px 50px}h1{font-size:30px;line-height:1.15;margin:0 0 12px}h2{font-size:20px;margin:0 0 10px}.eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);font-weight:700}.muted{color:var(--muted);font-size:14px}.toolbar,.navigation,.choices{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.toolbar{justify-content:space-between;margin:18px 0}.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}button,.file-label{background:#fff;border:1px solid #b9cbbf;border-radius:7px;padding:9px 13px;color:var(--ink);font:inherit;font-size:14px;cursor:pointer}button:hover,.file-label:hover{border-color:var(--accent);background:#edf4ef}button:disabled{opacity:.4;cursor:default}button.primary{background:var(--accent);color:white}input[type=text],textarea,select{border:1px solid #b9cbbf;border-radius:6px;padding:9px;font:inherit;color:var(--ink);background:#fff}input[type=text]{width:155px}input[type=radio]{accent-color:var(--accent)}.instructions{background:#e6eee5;border-radius:9px;padding:15px 19px;margin:20px 0}.instructions p{margin:6px 0}.question{padding:20px 24px;background:white;border:1px solid var(--line);border-radius:9px;margin:18px 0}.question p{margin:0;white-space:pre-wrap}.question ol{margin-bottom:0;color:var(--muted)}.answers{display:grid;grid-template-columns:1fr 1fr;gap:20px}.answer{background:var(--paper);padding:23px;border:1px solid var(--line);border-top:4px solid #96ab99;border-radius:9px}.answer h2{font-size:18px}.answer p{white-space:pre-wrap;margin:0;font-family:Georgia,serif;font-size:18px;line-height:1.7;overflow-wrap:anywhere}.rating{margin-top:22px;border:1px solid var(--line);border-radius:9px;background:white;padding:20px 24px}.choice{display:flex;gap:9px;align-items:center;padding:10px 13px;border:1px solid var(--line);border-radius:7px;cursor:pointer}.choice:has(input:checked){background:#e3f0e7;border-color:var(--accent)}.notes{display:block;margin-top:14px}textarea{width:100%;min-height:82px;resize:vertical}.navigation{justify-content:space-between;margin-top:18px}progress{width:180px;height:10px;accent-color:var(--accent)}#status{min-height:24px;margin:10px 0;font-size:14px}#status.error{color:#9a321a}:focus-visible{outline:3px solid #72a888;outline-offset:3px}.footer{font-size:13px;color:var(--muted);margin-top:20px}@media(max-width:720px){main{padding:20px 14px}.answers{grid-template-columns:1fr}.answer p{font-size:17px}.toolbar{align-items:flex-start}.navigation{gap:15px}.question,.rating{padding:18px}}
+.language-bar{display:flex;align-items:center;justify-content:space-between;gap:12px}.language-tabs{display:flex;gap:0}.language-tabs button{border-radius:0}.language-tabs button:first-child{border-radius:7px 0 0 7px}.language-tabs button:last-child{border-radius:0 7px 7px 0}.language-tabs button[aria-pressed=true]{background:var(--accent);color:white}.translation-note{border-left:3px solid #a6bda8;padding:8px 12px;background:#edf3e9;font-size:14px}html[lang=zh-CN] .answer p{font-family:"Songti SC","Noto Serif CJK SC","STSong",serif;line-height:1.95}html[lang=zh-CN] h1{line-height:1.4}
+</style>
+</head>
+<body><main>
+<div class="language-bar"><div class="eyebrow" data-i18n="eyebrow">Independent human review</div><div class="language-tabs" role="group" aria-label="Language / 语言"><button id="lang-en" type="button" aria-pressed="true">EN</button><button id="lang-zh" type="button" aria-pressed="false">中文</button></div></div>
+<h1 data-i18n="title">Which answer is better?</h1>
+<p class="muted" data-i18n="intro">Compare two answers to the same question. Answer origins are intentionally hidden.</p>
+<p id="translationNote" class="translation-note" data-i18n="translationNote" hidden></p>
+<div class="instructions"><p data-i18n="criteria">Prefer the answer that addresses the question more directly, gives better-supported and coherent reasons, and handles relevant qualifications without unsupported claims.</p><p data-i18n="instructions">Judge the quality of the answer—not whether you personally agree with its opinion. Do not reward length or style by itself. Choose About equal when there is no meaningful quality difference, or Cannot judge when you cannot assess the pair.</p></div>
+<div class="toolbar"><div class="tools"><label for="annotator" data-i18n="reviewer">Reviewer ID</label><input id="annotator" type="text" value="anonymous" maxlength="80" autocomplete="off"><button id="switchReviewer" data-i18n="useId">Use this ID</button></div><div class="tools"><button id="export" data-i18n="export">Export responses</button><label class="file-label" for="import" data-i18n="import">Import saved responses</label><input id="import" type="file" accept="application/json,.json" hidden></div></div>
+<div class="toolbar"><strong id="counter"></strong><div class="tools"><span id="progressText"></span><progress id="progress" max="20" value="0"></progress><label for="jump" data-i18n="goTo">Go to</label><select id="jump"></select></div></div>
+<section class="question"><h2 data-i18n="question">Question</h2><p id="question"></p><ol id="options" type="A"></ol></section>
+<div class="answers"><article class="answer"><h2 data-i18n="answerA">Answer A</h2><p id="answerA"></p></article><article class="answer"><h2 data-i18n="answerB">Answer B</h2><p id="answerB"></p></article></div>
+<section class="rating" aria-labelledby="ratingHeading"><h2 id="ratingHeading" data-i18n="assessment">Your assessment</h2><div class="choices">
+<label class="choice"><input type="radio" name="preference" value="A"><span data-i18n="betterA">A is better</span></label><label class="choice"><input type="radio" name="preference" value="B"><span data-i18n="betterB">B is better</span></label><label class="choice"><input type="radio" name="preference" value="tie"><span data-i18n="tie">About equal</span></label><label class="choice"><input type="radio" name="preference" value="unjudgeable"><span data-i18n="unjudgeable">Cannot judge</span></label>
+</div><label class="notes" for="notes" data-i18n="notes">Brief reason or supporting quote (optional)</label><textarea id="notes" placeholder="What made one answer better, or why are they comparable?"></textarea><button id="clear" data-i18n="clear">Clear this assessment</button></section>
+<div class="navigation"><button id="previous" data-i18n="previous">← Previous</button><button id="unanswered" data-i18n="unanswered">Next unreviewed</button><button id="next" class="primary" data-i18n="next">Next →</button></div>
+<p id="status" role="status" aria-live="polite"></p>
+<p class="footer" data-i18n="footer">Responses are saved in this browser when local storage is available; nothing is uploaded. Export a JSON backup before closing or moving this file. You may skip items and return later. Keyboard: 1–4 select a rating; N/P move between pairs (outside text fields).</p>
+<noscript>This local review tool requires JavaScript. No network connection is needed.</noscript>
+</main>
+<script type="application/json" id="blind-data">__BLIND_DATA__</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('blind-data').textContent);
+const byId=id=>document.getElementById(id);
+const preferences=new Set(['A','B','tie','unjudgeable']);
+const TEXT={
+ en:{eyebrow:'Independent human review',title:'Which answer is better?',intro:'Compare two answers to the same question. Answer origins are intentionally hidden.',translationNote:'Chinese is a machine-translated reading aid; English is the original. Switch to EN to check nuances. Both languages share the same assessment. Exports record the language displayed when you select a rating.',criteria:'Prefer the answer that addresses the question more directly, gives better-supported and coherent reasons, and handles relevant qualifications without unsupported claims.',instructions:'Judge the quality of the answer—not whether you personally agree with its opinion. Do not reward length or style by itself. Choose About equal when there is no meaningful quality difference, or Cannot judge when you cannot assess the pair.',reviewer:'Reviewer ID',useId:'Use this ID',export:'Export responses',import:'Import saved responses',goTo:'Go to',question:'Question',answerA:'Answer A',answerB:'Answer B',assessment:'Your assessment',betterA:'A is better',betterB:'B is better',tie:'About equal',unjudgeable:'Cannot judge',notes:'Brief reason or supporting quote (optional)',notesHint:'What made one answer better, or why are they comparable?',clear:'Clear this assessment',previous:'← Previous',next:'Next →',unanswered:'Next unreviewed',footer:'Responses are saved in this browser when local storage is available; nothing is uploaded. Export a JSON backup before closing or moving this file. You may skip items and return later. Keyboard: 1–4 select a rating; N/P move between pairs (outside text fields).',saved:'Saved in this browser. Export a backup when you finish.',storageError:'Browser storage is unavailable. Export responses now to preserve your work.',ready:'Ready. No responses are uploaded.',loadError:'Could not load browser storage. You can import a previously exported file.',wrongDataset:'This file belongs to a different review set.',invalidResponses:'Invalid or duplicate response in import.',invalidReviewer:'Please enter a valid reviewer ID.',largeImport:'Import file is too large.',confirmImport:'Import this saved session? This replaces the current view with the imported reviewer and responses. Export any unsaved work first.',importError:'Could not import this file.',exported:'Responses exported. Keep the JSON file for backup and submission.',allReviewed:'All pairs reviewed. Please export your responses.'},
+ zh:{eyebrow:'独立人工评审',title:'哪份回答更好？',intro:'比较同一问题的两份回答。答案来源已隐藏。',translationNote:'中文为机器翻译辅助阅读，英文为原文。遇到措辞或含义不确定时可切回 EN 核对。两种语言共用一份评分；导出时会记录选择评分时显示的语言。',criteria:'请选择更直接回应问题、理由更有依据且逻辑连贯、能妥善处理相关限定条件而不作无依据断言的回答。',instructions:'请评价回答的质量，而不是你是否赞同其立场。不要仅因篇幅更长或文风更好就给予优势。若质量没有实质差异，选“实质相当”；若无法评估这对回答，选“无法判断”。',reviewer:'评审者 ID',useId:'使用此 ID',export:'导出标注',import:'导入已有标注',goTo:'跳转',question:'问题',answerA:'回答 A',answerB:'回答 B',assessment:'你的评价',betterA:'A 更好',betterB:'B 更好',tie:'实质相当',unjudgeable:'无法判断',notes:'简短理由或支持性原文（可选）',notesHint:'哪份回答更好，具体好在哪里？或为什么两者相当？',clear:'清除此项评价',previous:'← 上一题',next:'下一题 →',unanswered:'下一道未评题',footer:'若浏览器允许，本页会在本地自动保存，不上传任何数据。关闭或移动文件前请导出 JSON 备份。可以跳过题目，之后再回来。快捷键：1–4 选择评分；N/P 切换题目（在文本输入框外生效）。',saved:'已在此浏览器中保存。完成后请导出备份。',storageError:'浏览器不允许本地存储，请立即导出以保留标注。',ready:'已就绪。不会上传任何标注。',loadError:'无法读取浏览器中的记录。可导入此前导出的文件。',wrongDataset:'该文件属于另一套评审题目。',invalidResponses:'导入文件中存在无效或重复的标注。',invalidReviewer:'请输入有效的评审者 ID。',largeImport:'导入文件过大。',confirmImport:'导入这份记录吗？当前页面将切换到导入的评审者和标注。请先导出当前未备份的工作。',importError:'无法导入该文件。',exported:'标注已导出。请保留 JSON 文件，用于备份和提交。',allReviewed:'所有题目均已评完，请导出标注。'}
+};
+const hasChinese=Array.isArray(DATA.translations?.zh)&&DATA.translations.zh.length===DATA.items.length;
+const translated=new Map((DATA.translations?.zh||[]).map(item=>[item.id,item]));
+const languageKey=`blind-review-language:${DATA.dataset_id}`;
+let language=hasChinese?'zh':'en';
+try{const saved=localStorage.getItem(languageKey);if(saved==='en'||saved==='zh'&&hasChinese)language=saved;}catch(e){}
+let index=0, reviewer='anonymous', responses={}, viewed={}, statusKey='ready', statusError=false;
+const activeReviewerKey=`blind-review-active:${DATA.dataset_id}`;
+try{const name=localStorage.getItem(activeReviewerKey);if(name&&name.length<=80){reviewer=name;byId('annotator').value=name;}}catch(e){}
+const storageKey=()=>`blind-review:${DATA.dataset_id}:${reviewer}`;
+const message=key=>TEXT[language][key]||key;
+function status(key,error=false){statusKey=key;statusError=error;byId('status').textContent=message(key);byId('status').classList.toggle('error',error);}
+function validate(payload){
+ if(payload.version!==DATA.version||payload.dataset_id!==DATA.dataset_id||!Array.isArray(payload.responses))throw Error('wrongDataset');
+ const allowed=new Set(DATA.items.map(x=>x.id)), seen=new Set();
+ const normalized=[];
+ for(const r of payload.responses){
+  if(!r||!allowed.has(r.item_id)||seen.has(r.item_id)||!(r.preference===null||preferences.has(r.preference))||typeof r.notes!=='string'||r.notes.length>20000||typeof r.updated_at!=='string')throw Error('invalidResponses');
+  const lang=r.rating_language===undefined?(r.preference===null?null:'en'):r.rating_language;
+  const translationId=r.rating_translation_id??null;
+  const editLang=r.last_edit_language??'en';
+  const views=r.viewed_languages_at_rating??(lang?[lang]:[]);
+  if((r.preference===null?lang!==null:!['en','zh'].includes(lang))||!['en','zh'].includes(editLang)||!Array.isArray(views)||views.some(x=>!['en','zh'].includes(x))||new Set(views).size!==views.length||(lang&&!views.includes(lang))||(lang==='zh'?(typeof translationId!=='string'||!translationId):translationId!==null))throw Error('invalidResponses');
+  normalized.push([r.item_id,{item_id:r.item_id,preference:r.preference,notes:r.notes,updated_at:r.updated_at,rating_language:lang,rating_translation_id:translationId,last_edit_language:editLang,viewed_languages_at_rating:views}]);seen.add(r.item_id);
+ }
+ return Object.fromEntries(normalized);
+}
+function exportPayload(){return {version:DATA.version,annotation_format:'bilingual-v1',dataset_id:DATA.dataset_id,reviewer_id:reviewer,display_language:language,translation_ids:DATA.translation_ids||{},exported_at:new Date().toISOString(),responses:DATA.items.filter(x=>responses[x.id]).map(x=>responses[x.id])};}
+function persist(){try{localStorage.setItem(storageKey(),JSON.stringify(exportPayload()));localStorage.setItem(activeReviewerKey,reviewer);status('saved');}catch(e){status('storageError',true);}}
+function load(){responses={};viewed={};try{const saved=localStorage.getItem(storageKey());if(saved)responses=validate(JSON.parse(saved));status('ready');}catch(e){status('loadError',true);}render();}
+function refreshProgress(){const n=DATA.items.filter(x=>preferences.has(responses[x.id]?.preference)).length;byId('progressText').textContent=language==='zh'?`已评 ${n} / ${DATA.items.length} 题`:`${n} / ${DATA.items.length} reviewed`;byId('progress').max=DATA.items.length;byId('progress').value=n;for(const [i,o] of [...byId('jump').options].entries())o.textContent=`${i+1}${preferences.has(responses[DATA.items[i].id]?.preference)?' ✓':''}`;}
+function render(){
+ document.documentElement.lang=language==='zh'?'zh-CN':'en';document.title=language==='zh'?'匿名答案评审':'Blind answer review';
+ for(const node of document.querySelectorAll('[data-i18n]'))node.textContent=message(node.dataset.i18n);
+ byId('notes').placeholder=message('notesHint');byId('translationNote').hidden=!hasChinese;
+ byId('lang-en').setAttribute('aria-pressed',String(language==='en'));byId('lang-zh').setAttribute('aria-pressed',String(language==='zh'));byId('lang-zh').disabled=!hasChinese;
+ const original=DATA.items[index],item=language==='zh'?translated.get(original.id):original,r=responses[original.id];
+ viewed[original.id]??=new Set(r?.viewed_languages_at_rating||[]);viewed[original.id].add(language);
+ byId('counter').textContent=language==='zh'?`第 ${index+1} / ${DATA.items.length} 题`:`Pair ${index+1} of ${DATA.items.length}`;
+ byId('question').textContent=item.question;byId('options').replaceChildren(...item.options.map(t=>{const el=document.createElement('li');el.textContent=t;return el;}));
+ byId('answerA').textContent=item.answers.A;byId('answerB').textContent=item.answers.B;
+ for(const radio of document.querySelectorAll('[name=preference]'))radio.checked=radio.value===r?.preference;
+ byId('notes').value=r?.notes||'';byId('previous').disabled=index===0;byId('next').disabled=index===DATA.items.length-1;byId('jump').value=String(index);refreshProgress();status(statusKey,statusError);
+}
+function save(reason){
+ const item=DATA.items[index],old=responses[item.id],preference=document.querySelector('[name=preference]:checked')?.value||null;
+ const ratingLanguage=preference?(reason==='rating'?language:(old?.rating_language||'en')):null;
+ responses[item.id]={item_id:item.id,preference,notes:byId('notes').value,updated_at:new Date().toISOString(),rating_language:ratingLanguage,rating_translation_id:ratingLanguage==='zh'?(reason==='rating'?DATA.translation_ids.zh:old.rating_translation_id):null,last_edit_language:language,viewed_languages_at_rating:preference?(reason==='rating'?[...viewed[item.id]]:(old?.viewed_languages_at_rating||[ratingLanguage])):[]};persist();refreshProgress();
+}
+function switchLanguage(next){if(next==='zh'&&!hasChinese)return;language=next;try{localStorage.setItem(languageKey,language);}catch(e){}render();}
+function move(next){index=Math.max(0,Math.min(DATA.items.length-1,next));render();window.scrollTo({top:0,behavior:'instant'});}
+for(let i=0;i<DATA.items.length;i++){const o=document.createElement('option');o.value=String(i);o.textContent=String(i+1);byId('jump').append(o);}
+for(const radio of document.querySelectorAll('[name=preference]'))radio.addEventListener('change',()=>save('rating'));
+byId('notes').addEventListener('input',()=>save('notes'));
+byId('lang-en').onclick=()=>switchLanguage('en');byId('lang-zh').onclick=()=>switchLanguage('zh');
+byId('previous').onclick=()=>move(index-1);byId('next').onclick=()=>move(index+1);
+byId('jump').onchange=()=>move(Number(byId('jump').value));
+byId('unanswered').onclick=()=>{for(let step=1;step<=DATA.items.length;step++){const next=(index+step)%DATA.items.length;if(!preferences.has(responses[DATA.items[next].id]?.preference)){move(next);return;}}status('allReviewed');};
+byId('clear').onclick=()=>{delete responses[DATA.items[index].id];persist();render();};
+byId('switchReviewer').onclick=()=>{const name=byId('annotator').value.trim();if(!name){status('invalidReviewer',true);return;}reviewer=name;index=0;load();try{localStorage.setItem(activeReviewerKey,reviewer);}catch(e){}};
+byId('export').onclick=()=>{const blob=new Blob([JSON.stringify(exportPayload(),null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`answer-review-${reviewer.replace(/[^a-zA-Z0-9_-]/g,'_')}-${DATA.dataset_id.slice(0,8)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status('exported');};
+byId('import').onchange=async()=>{const file=byId('import').files[0];if(!file)return;try{if(file.size>2000000)throw Error('largeImport');const payload=JSON.parse(await file.text());const imported=validate(payload);if(typeof payload.reviewer_id!=='string'||!payload.reviewer_id.trim()||payload.reviewer_id.length>80)throw Error('invalidReviewer');if(!window.confirm(message('confirmImport')))return;reviewer=payload.reviewer_id;byId('annotator').value=reviewer;responses=imported;viewed={};index=0;persist();render();}catch(e){status(TEXT.en[e.message]?e.message:'importError',true);}finally{byId('import').value='';}};
+document.addEventListener('keydown',event=>{if(event.ctrlKey||event.metaKey||event.altKey||['INPUT','TEXTAREA','SELECT','BUTTON'].includes(event.target.tagName))return;const key=event.key.toLowerCase();if(['1','2','3','4'].includes(key)){document.querySelectorAll('[name=preference]')[Number(key)-1].click();event.preventDefault();}else if(key==='n'){move(index+1);}else if(key==='p'){move(index-1);}});
+load();
+</script></body></html>

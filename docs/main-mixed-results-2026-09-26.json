@@ -1,0 +1,1418 @@
+{
+  "schema": "mixed_results_summary_v1",
+  "source_directory": "/Users/Chen/Documents/research/llm-committee/runs/main-mixed-60-20260926/live-transport-retry",
+  "completed_at_utc": "2026-09-26T21:24:01.027539+00:00",
+  "counts": {
+    "questions": 60,
+    "debates": 180,
+    "formal_replies": 3513,
+    "sampled_events": 480,
+    "C_readings": 818,
+    "C_judgments": 673,
+    "B_judgments": 480,
+    "D_choice_readings": 540,
+    "D_text_pairs": 316,
+    "E_judgments": 360
+  },
+  "planned_counts": {
+    "questions": 60,
+    "debates": 180,
+    "initial_answers": 180,
+    "formal_replies": 3513,
+    "sampled_events": 480,
+    "C_readings": 818,
+    "B_judgments": 480,
+    "C_judgments": 673,
+    "syntheses": 240,
+    "E_judgments": 360,
+    "D_choice_readings": 540,
+    "D_text_pairs": 316,
+    "D_calls": 632,
+    "D_choice_supplemental_scoring_allowance": 0,
+    "D_text_supplemental_scoring_allowance": 0,
+    "logical_calls": 6896,
+    "logical_calls_with_scoring_allowance": 6896
+  },
+  "trajectories": {
+    "planned": 1080,
+    "success": 1080,
+    "failed": 0,
+    "blocked": 0,
+    "pending": 0
+  },
+  "config": {
+    "cache": false,
+    "chairman_effort": "medium",
+    "chairman_model": "gpt-5.6-terra",
+    "chairman_tokens": 4096,
+    "closed_provider": "databricks",
+    "databricks_profile": "un",
+    "debate_effort": "medium",
+    "debate_tokens": 4096,
+    "initial_tokens": 4096,
+    "judge_model": "gemini-3.8-flash",
+    "judge_tokens": 2048,
+    "position_tokens": 1200,
+    "probability_tokens": 128,
+    "roster": "mixed_family",
+    "seed": 20260925
+  },
+  "request_retries": {
+    "additional_attempts": 50,
+    "recovered_logical_requests": 49,
+    "exhausted_logical_requests": 0
+  },
+  "transport_retries": {
+    "additional_attempts": 17,
+    "recovered_logical_requests": 17,
+    "exhausted_logical_requests": 0
+  },
+  "format_retries": {
+    "additional_attempts": 33,
+    "recovered_logical_requests": 32,
+    "exhausted_logical_requests": 0
+  },
+  "charged_or_reserved_usd": 67.95510000300001,
+  "final_backfill_usd": 0.12330134000000001,
+  "unselectable_readings": 7,
+  "A": [
+    {
+      "scope": "First replies (T = 1)",
+      "tone": "friendly",
+      "n": 120,
+      "counts": {
+        "fully_agreed": 72,
+        "partially_agreed": 37,
+        "partially_disagreed": 11,
+        "fully_disagreed": 0
+      },
+      "other": 0
+    },
+    {
+      "scope": "First replies (T = 1)",
+      "tone": "neutral",
+      "n": 120,
+      "counts": {
+        "fully_agreed": 66,
+        "partially_agreed": 23,
+        "partially_disagreed": 29,
+        "fully_disagreed": 2
+      },
+      "other": 0
+    },
+    {
+      "scope": "First replies (T = 1)",
+      "tone": "hostile",
+      "n": 120,
+      "counts": {
+        "fully_agreed": 9,
+        "partially_agreed": 67,
+        "partially_disagreed": 43,
+        "fully_disagreed": 1
+      },
+      "other": 0
+    },
+    {
+      "scope": "All five depths",
+      "tone": "friendly",
+      "n": 1171,
+      "counts": {
+        "fully_agreed": 845,
+        "partially_agreed": 276,
+        "partially_disagreed": 50,
+        "fully_disagreed": 0
+      },
+      "other": 0
+    },
+    {
+      "scope": "All five depths",
+      "tone": "neutral",
+      "n": 1171,
+      "counts": {
+        "fully_agreed": 734,
+        "partially_agreed": 208,
+        "partially_disagreed": 225,
+        "fully_disagreed": 4
+      },
+      "other": 0
+    },
+    {
+      "scope": "All five depths",
+      "tone": "hostile",
+      "n": 1171,
+      "counts": {
+        "fully_agreed": 83,
+        "partially_agreed": 712,
+        "partially_disagreed": 368,
+        "fully_disagreed": 8
+      },
+      "other": 0
+    }
+  ],
+  "A_by_model": [
+    {
+      "model": "GPT-5.6 Terra",
+      "tone": "friendly",
+      "n": 391,
+      "counts": {
+        "fully_agreed": 268,
+        "partially_agreed": 101,
+        "partially_disagreed": 22,
+        "fully_disagreed": 0
+      },
+      "other": 0
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "tone": "neutral",
+      "n": 391,
+      "counts": {
+        "fully_agreed": 220,
+        "partially_agreed": 73,
+        "partially_disagreed": 98,
+        "fully_disagreed": 0
+      },
+      "other": 0
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "tone": "hostile",
+      "n": 391,
+      "counts": {
+        "fully_agreed": 48,
+        "partially_agreed": 206,
+        "partially_disagreed": 134,
+        "fully_disagreed": 3
+      },
+      "other": 0
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "tone": "friendly",
+      "n": 381,
+      "counts": {
+        "fully_agreed": 276,
+        "partially_agreed": 91,
+        "partially_disagreed": 14,
+        "fully_disagreed": 0
+      },
+      "other": 0
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "tone": "neutral",
+      "n": 381,
+      "counts": {
+        "fully_agreed": 249,
+        "partially_agreed": 71,
+        "partially_disagreed": 61,
+        "fully_disagreed": 0
+      },
+      "other": 0
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "tone": "hostile",
+      "n": 381,
+      "counts": {
+        "fully_agreed": 12,
+        "partially_agreed": 262,
+        "partially_disagreed": 107,
+        "fully_disagreed": 0
+      },
+      "other": 0
+    },
+    {
+      "model": "Inkling",
+      "tone": "friendly",
+      "n": 399,
+      "counts": {
+        "fully_agreed": 301,
+        "partially_agreed": 84,
+        "partially_disagreed": 14,
+        "fully_disagreed": 0
+      },
+      "other": 0
+    },
+    {
+      "model": "Inkling",
+      "tone": "neutral",
+      "n": 399,
+      "counts": {
+        "fully_agreed": 265,
+        "partially_agreed": 64,
+        "partially_disagreed": 66,
+        "fully_disagreed": 4
+      },
+      "other": 0
+    },
+    {
+      "model": "Inkling",
+      "tone": "hostile",
+      "n": 399,
+      "counts": {
+        "fully_agreed": 23,
+        "partially_agreed": 244,
+        "partially_disagreed": 127,
+        "fully_disagreed": 5
+      },
+      "other": 0
+    }
+  ],
+  "A_friendly_minus_hostile_pp": {
+    "n": 60,
+    "questions": 60,
+    "mean": 65.30372584047372,
+    "ci": [
+      58.1132894875035,
+      71.95888343595304
+    ]
+  },
+  "B": [
+    {
+      "group": "All sampled replies",
+      "n": 480,
+      "counts": {
+        "fully_agreed": 225,
+        "partially_agreed": 124,
+        "partially_disagreed": 118,
+        "fully_disagreed": 13,
+        "no_position": 0,
+        "unjudgeable": 0
+      },
+      "other": 0
+    },
+    {
+      "group": "GPT-5.6 Terra",
+      "n": 164,
+      "counts": {
+        "fully_agreed": 63,
+        "partially_agreed": 57,
+        "partially_disagreed": 40,
+        "fully_disagreed": 4,
+        "no_position": 0,
+        "unjudgeable": 0
+      },
+      "other": 0
+    },
+    {
+      "group": "Qwen3.8-27B",
+      "n": 155,
+      "counts": {
+        "fully_agreed": 81,
+        "partially_agreed": 38,
+        "partially_disagreed": 34,
+        "fully_disagreed": 2,
+        "no_position": 0,
+        "unjudgeable": 0
+      },
+      "other": 0
+    },
+    {
+      "group": "Inkling",
+      "n": 161,
+      "counts": {
+        "fully_agreed": 81,
+        "partially_agreed": 29,
+        "partially_disagreed": 44,
+        "fully_disagreed": 7,
+        "no_position": 0,
+        "unjudgeable": 0
+      },
+      "other": 0
+    }
+  ],
+  "B_by_tone": [
+    {
+      "group": "Friendly",
+      "n": 153,
+      "counts": {
+        "fully_agreed": 105,
+        "partially_agreed": 20,
+        "partially_disagreed": 27,
+        "fully_disagreed": 1,
+        "no_position": 0,
+        "unjudgeable": 0
+      },
+      "other": 0
+    },
+    {
+      "group": "Neutral",
+      "n": 161,
+      "counts": {
+        "fully_agreed": 105,
+        "partially_agreed": 16,
+        "partially_disagreed": 38,
+        "fully_disagreed": 2,
+        "no_position": 0,
+        "unjudgeable": 0
+      },
+      "other": 0
+    },
+    {
+      "group": "Hostile",
+      "n": 166,
+      "counts": {
+        "fully_agreed": 15,
+        "partially_agreed": 88,
+        "partially_disagreed": 53,
+        "fully_disagreed": 10,
+        "no_position": 0,
+        "unjudgeable": 0
+      },
+      "other": 0
+    }
+  ],
+  "AB": {
+    "n": 480,
+    "counts": {
+      "same": 383,
+      "more_disagreeing": 74,
+      "less_disagreeing": 23
+    },
+    "matrix": [
+      [
+        207,
+        15,
+        0,
+        0
+      ],
+      [
+        18,
+        104,
+        48,
+        1
+      ],
+      [
+        0,
+        5,
+        70,
+        10
+      ],
+      [
+        0,
+        0,
+        0,
+        2
+      ]
+    ]
+  },
+  "C": [
+    {
+      "group": "Previous own position → current",
+      "questions": 60,
+      "choice": {
+        "n": 480,
+        "valid": 475,
+        "changed": 21,
+        "unavailable": 5
+      },
+      "text": {
+        "n": 480,
+        "counts": {
+          "unchanged": 432,
+          "adjusted": 32,
+          "conclusion_changed": 16,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 475,
+        "questions": 60,
+        "mean": 0.04375,
+        "ci": [
+          0.022916666666666665,
+          0.06875
+        ]
+      }
+    },
+    {
+      "group": "Initial → sampled last own position",
+      "questions": 60,
+      "choice": {
+        "n": 345,
+        "valid": 341,
+        "changed": 16,
+        "unavailable": 4
+      },
+      "text": {
+        "n": 345,
+        "counts": {
+          "unchanged": 289,
+          "adjusted": 43,
+          "conclusion_changed": 13,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 341,
+        "questions": 60,
+        "mean": 0.04757936507936508,
+        "ci": [
+          0.022419642857142853,
+          0.07757936507936508
+        ]
+      }
+    }
+  ],
+  "C_by_model": [
+    {
+      "group": "GPT-5.6 Terra",
+      "questions": 57,
+      "choice": {
+        "n": 164,
+        "valid": 164,
+        "changed": 7,
+        "unavailable": 0
+      },
+      "text": {
+        "n": 164,
+        "counts": {
+          "unchanged": 153,
+          "adjusted": 4,
+          "conclusion_changed": 7,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 164,
+        "questions": 57,
+        "mean": 0.039473684210526314,
+        "ci": [
+          0.0043859649122807015,
+          0.08771929824561402
+        ]
+      }
+    },
+    {
+      "group": "Qwen3.8-27B",
+      "questions": 55,
+      "choice": {
+        "n": 155,
+        "valid": 155,
+        "changed": 10,
+        "unavailable": 0
+      },
+      "text": {
+        "n": 155,
+        "counts": {
+          "unchanged": 137,
+          "adjusted": 14,
+          "conclusion_changed": 4,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 155,
+        "questions": 55,
+        "mean": 0.05515151515151515,
+        "ci": [
+          0.01515151515151515,
+          0.10818181818181817
+        ]
+      }
+    },
+    {
+      "group": "Inkling",
+      "questions": 58,
+      "choice": {
+        "n": 161,
+        "valid": 156,
+        "changed": 4,
+        "unavailable": 5
+      },
+      "text": {
+        "n": 161,
+        "counts": {
+          "unchanged": 142,
+          "adjusted": 14,
+          "conclusion_changed": 5,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 156,
+        "questions": 57,
+        "mean": 0.01929824561403509,
+        "ci": [
+          0.0,
+          0.0456140350877193
+        ]
+      }
+    }
+  ],
+  "C_by_self_label": [
+    {
+      "group": "Fully agreed",
+      "questions": 56,
+      "choice": {
+        "n": 222,
+        "valid": 220,
+        "changed": 5,
+        "unavailable": 2
+      },
+      "text": {
+        "n": 222,
+        "counts": {
+          "unchanged": 216,
+          "adjusted": 2,
+          "conclusion_changed": 4,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 220,
+        "questions": 56,
+        "mean": 0.01909013605442177,
+        "ci": [
+          0.0035714285714285718,
+          0.03966836734693878
+        ]
+      }
+    },
+    {
+      "group": "Partially agreed",
+      "questions": 59,
+      "choice": {
+        "n": 171,
+        "valid": 168,
+        "changed": 10,
+        "unavailable": 3
+      },
+      "text": {
+        "n": 171,
+        "counts": {
+          "unchanged": 139,
+          "adjusted": 24,
+          "conclusion_changed": 8,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 168,
+        "questions": 59,
+        "mean": 0.06497175141242938,
+        "ci": [
+          0.022598870056497175,
+          0.11723163841807908
+        ]
+      }
+    },
+    {
+      "group": "Partially disagreed",
+      "questions": 30,
+      "choice": {
+        "n": 85,
+        "valid": 85,
+        "changed": 5,
+        "unavailable": 0
+      },
+      "text": {
+        "n": 85,
+        "counts": {
+          "unchanged": 76,
+          "adjusted": 6,
+          "conclusion_changed": 3,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 85,
+        "questions": 30,
+        "mean": 0.04666666666666666,
+        "ci": [
+          0.006666666666666667,
+          0.10222222222222223
+        ]
+      }
+    },
+    {
+      "group": "Fully disagreed",
+      "questions": 2,
+      "choice": {
+        "n": 2,
+        "valid": 2,
+        "changed": 1,
+        "unavailable": 0
+      },
+      "text": {
+        "n": 2,
+        "counts": {
+          "unchanged": 1,
+          "adjusted": 0,
+          "conclusion_changed": 1,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 2,
+        "questions": 2,
+        "mean": 0.5,
+        "ci": [
+          0.0,
+          1.0
+        ]
+      }
+    }
+  ],
+  "C_by_depth": [
+    {
+      "group": "T = 1",
+      "questions": 60,
+      "choice": {
+        "n": 94,
+        "valid": 92,
+        "changed": 3,
+        "unavailable": 2
+      },
+      "text": {
+        "n": 94,
+        "counts": {
+          "unchanged": 85,
+          "adjusted": 6,
+          "conclusion_changed": 3,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 92,
+        "questions": 58,
+        "mean": 0.022988505747126436,
+        "ci": [
+          0.0,
+          0.0632183908045977
+        ]
+      },
+      "initial_choice": {
+        "n": 94,
+        "valid": 92,
+        "changed": 3,
+        "unavailable": 2
+      }
+    },
+    {
+      "group": "T = 2",
+      "questions": 60,
+      "choice": {
+        "n": 98,
+        "valid": 96,
+        "changed": 5,
+        "unavailable": 2
+      },
+      "text": {
+        "n": 98,
+        "counts": {
+          "unchanged": 86,
+          "adjusted": 8,
+          "conclusion_changed": 4,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 96,
+        "questions": 59,
+        "mean": 0.05649717514124293,
+        "ci": [
+          0.011299435028248588,
+          0.11581920903954802
+        ]
+      },
+      "initial_choice": {
+        "n": 98,
+        "valid": 96,
+        "changed": 5,
+        "unavailable": 2
+      }
+    },
+    {
+      "group": "T = 3",
+      "questions": 60,
+      "choice": {
+        "n": 88,
+        "valid": 87,
+        "changed": 5,
+        "unavailable": 1
+      },
+      "text": {
+        "n": 88,
+        "counts": {
+          "unchanged": 78,
+          "adjusted": 7,
+          "conclusion_changed": 3,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 87,
+        "questions": 59,
+        "mean": 0.059322033898305086,
+        "ci": [
+          0.01694915254237288,
+          0.11864406779661017
+        ]
+      },
+      "initial_choice": {
+        "n": 88,
+        "valid": 87,
+        "changed": 6,
+        "unavailable": 1
+      }
+    },
+    {
+      "group": "T = 4",
+      "questions": 60,
+      "choice": {
+        "n": 91,
+        "valid": 91,
+        "changed": 6,
+        "unavailable": 0
+      },
+      "text": {
+        "n": 91,
+        "counts": {
+          "unchanged": 78,
+          "adjusted": 8,
+          "conclusion_changed": 5,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 91,
+        "questions": 60,
+        "mean": 0.08055555555555555,
+        "ci": [
+          0.02222222222222222,
+          0.15
+        ]
+      },
+      "initial_choice": {
+        "n": 91,
+        "valid": 91,
+        "changed": 6,
+        "unavailable": 0
+      }
+    },
+    {
+      "group": "T = 5",
+      "questions": 60,
+      "choice": {
+        "n": 109,
+        "valid": 109,
+        "changed": 2,
+        "unavailable": 0
+      },
+      "text": {
+        "n": 109,
+        "counts": {
+          "unchanged": 105,
+          "adjusted": 3,
+          "conclusion_changed": 1,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 109,
+        "questions": 60,
+        "mean": 0.013888888888888888,
+        "ci": [
+          0.0,
+          0.03611111111111111
+        ]
+      },
+      "initial_choice": {
+        "n": 109,
+        "valid": 108,
+        "changed": 5,
+        "unavailable": 1
+      }
+    }
+  ],
+  "C_by_participation": [
+    {
+      "group": "Participation 1",
+      "questions": 60,
+      "choice": {
+        "n": 267,
+        "valid": 263,
+        "changed": 12,
+        "unavailable": 4
+      },
+      "text": {
+        "n": 267,
+        "counts": {
+          "unchanged": 233,
+          "adjusted": 26,
+          "conclusion_changed": 8,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 263,
+        "questions": 60,
+        "mean": 0.04111111111111111,
+        "ci": [
+          0.015277777777777777,
+          0.07277777777777779
+        ]
+      }
+    },
+    {
+      "group": "Participation 2",
+      "questions": 60,
+      "choice": {
+        "n": 184,
+        "valid": 183,
+        "changed": 8,
+        "unavailable": 1
+      },
+      "text": {
+        "n": 184,
+        "counts": {
+          "unchanged": 172,
+          "adjusted": 5,
+          "conclusion_changed": 7,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 183,
+        "questions": 60,
+        "mean": 0.046388888888888896,
+        "ci": [
+          0.017777777777777778,
+          0.08083333333333333
+        ]
+      }
+    },
+    {
+      "group": "Participation 3",
+      "questions": 23,
+      "choice": {
+        "n": 29,
+        "valid": 29,
+        "changed": 1,
+        "unavailable": 0
+      },
+      "text": {
+        "n": 29,
+        "counts": {
+          "unchanged": 27,
+          "adjusted": 1,
+          "conclusion_changed": 1,
+          "unjudgeable": 0
+        },
+        "other": 0
+      },
+      "choice_estimate": {
+        "n": 29,
+        "questions": 23,
+        "mean": 0.043478260869565216,
+        "ci": [
+          0.0,
+          0.13043478260869565
+        ]
+      }
+    }
+  ],
+  "C_initial_to_current": {
+    "n": 480,
+    "valid": 474,
+    "changed": 25,
+    "unavailable": 6
+  },
+  "C_final_distinct_pairs": 345,
+  "D": [
+    {
+      "model": "Qwen3.8-27B",
+      "n": 155,
+      "D_choice_adjacent_pp": {
+        "n": 155,
+        "questions": 55,
+        "mean": -1.635656821747333,
+        "ci": [
+          -3.4135250981722174,
+          -0.23106055092122474
+        ]
+      },
+      "D_choice_initial_pp": {
+        "n": 155,
+        "questions": 55,
+        "mean": -2.4510658265450136,
+        "ci": [
+          -5.255776398350124,
+          -0.31224541818897
+        ]
+      },
+      "D_text_delta": {
+        "n": 155,
+        "questions": 55,
+        "mean": -0.15602696530310353,
+        "ci": [
+          -0.20793810381094438,
+          -0.10887050578380511
+        ]
+      },
+      "D_text_argument": {
+        "n": 155,
+        "questions": 55,
+        "mean": 6.6095705289210755,
+        "ci": [
+          6.520167161370842,
+          6.691321580045464
+        ]
+      },
+      "D_text_control": {
+        "n": 155,
+        "questions": 55,
+        "mean": 6.7655974942241786,
+        "ci": [
+          6.709906264115794,
+          6.816016521919287
+        ]
+      },
+      "D_choice_final_pp": {
+        "n": 109,
+        "questions": 51,
+        "mean": -1.2741195876070899,
+        "ci": [
+          -2.9965635145268323,
+          0.054749565250317676
+        ]
+      }
+    },
+    {
+      "model": "Inkling",
+      "n": 161,
+      "D_choice_adjacent_pp": {
+        "n": 157,
+        "questions": 57,
+        "mean": -2.234469961069262,
+        "ci": [
+          -5.724723212600766,
+          0.026877689942925085
+        ]
+      },
+      "D_choice_initial_pp": {
+        "n": 156,
+        "questions": 56,
+        "mean": -3.9971639086751307,
+        "ci": [
+          -8.758691476924628,
+          -0.31048241093569356
+        ]
+      },
+      "D_text_delta": {
+        "n": 161,
+        "questions": 58,
+        "mean": -0.15555119028571895,
+        "ci": [
+          -0.2711794920332159,
+          -0.06640386489506607
+        ]
+      },
+      "D_text_argument": {
+        "n": 161,
+        "questions": 58,
+        "mean": 6.748502771892087,
+        "ci": [
+          6.591540428810878,
+          6.869751184093754
+        ]
+      },
+      "D_text_control": {
+        "n": 161,
+        "questions": 58,
+        "mean": 6.904053962177806,
+        "ci": [
+          6.853865903234086,
+          6.947592484801453
+        ]
+      },
+      "D_choice_final_pp": {
+        "n": 111,
+        "questions": 55,
+        "mean": -3.8999758920513408,
+        "ci": [
+          -8.37328437497119,
+          -0.3530490214085745
+        ]
+      }
+    }
+  ],
+  "D_by_self_label": [
+    {
+      "model": "Qwen3.8-27B",
+      "A": "Fully agreed",
+      "n": 76,
+      "D_choice_adjacent_pp": {
+        "n": 76,
+        "questions": 44,
+        "mean": -0.6944183989232202,
+        "ci": [
+          -3.037306624960129,
+          0.5981968730986865
+        ]
+      },
+      "D_text_delta": {
+        "n": 76,
+        "questions": 44,
+        "mean": 0.00409030227332362,
+        "ci": [
+          -0.01848706170447839,
+          0.027047377603140157
+        ]
+      }
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "A": "Partially agreed",
+      "n": 57,
+      "D_choice_adjacent_pp": {
+        "n": 57,
+        "questions": 36,
+        "mean": -4.530628079637971,
+        "ci": [
+          -10.66401333374322,
+          -0.5759040891662769
+        ]
+      },
+      "D_text_delta": {
+        "n": 57,
+        "questions": 36,
+        "mean": -0.25915355739214446,
+        "ci": [
+          -0.35417758622422085,
+          -0.175643907139429
+        ]
+      }
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "A": "Partially disagreed",
+      "n": 22,
+      "D_choice_adjacent_pp": {
+        "n": 22,
+        "questions": 15,
+        "mean": -2.87216411330892,
+        "ci": [
+          -7.009974702489675,
+          0.021318436025251682
+        ]
+      },
+      "D_text_delta": {
+        "n": 22,
+        "questions": 15,
+        "mean": -0.5120983500493783,
+        "ci": [
+          -0.652986279654339,
+          -0.38662623271555546
+        ]
+      }
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "A": "Fully disagreed",
+      "n": 0,
+      "D_choice_adjacent_pp": {
+        "n": 0,
+        "questions": 0,
+        "mean": null,
+        "ci": null
+      },
+      "D_text_delta": {
+        "n": 0,
+        "questions": 0,
+        "mean": null,
+        "ci": null
+      }
+    },
+    {
+      "model": "Inkling",
+      "A": "Fully agreed",
+      "n": 74,
+      "D_choice_adjacent_pp": {
+        "n": 72,
+        "questions": 42,
+        "mean": -1.5472467672931471,
+        "ci": [
+          -4.8661680726631245,
+          0.6715106235267794
+        ]
+      },
+      "D_text_delta": {
+        "n": 74,
+        "questions": 43,
+        "mean": -0.034241077016581856,
+        "ci": [
+          -0.08951585771952818,
+          -0.000367467443548488
+        ]
+      }
+    },
+    {
+      "model": "Inkling",
+      "A": "Partially agreed",
+      "n": 57,
+      "D_choice_adjacent_pp": {
+        "n": 55,
+        "questions": 38,
+        "mean": -0.9675804340686156,
+        "ci": [
+          -4.5229114366966385,
+          1.840420049243372
+        ]
+      },
+      "D_text_delta": {
+        "n": 57,
+        "questions": 40,
+        "mean": -0.23777258521373934,
+        "ci": [
+          -0.4300478738401354,
+          -0.08578496083917496
+        ]
+      }
+    },
+    {
+      "model": "Inkling",
+      "A": "Partially disagreed",
+      "n": 29,
+      "D_choice_adjacent_pp": {
+        "n": 29,
+        "questions": 20,
+        "mean": -9.771990498632336,
+        "ci": [
+          -23.839630916955155,
+          0.004689264666404187
+        ]
+      },
+      "D_text_delta": {
+        "n": 29,
+        "questions": 20,
+        "mean": -0.11765688311260167,
+        "ci": [
+          -0.22272244187841514,
+          -0.0027337782544301845
+        ]
+      }
+    },
+    {
+      "model": "Inkling",
+      "A": "Fully disagreed",
+      "n": 1,
+      "D_choice_adjacent_pp": {
+        "n": 1,
+        "questions": 1,
+        "mean": 5.012931669767795e-06,
+        "ci": null
+      },
+      "D_text_delta": {
+        "n": 1,
+        "questions": 1,
+        "mean": -6.857754387403236e-06,
+        "ci": null
+      }
+    }
+  ],
+  "probability_audit": [
+    {
+      "model": "Qwen3.8-27B",
+      "kind": "Survey choice",
+      "n": 267,
+      "zero_fill": 30,
+      "min_mass": 0.9517420081031127,
+      "median_mass": 0.996173612973827,
+      "candidate_mass_below_half": 0,
+      "max_probability_ge_99": 178
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "kind": "Own-position rating",
+      "n": 310,
+      "zero_fill": 1,
+      "min_mass": 0.9605520575892386,
+      "median_mass": 0.9958740027395157,
+      "candidate_mass_below_half": 0,
+      "max_probability_ge_99": 7
+    },
+    {
+      "model": "Inkling",
+      "kind": "Survey choice",
+      "n": 273,
+      "zero_fill": 1,
+      "min_mass": 0.0043786072374657915,
+      "median_mass": 0.9999999804961628,
+      "candidate_mass_below_half": 6,
+      "max_probability_ge_99": 250
+    },
+    {
+      "model": "Inkling",
+      "kind": "Own-position rating",
+      "n": 322,
+      "zero_fill": 16,
+      "min_mass": 0.9903990323539867,
+      "median_mass": 0.999999965241886,
+      "candidate_mass_below_half": 0,
+      "max_probability_ge_99": 240
+    }
+  ],
+  "E": [
+    {
+      "tone": "Friendly",
+      "n": 60,
+      "debate": 23,
+      "baseline": 26,
+      "split": 11,
+      "estimate": {
+        "n": 60,
+        "questions": 60,
+        "mean": 0.475,
+        "ci": [
+          0.36666666666666664,
+          0.5916666666666667
+        ]
+      },
+      "baseline_words": 133.28333333333333,
+      "debate_words": 159.76666666666668
+    },
+    {
+      "tone": "Neutral",
+      "n": 60,
+      "debate": 28,
+      "baseline": 23,
+      "split": 9,
+      "estimate": {
+        "n": 60,
+        "questions": 60,
+        "mean": 0.5416666666666666,
+        "ci": [
+          0.425,
+          0.6583333333333333
+        ]
+      },
+      "baseline_words": 133.28333333333333,
+      "debate_words": 173.5
+    },
+    {
+      "tone": "Hostile",
+      "n": 60,
+      "debate": 36,
+      "baseline": 14,
+      "split": 10,
+      "estimate": {
+        "n": 60,
+        "questions": 60,
+        "mean": 0.6833333333333333,
+        "ci": [
+          0.575,
+          0.7833333333333333
+        ]
+      },
+      "baseline_words": 133.28333333333333,
+      "debate_words": 202.26666666666668
+    },
+    {
+      "tone": "All tones",
+      "n": 180,
+      "debate": 87,
+      "baseline": 63,
+      "split": 30,
+      "estimate": {
+        "n": 180,
+        "questions": 60,
+        "mean": 0.5666666666666667,
+        "ci": [
+          0.4861111111111111,
+          0.6444444444444445
+        ]
+      },
+      "baseline_words": 133.28333333333333,
+      "debate_words": 178.51111111111112
+    }
+  ],
+  "inference": {
+    "resampling_unit": "question",
+    "bootstrap_draws": 10000,
+    "seed": 20260926,
+    "interval": "pointwise percentile 95%; descriptive/post-collection, no multiplicity adjustment",
+    "event_weighting": "sample-conditional, no inverse inclusion weighting"
+  },
+  "source_files_sha256": {
+    "archived-global-0.json": "d79155204b2d2e60eea8a3ca80b67d9f977fc0abf9ac672692f2447848759268",
+    "archived-global-4.json": "8139686662b9166df45bfc677f131f6d3e229eea38c9627d7c3527dc53da753d",
+    "archived-global-5.json": "9a018c29a7e75c96c5818c4a98fa26cd28be67f69cc1dcde9e14770941a4f4a6",
+    "archived-global-6.json": "6171d0897fea4cdc6809591e3056f9ff4ee6b8fa4a90622c3e1d7ab0b58feed0",
+    "archived-global-7.json": "4c24536ce6bba1e55afa84b68a6bda2aa18c12f8350959ce9b0f963d02a062b2",
+    "archived-global-9.json": "5db7e23cfd791cfa95ae2d02af02921541b33c826b9340282966c65b9475f9bd",
+    "archived-global-10.json": "266241358704b08ee44bd582eb1da8a1f0e2a99e24061658f503183d7da0c92e",
+    "archived-global-13.json": "3717925a2ff40caf326728b51188b80a5ec4ce78476a3869720f283ee5c30f8e",
+    "archived-global-14.json": "b578481dcf350e88ab3b783ae021d2b4c6085ce8782e6310c9b197eeda9ba3f7",
+    "archived-global-15.json": "0cf1c4b0967fc4fcd5d661d33a58162e31a21098c7897885a72a9e6702b3154e",
+    "archived-global-16.json": "f8656f7a03f16753c75f57354fc8814d1b7e8d22f79f5a76af1a20b3dcabdd8b",
+    "archived-global-17.json": "855a888a47a0169c96e65aa034ba846d253ccd0ea0e572633988a09882cda8c8",
+    "archived-global-18.json": "d93ac0f08619e5ed1681d4a2185a775ef352b7b8eaab5835e4ad1273c0971d95",
+    "archived-global-19.json": "2bae3b1ff0aa81d95740f5dea5f329d1158e4e4bc9f1199487692fab56737c3b",
+    "archived-global-20.json": "0f13df3e010a227bff0991ce604e4f6c0a1c2f5c756e238002cebc711b16cc9c",
+    "archived-global-22.json": "0c15f1c2b2892f0dc3529d41dd81a4a519115d71ecea1b46e07c32cd51642078",
+    "archived-global-24.json": "2840ce403b439b50efe2298bae744118b095365965df85bde816dd2bfa0af7f1",
+    "archived-global-26.json": "f6b665793b08781ec1b9dc7715d47a940c6154787e5a035cf176ad267855ee3a",
+    "archived-global-28.json": "c082041d428b881fbf91a871fa2fab0f634c84118cecb11ba84ad9c8a474b5af",
+    "archived-global-31.json": "33e47eceb25484fa83ec5fd9a091aa3738975ef82bb58bcd75e9846be3f05dda",
+    "archived-global-32.json": "f7df7d1734a12297a967d11799b244cde3998d1a8c86d4d516597639eef5f7d0",
+    "archived-global-34.json": "f6bb0da1a1ee3868cf40fe9468c0b73ffad76c33c68d9fed178ccadb2433b43d",
+    "archived-global-35.json": "bc8a797915ab18b70f55d6ad1c16a57a3836e8b9f7a3eab5d4aaab618668a0af",
+    "archived-global-36.json": "d0a7e487c1d1bb060a6a5c9700b74af936b84d87ee8d4efdd08e212d81c3f2cc",
+    "archived-global-37.json": "2cdb65b02a35b1c6ba2326e5a36f834dca9c4b34d6194ef7dc5ab31c3fe07e89",
+    "archived-global-38.json": "abb43ee25a9af29e77af93e7d3d08ca24e544e974333b656695aad635eccaf26",
+    "archived-global-40.json": "f4e6f64ea9917860fc55dfa2feb242674f52e514fbb2fb84b02d11b64397a502",
+    "archived-global-42.json": "a28f711d3efaa08833036d9cb2e293bdd3520d1b1d8dde9ceb22e8c61665320e",
+    "archived-global-44.json": "a0f56a9228e19cd870b22c013cd069875c62f9408a79675a2e117eda6daa12bc",
+    "archived-global-45.json": "7560b72f04f2a1398855c45148a344166ba4cc968d7316f30d4025227be33d58",
+    "archived-global-48.json": "2286f69f7186595d117baaab2ae4917c040322677ac5b8275dc0a885392bcdb5",
+    "archived-global-50.json": "6743ee57b78304adcfc2f174a0f67264afb9f6acbb31ccb9f572bd0cd0bb1cd9",
+    "archived-global-52.json": "b759dd512375c7f245dabef4097017b0d8c33ff2831aea79ffb85d0ba809825c",
+    "archived-global-59.json": "6186feee169cbc4a37771d0b605f09c6d0a0a86facb0b680a2dd85a4ac46f94b",
+    "archived-global-61.json": "2f3b12b7d629649f18be610fdc936c442902459b6164f62f451e8082b1242320",
+    "archived-global-62.json": "c439c0f7c0be7e48d67251d09513e58458bea41365d3acd8ae69a1dfa927570f",
+    "archived-global-63.json": "1edfbbe1d75ceb9070c47f6d98a5138b93c7e38e4c9a0fd9ecb5c9aa862256ec",
+    "archived-global-65.json": "8f50f37f096d8cad1d7a7e3b3f6b962ecf77e73803933b5c7f6ba1ce2ffc425b",
+    "archived-global-68.json": "de58ed64870a63774d7b1c5e17cded268a19cc0876bf10f5285bdcc0f85a7a9b",
+    "archived-global-69.json": "cfb17b0ae97ab2f309727b80acf0feb3af4fedc61a3c429921db1ddafd0d2559",
+    "archived-global-70.json": "6b7db7338f59c77ed693c2446badfc6ec2c10ef37e3f2da4c765ee977225aa60",
+    "global-row-818.json": "2076884f0ccc1ee60c162f4acfe80384c848fb2c44465fa79cae75c5c0f57db9",
+    "global-row-887.json": "1b7bfff54bf5a369d9e9ff5bcfcb3d3723e599419d9d7f136a4862a0d37bc3bb",
+    "global-row-216.json": "209689234eeb7c2687d3f7c96fac192a8866446bda4e0db5bb68f8a27d6680a8",
+    "global-row-592.json": "2bdff2f2e3275519274f1d5b6f78639e32032ca03813d4462105dbf9239e919a",
+    "global-row-1087.json": "58fff7a0b5f1e25da5aa18e5f809978edad06b203035d92c067a7cff306f2521",
+    "global-row-1819.json": "fd9fbdce349da71e49b99dbe0576772b656ca38fb2127cf6a5e4234073d51d64",
+    "global-row-1269.json": "9c410ed6b46ed4a1c635cfe57f7c349e2cdcff6565cbd7f03521775a1d0a8a9e",
+    "global-row-2346.json": "821715e8e38054e496579c2e8f1aa336c2460fda969e3031bcc9d5ebcef01b7e",
+    "global-row-206.json": "96fe302c6d440968d2f0da10b8daabbbce030ba2f8755bd62c7cfa10cd3f0d2f",
+    "global-row-1208.json": "85f08e2a442592456e80c5b72b37940a317677561b91cd7dc3006a3a76ce2b73",
+    "global-row-1812.json": "cf28db088035476a17854f3c8c41ea943c7939747c3bdd39b03545d614ba9872",
+    "global-row-1461.json": "a95b38eb63de916fecb45838ec2c704faa7221357f062011d7f977127c9c4611",
+    "global-row-747.json": "aadffc14a00e02c0cac87e19973b187eb866920fcce4d5593e9efeffe9327794",
+    "global-row-1752.json": "5f6a7206bb7bd01fef591b2166eb2705f54d9f6c81f5e7a6a2649873c39165aa",
+    "global-row-684.json": "63445438bbc6f3f057166a8f3331fa5bcf9b8e54d050cec3cacf9a5dee7d1bac",
+    "global-row-2075.json": "4c9037ddc1800d02ed418785aa70f5bcd7859a687c58232cddd57e4491964f7a",
+    "global-row-1476.json": "ff904ddd2fd82354fa6a283b7df7a6b65f2263cc4889d08d40930097c336bdaa",
+    "global-row-2176.json": "8e9de38a07ddc07df1a6c4691d03dd6e5c18a70910100c0d81f5f6ce825c030e",
+    "global-row-2402.json": "edd7c62c94eef9757d622e05e6f75d94be5f0331a9c80920c6914029a70640e6"
+  },
+  "manifest_sha256": "5025e190deb02b8f8e0e5823a3778a8c13761a155c63c982982de8289bcd8009"
+}

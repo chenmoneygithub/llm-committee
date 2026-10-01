@@ -1,0 +1,32 @@
+{
+  "source": "gate_b_merged (human-web labels) scored 2026-07-10; direction = agree/disagree side",
+  "note": "Raw direction concordance, NOT chance-corrected. Prefer these over the all18 side-kappa=1.0, whose only agree-side variance comes from the 2 survey items excluded elsewhere.",
+  "gemini": {
+    "all_items": {
+      "n": 11,
+      "match": 11,
+      "p_o": 1.0
+    },
+    "clean_propositional": {
+      "n": 7,
+      "match": 7,
+      "p_o": 1.0,
+      "kappa_status": "undefined (single class: all disagree-side, no variance to chance-correct)"
+    },
+    "fine_ordinal": {
+      "weighted_kappa": 0.593,
+      "weighted_band": "moderate",
+      "spearman": 0.742,
+      "spearman_p": 0.009,
+      "note": "direction correct every item; off by one severity notch on a few (partially vs fully disagreed)"
+    }
+  },
+  "pooled_all_judges_clean13": {
+    "n": 13,
+    "match": 11,
+    "p_o": 0.846,
+    "cohen_kappa": 0.435,
+    "caveat": "mixes judge families (violates per-family routing) — CONTEXT only, not a routed headline"
+  },
+  "gate_status": "PENDING — directionally encouraging first pass; NOT Gate-B validation (n=1 annotator, no human-human ceiling)."
+}

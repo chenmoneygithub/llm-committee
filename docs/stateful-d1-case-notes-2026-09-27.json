@@ -1,0 +1,124 @@
+{
+  "scope": "Post-hoc, assistant-authored close reading of existing model outputs. No new model calls, blinded annotation, fact checking, or causal intervention.",
+  "selection": "Purposeful diagnostic coverage, not a random sample or a prevalence estimate: large rises on distinct questions (both models); a fall; a saturated read with falling text endorsement; a formal option switch despite a positive readout; and both saved continuations of one matched path. All selected incoming peer labels are leaning_disagree. Read the distributions over all sampled events for frequency.",
+  "cases": [
+    {
+      "question_id": "global-row-2075", "node_id": "CA-2", "assignment": "original",
+      "title": "Inkling · Ban Ki-moon: a near-100pp jump without a formal option change",
+      "selection_reason": "Largest D1 rise among Inkling events receiving a leaning-disagree reply.",
+      "finding": "The independent reasoning-enabled initial answer already chose C. The earlier neutral D1 read saw only the question, not that answer; the later read is explicitly supplied with choice C and its rationale. Formal C stays C. This is not an observed move from an initially favorable formal stance to a more negative one.",
+      "interpretation": "The changed information supplied to the probe is a concrete alternative explanation for the jump. It is consistent with conditioning on the recorded answer, but the existing data cannot isolate the contribution of that conditioning from the incoming argument and history.",
+      "quotes": [
+        {"field": "position_before", "text": "I would place my confidence at ‘not too much.’"},
+        {"field": "receiver_reply", "text": "it explains weakness rather than redeeming it"},
+        {"field": "position_after", "text": "My confidence in Ban Ki-moon remains “not too much confidence” (C)."}
+      ]
+    },
+    {
+      "question_id": "archived-global-4", "node_id": "CA-2", "assignment": "original",
+      "title": "Inkling · EU pandemic response: defending B is not newly choosing B",
+      "selection_reason": "Second-largest Inkling D1 rise on a different question.",
+      "finding": "The formal initial answer is already B (somewhat good). The independent, no-reasoning initial read instead places most mass on C (somewhat bad). At the later read, the prompt supplies the existing B position. The receiver acknowledges early failures but retains B and argues that the peer uses an unrealistic institutional benchmark.",
+      "interpretation": "There is substantive argumentation in defense of the original answer, but +92pp in this probe does not quantify how much that defense strengthened the formal position. In the same event, D2 becomes less likely to endorse the old full text completely.",
+      "quotes": [
+        {"field": "position_before", "text": "For these reasons, I rate the performance somewhat good."},
+        {"field": "receiver_reply", "text": "Your critique validly weakens any 'very good' claim"},
+        {"field": "position_after", "text": "Maintaining B"}
+      ]
+    },
+    {
+      "question_id": "archived-global-32", "node_id": "BC-4", "assignment": "alternate",
+      "title": "Qwen · UN membership: a neutral-probe rebound while the formal answer stays A",
+      "selection_reason": "Largest Qwen D1 rise after a leaning-disagree input; retain the earlier decrease for context.",
+      "finding": "Qwen's formal answer remains A across its recorded positions. The neutral read for A was lower at the earlier participation; it later rebounds. The receiver explicitly concedes constraints and costs, then defends the net benefit of membership. Thus the probability rebound coexists with concessions, not a newly more extreme survey choice.",
+      "interpretation": "This is a later-turn case, so removing comparisons that start at the bare question would not remove it. The before/after replay still changes history and the supplied own-position text. The peer label alone does not determine the sign of the probe difference.",
+      "quotes": [
+        {"field": "position_before", "text": "The qualifications are real but do not reduce the net to 'a fair amount.'"},
+        {"field": "receiver_reply", "text": "that is a genuine recurring cost I haven't weighted heavily enough"},
+        {"field": "receiver_reply", "text": "I still land at A."}
+      ]
+    },
+    {
+      "question_id": "archived-global-19", "node_id": "BC-4", "assignment": "original",
+      "title": "Qwen · Religious institutions: more explicit reservations, unchanged option, higher D1",
+      "selection_reason": "Second-largest Qwen rise on a different question.",
+      "finding": "The receiver says the peer sharpened its reservation without moving its rating. The formal position accepts the institutional-accountability objection more firmly, but retains B. D1 rises while D2 gives less support to complete endorsement of the pre-turn paragraph.",
+      "interpretation": "The text supports persistence of the bottom-line category, not a claim of stronger or less qualified commitment. Gemini's existing C judgment calls the position unchanged; the quotations preserve qualifications that this coarse category does not quantify.",
+      "quotes": [
+        {"field": "receiver_reply", "text": "You have sharpened my reservation, but not moved my rating."},
+        {"field": "position_after", "text": "I now accept more firmly than before"},
+        {"field": "position_after", "text": "My confidence is qualified, not unqualified"}
+      ]
+    },
+    {
+      "question_id": "global-row-1208", "node_id": "BC-2", "assignment": "original",
+      "title": "Qwen · India–Pakistan relations: disagreement about reasons despite the same survey choice",
+      "selection_reason": "Large positive D1 with an explicitly shared survey conclusion.",
+      "finding": "The incoming member self-labels leaning disagree but also selects B and says it shares the receiver's disapproval. Its objection concerns the diagnosis of the policy failure. The receiver adopts parts of this reframing and also retains B. Receiving this label therefore does not establish that the input advocated a different survey option.",
+      "interpretation": "The four-level peer label describes the contribution as a whole; it is not a deterministic indicator of opposing survey choices. This case is especially important for interpreting the label-conditioned table.",
+      "quotes": [
+        {"field": "peer_reply", "text": "I share your disapproval, but mine centers on"},
+        {"field": "receiver_reply", "text": "Your reframing of the core failure as institutionalization rather than engagement-absence is sharper than my original formulation."},
+        {"field": "position_after", "text": "I disapprove of Modi's handling of Pakistan relations, refined by this exchange."}
+      ]
+    },
+    {
+      "question_id": "global-row-1269", "node_id": "BC-2", "assignment": "original",
+      "title": "Qwen · Confidence in Xi: the formal choice changes even though old-option D1 rises",
+      "selection_reason": "Counterexample to interpreting a positive D1 difference as reinforcement of the old formal answer.",
+      "finding": "The formal response moves from B (some confidence) to C (not too much confidence), and the reply explicitly concedes the peer's argument. Yet the probability of old option B in the neutral replay rises from about 20% to 26%. B remains a minority option in that replay.",
+      "interpretation": "D1 is not the probability attached to the reasoning-enabled formal generation: it has a different task and no current-tone instruction. An increase in one minority option's probability need not change the modal option and cannot override the recorded formal B-to-C switch. This is a direct warning against calling every positive D1 value 'enhancement.'",
+      "quotes": [
+        {"field": "receiver_reply", "text": "All of this means 'some confidence' did overstate normative alignment, and I will not defend it."},
+        {"field": "receiver_reply", "text": "I am moving my position accordingly."},
+        {"field": "position_after", "text": "I move to 'not too much confidence'"}
+      ]
+    },
+    {
+      "question_id": "archived-global-26", "node_id": "BC-4", "assignment": "original",
+      "title": "Qwen · Women's organizations: a substantial drop hidden inside a positive-mean row",
+      "selection_reason": "Largest negative Qwen D1 difference, retained as a contrasting case.",
+      "finding": "The peer attacks the receiver's accountability argument as circular. The receiver accepts part of that critique and acknowledges greater heterogeneity, while retaining option B. D1 drops by about 25pp and the existing C judge labels the reasoning adjusted.",
+      "interpretation": "This example genuinely contributes a negative value to the same label group whose reported net mean is positive. The distribution, rather than the mean alone, makes this visible. As with the rising cases, it does not separately identify the causal effect of the incoming argument.",
+      "quotes": [
+        {"field": "peer_reply", "text": "it masks a circular comfort"},
+        {"field": "receiver_reply", "text": "I accept the circularity critique in part"},
+        {"field": "position_after", "text": "These factors explain why A is an overstatement. But they do not, in my view, push the category-level assessment below B."}
+      ]
+    },
+    {
+      "question_id": "archived-global-28", "node_id": "CA-4", "assignment": "original",
+      "title": "Inkling · France's role: saturated option probability, but lower full-text endorsement",
+      "selection_reason": "Contrast near-zero D1 movement with a large fall in the D2 complete-endorsement category.",
+      "finding": "The receiver concedes concrete losses of French influence but keeps option C, broadly comparable importance. Both D1 probabilities are essentially 100%. D2 shifts most mass from complete endorsement toward mostly agreeing with the fixed prior paragraph.",
+      "interpretation": "An almost unchanged option read does not mean no sensitivity to the argument. D1 asks which coarse survey option to select; D2 asks how fully to endorse the entire prior paragraph. The decline in G is not a move to overall disagreement: the argument-arm mode is F, mostly agree.",
+      "quotes": [
+        {"field": "receiver_reply", "text": "Your case for net erosion is stronger than I initially granted"},
+        {"field": "receiver_reply", "text": "Your argument correctly identifies the wounds; I dispute that they outweigh the structural offsets."}
+      ]
+    },
+    {
+      "question_id": "global-row-2075", "node_id": "BC-4", "assignment": "original",
+      "title": "Qwen · Ban Ki-moon, original continuation: same labels, positive D1",
+      "selection_reason": "One half of a saved paired continuation with identical pre-fork state but opposite D1 directions.",
+      "finding": "The incoming peer narrows the disagreement and accepts several points about strategic restraint. The receiver grants failures on specific crises while keeping B on the broader record. Its D1 difference is positive.",
+      "interpretation": "Compare with the next case: both have peer leaning disagree and receiver leaning agree, the same earlier D1 baseline and the same formal pre-turn position, yet their incoming arguments and preceding tone assignments differ. The pair illustrates variation hidden within a label cell, not a replicated causal estimate of a single tone's effect. D1 is neutral and does not receive the receiver's T4 tone instruction.",
+      "quotes": [
+        {"field": "peer_reply", "text": "Where I still part ways—though more narrowly now"},
+        {"field": "receiver_reply", "text": "I accept your narrower point more fully than I did initially."}
+      ]
+    },
+    {
+      "question_id": "global-row-2075", "node_id": "BC-4", "assignment": "alternate",
+      "title": "Qwen · Ban Ki-moon, alternate continuation: same labels, negative D1",
+      "selection_reason": "Other half of the presaved paired continuation; no new experiment was run.",
+      "finding": "The incoming argument places greater weight on high-stakes security failures. The receiver explicitly says it now holds B more tenuously. D1 declines slightly; the existing C judge marks adjusted reasoning. D2 also shows a larger decline in endorsement than in the original continuation.",
+      "interpretation": "The qualitative contrast is more informative than treating the two outcomes as interchangeable instances of the same label pair. Both formal choices remain B. This single pair is illustrative, not a general tone-effect estimate.",
+      "quotes": [
+        {"field": "peer_reply", "text": "Climate success occurred in a lower-stakes consensus arena and does not offset systematic deference"},
+        {"field": "position_after", "text": "I maintain some confidence in Ban Ki-Moon, though more tenuously than at the start of this exchange."},
+        {"field": "receiver_reply", "text": "The outcome for me is B, held more tenuously than before"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "questions": 20,
+  "initial_disagreement_questions": 0,
+  "initial_disagreement_denominator": 19,
+  "observed_initial_disagreement_questions": 1,
+  "observed_initial_disagreement_denominator": 20,
+  "coverage": {
+    "initial_answers": 59,
+    "replies": 232,
+    "complete_trajectories": 58,
+    "failed_tasks": 1,
+    "blocked_tasks": 18
+  },
+  "agreement_by_model": [
+    {
+      "model": "gpt-5.6-terra",
+      "n": 78,
+      "labels": {
+        "strongly_agree": 78
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.8-27B",
+      "n": 78,
+      "labels": {
+        "strongly_agree": 77,
+        "strongly_disagree": 1
+      }
+    },
+    {
+      "model": "thinkingmachines/Inkling",
+      "n": 76,
+      "labels": {
+        "strongly_agree": 76
+      }
+    }
+  ],
+  "models": [
+    {
+      "model": "gpt-5.6-terra",
+      "initial_n": 20,
+      "initial_correct": 19,
+      "endpoint_n": 39,
+      "endpoint_correct": 39,
+      "endpoint_initial_correct": 38,
+      "transitions": {
+        "right_to_right": 38,
+        "wrong_to_right": 1
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.8-27B",
+      "initial_n": 20,
+      "initial_correct": 20,
+      "endpoint_n": 39,
+      "endpoint_correct": 39,
+      "endpoint_initial_correct": 39,
+      "transitions": {
+        "right_to_right": 39
+      }
+    },
+    {
+      "model": "thinkingmachines/Inkling",
+      "initial_n": 19,
+      "initial_correct": 19,
+      "endpoint_n": 38,
+      "endpoint_correct": 38,
+      "endpoint_initial_correct": 38,
+      "transitions": {
+        "right_to_right": 38
+      }
+    }
+  ],
+  "chairman": [
+    {
+      "pair": "AB",
+      "n": 20,
+      "baseline_correct": 20,
+      "debate_correct": 20,
+      "transitions": {
+        "right_to_right": 20
+      }
+    },
+    {
+      "pair": "CA",
+      "n": 19,
+      "baseline_correct": 19,
+      "debate_correct": 19,
+      "transitions": {
+        "right_to_right": 19
+      }
+    },
+    {
+      "pair": "BC",
+      "n": 19,
+      "baseline_correct": 19,
+      "debate_correct": 19,
+      "transitions": {
+        "right_to_right": 19
+      }
+    }
+  ],
+  "C_conditional": [
+    {
+      "previous_label": "strongly_agree",
+      "current_label": "strongly_agree",
+      "n": 173,
+      "option_changes": 0,
+      "transitions": {
+        "right_to_right": 173
+      }
+    },
+    {
+      "previous_label": "strongly_disagree",
+      "current_label": "strongly_agree",
+      "n": 1,
+      "option_changes": 1,
+      "transitions": {
+        "wrong_to_right": 1
+      }
+    }
+  ],
+  "D1_conditional": [
+    {
+      "model": "Qwen/Qwen3.8-27B",
+      "previous_label": "strongly_agree",
+      "current_label": "strongly_agree",
+      "n": 58,
+      "mean_tv": 0.2716764576380062,
+      "median_tv": 0.0035155936707927365,
+      "mean_correct_probability_change_pp": 27.153345472341034
+    },
+    {
+      "model": "thinkingmachines/Inkling",
+      "previous_label": "strongly_agree",
+      "current_label": "strongly_agree",
+      "n": 57,
+      "mean_tv": 0.2507947044302578,
+      "median_tv": 2.0349495390307523e-08,
+      "mean_correct_probability_change_pp": 25.07945006015596
+    }
+  ],
+  "D1_measurement_types": [
+    {
+      "model": "Qwen/Qwen3.8-27B",
+      "previous_label": "strongly_agree",
+      "current_label": "strongly_agree",
+      "measurement_type": "first_participation",
+      "n": 19,
+      "mean_tv": 0.814851071368272,
+      "median_tv": 0.874236238585512,
+      "mean_correct_probability_change_pp": 81.4851071368272
+    },
+    {
+      "model": "Qwen/Qwen3.8-27B",
+      "previous_label": "strongly_agree",
+      "current_label": "strongly_agree",
+      "measurement_type": "later_participation",
+      "n": 39,
+      "mean_tv": 0.0070529278719793035,
+      "median_tv": 0.0006339549216692588,
+      "mean_correct_probability_change_pp": 0.6840256870785483
+    },
+    {
+      "model": "thinkingmachines/Inkling",
+      "previous_label": "strongly_agree",
+      "current_label": "strongly_agree",
+      "measurement_type": "first_participation",
+      "n": 19,
+      "mean_tv": 0.7523800452594644,
+      "median_tv": 0.9763374501582045,
+      "mean_correct_probability_change_pp": 75.23797639193262
+    },
+    {
+      "model": "thinkingmachines/Inkling",
+      "previous_label": "strongly_agree",
+      "current_label": "strongly_agree",
+      "measurement_type": "later_participation",
+      "n": 38,
+      "mean_tv": 2.034015654462251e-06,
+      "median_tv": 6.233969175219824e-09,
+      "mean_correct_probability_change_pp": 0.0001868942676309718
+    }
+  ],
+  "protocol_version": "supergpqa-neutral-public-history-2026-09-28-v2",
+  "source": "/Users/Chen/Documents/research/llm-committee/runs/supergpqa-neutral-20-20260928/live-v2",
+  "progress": {
+    "kind": "paid_supergpqa_pilot",
+    "protocol_version": "supergpqa-neutral-public-history-2026-09-28-v2",
+    "status": "completed_with_failures",
+    "pid": 55618,
+    "updated_at_utc": "2026-09-29T04:53:58.781633+00:00",
+    "elapsed_this_process_seconds": 252.56,
+    "target_this_phase": 20,
+    "planned_counts": {
+      "by_purpose": {
+        "d_choice": 200,
+        "debate": 240,
+        "initial": 60,
+        "synthesis": 120
+      },
+      "logical_calls": 620,
+      "questions": 20,
+      "trajectories": 60
+    },
+    "completed_questions": 20,
+    "successful_questions": 19,
+    "question_statuses": {
+      "supergpqa-c363067c2bec418c94776f8622488a43": "completed",
+      "supergpqa-0186b9644aae4a8a922f138819bd9f8c": "completed",
+      "supergpqa-cd91aa64ff6b4b6b8954bc39e367509a": "completed",
+      "supergpqa-ca0afd88b52d4c1e9bf8dbe53060acce": "completed",
+      "supergpqa-8985456d752a46f9bf79024282a47b27": "completed",
+      "supergpqa-e1b7c9079b304a928b8fa2e73388267e": "completed_with_failures",
+      "supergpqa-6b2c2549515547508c743f9357587755": "completed",
+      "supergpqa-0e5ffea046144853a213fb83c8f54203": "completed",
+      "supergpqa-d8503ecf958948ccbf0d61a9d5d7a9ee": "completed",
+      "supergpqa-1ec8f7af334d4fb48479f2bda2dfcc67": "completed",
+      "supergpqa-9f0505f82eff4e6783e3df03701a8579": "completed",
+      "supergpqa-045da15bd30d40d194de62ba7e020335": "completed",
+      "supergpqa-e91d32369fd14487925ed317758ac459": "completed",
+      "supergpqa-36551d7a41884315ad28a49e289ce0e5": "completed",
+      "supergpqa-3458439027af43d19b4bf819f6826e60": "completed",
+      "supergpqa-c038df43b31d466b9b002e81a315a952": "completed",
+      "supergpqa-7753d398f364454d84d42d1d81b3537b": "completed",
+      "supergpqa-6855dc9516154973a858de66247e3a6b": "completed",
+      "supergpqa-e4f717767c094b5b99cc0a2f3d3da63c": "completed",
+      "supergpqa-a7f25bf7b509418e99cd86601cd65e1a": "completed"
+    },
+    "trajectory_statuses": {
+      "completed": 58,
+      "incomplete": 2
+    },
+    "call_status_counts": {
+      "completed": 601,
+      "invalid": 8
+    },
+    "charged_or_reserved_usd": 3.878602068,
+    "cost_note": "Token-based estimate including retries/reservations, not a provider invoice",
+    "max_inflight_requests": 32,
+    "question_workers": 8,
+    "task_failures": {
+      "supergpqa-e1b7c9079b304a928b8fa2e73388267e/supergpqa-neutral-public-history-2026-09-28-v2/initial/2": {
+        "key": "supergpqa-e1b7c9079b304a928b8fa2e73388267e/supergpqa-neutral-public-history-2026-09-28-v2/initial/2",
+        "attempt_keys": [
+          "supergpqa-e1b7c9079b304a928b8fa2e73388267e/supergpqa-neutral-public-history-2026-09-28-v2/initial/2",
+          "supergpqa-e1b7c9079b304a928b8fa2e73388267e/supergpqa-neutral-public-history-2026-09-28-v2/initial/2::format-retry:1",
+          "supergpqa-e1b7c9079b304a928b8fa2e73388267e/supergpqa-neutral-public-history-2026-09-28-v2/initial/2::format-retry:2"
+        ],
+        "reason": "Expecting value: line 1 column 1 (char 0)",
+        "status": "failed_after_format_retries",
+        "purpose": "initial",
+        "model": "thinkingmachines/Inkling"
+      }
+    },
+    "fatal_errors": {},
+    "active_question_ids": [],
+    "in_flight_requests": 0,
+    "peak_in_flight_requests": 32,
+    "peak_active_questions": 8,
+    "request_retries": {
+      "additional_attempts": 7,
+      "recovered_logical_requests": 4,
+      "exhausted_logical_requests": 1
+    },
+    "format_retries": {
+      "additional_attempts": 7,
+      "recovered_logical_requests": 4,
+      "exhausted_logical_requests": 1
+    },
+    "transport_retries": {
+      "additional_attempts": 0,
+      "recovered_logical_requests": 0,
+      "exhausted_logical_requests": 0
+    },
+    "output_limit_retries": {
+      "additional_attempts": 0,
+      "recovered_logical_requests": 0,
+      "exhausted_logical_requests": 0
+    }
+  },
+  "scope": "Curated engineering/diagnostic pilot, not a random estimate of full SuperGPQA accuracy. No independent human/expert validation claimed.",
+  "received_response_estimate_usd": 3.878602068,
+  "unresolved_reserved_usd": 0,
+  "attempt_statuses": {
+    "completed": 601,
+    "invalid": 8
+  },
+  "incomplete_response_attempts": 1,
+  "excluded_v1_preflight_estimate_usd": 0.14867573
+}

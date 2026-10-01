@@ -1,0 +1,993 @@
+{
+ "draws": 10000,
+ "seed": 20260929,
+ "settings": [
+  {
+   "setting": "same_model",
+   "title": "Same model (Terra ×3)",
+   "questions": 50,
+   "pairable_replies": 750,
+   "pairable_missing_or_unlabeled": 0,
+   "sampled_events": 667,
+   "sampled_label_mismatch_vs_formal_records": 0,
+   "cells": [
+    {
+     "previous_peer_label": "strongly_agree",
+     "current_label": "strongly_agree",
+     "occurrences": 362,
+     "occurrence_share": 0.4826666666666667,
+     "occurrence_share_ci": [
+      0.43066666666666664,
+      0.536
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 50,
+     "sampled": 323,
+     "sampled_questions": 50,
+     "option_changed": 2,
+     "option_valid": 320,
+     "option_excluded": 3,
+     "option_rate_ci": [
+      0.0,
+      0.020338983050847456
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 0,
+     "text_reasons_adjusted": 0,
+     "text_valid": 323,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.07134760017861413
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "strongly_agree",
+     "current_label": "leaning_agree",
+     "occurrences": 129,
+     "occurrence_share": 0.172,
+     "occurrence_share_ci": [
+      0.14933333333333335,
+      0.19466666666666665
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 49,
+     "sampled": 113,
+     "sampled_questions": 47,
+     "option_changed": 2,
+     "option_valid": 112,
+     "option_excluded": 1,
+     "option_rate_ci": [
+      0.0,
+      0.05714285714285714
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 0,
+     "text_reasons_adjusted": 1,
+     "text_valid": 113,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.07555760526591085
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "strongly_agree",
+     "current_label": "leaning_disagree",
+     "occurrences": 2,
+     "occurrence_share": 0.0026666666666666666,
+     "occurrence_share_ci": [
+      0.0,
+      0.006666666666666667
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 2,
+     "sampled": 2,
+     "sampled_questions": 2,
+     "option_changed": 1,
+     "option_valid": 2,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.0,
+      1.0
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 1268,
+     "text_conclusion_changed": 1,
+     "text_reasons_adjusted": 0,
+     "text_valid": 2,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      1.0
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 1268
+    },
+    {
+     "previous_peer_label": "leaning_agree",
+     "current_label": "strongly_agree",
+     "occurrences": 115,
+     "occurrence_share": 0.15333333333333332,
+     "occurrence_share_ci": [
+      0.128,
+      0.17866666666666667
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 44,
+     "sampled": 103,
+     "sampled_questions": 44,
+     "option_changed": 4,
+     "option_valid": 102,
+     "option_excluded": 1,
+     "option_rate_ci": [
+      0.0,
+      0.1111111111111111
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 1,
+     "text_reasons_adjusted": 0,
+     "text_valid": 103,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.031578947368421054
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_agree",
+     "current_label": "leaning_agree",
+     "occurrences": 53,
+     "occurrence_share": 0.07066666666666667,
+     "occurrence_share_ci": [
+      0.04933333333333333,
+      0.09333333333333334
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 28,
+     "sampled": 45,
+     "sampled_questions": 26,
+     "option_changed": 0,
+     "option_valid": 45,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.0,
+      0.12872892362858793
+     ],
+     "option_rate_ci_method": "wilson_questions",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 0,
+     "text_reasons_adjusted": 0,
+     "text_valid": 45,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.12872892362858793
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_agree",
+     "current_label": "leaning_disagree",
+     "occurrences": 5,
+     "occurrence_share": 0.006666666666666667,
+     "occurrence_share_ci": [
+      0.0013333333333333333,
+      0.014666666666666666
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 4,
+     "sampled": 4,
+     "sampled_questions": 4,
+     "option_changed": 1,
+     "option_valid": 3,
+     "option_excluded": 1,
+     "option_rate_ci": [
+      0.0,
+      1.0
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 432,
+     "text_conclusion_changed": 1,
+     "text_reasons_adjusted": 0,
+     "text_valid": 4,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      1.0
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 149
+    },
+    {
+     "previous_peer_label": "leaning_disagree",
+     "current_label": "strongly_agree",
+     "occurrences": 18,
+     "occurrence_share": 0.024,
+     "occurrence_share_ci": [
+      0.010666666666666666,
+      0.04133333333333333
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 10,
+     "sampled": 16,
+     "sampled_questions": 9,
+     "option_changed": 16,
+     "option_valid": 16,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.700854948272956,
+      1.0
+     ],
+     "option_rate_ci_method": "wilson_questions",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 15,
+     "text_reasons_adjusted": 1,
+     "text_valid": 16,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.8181818181818182,
+      1.0
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_disagree",
+     "current_label": "leaning_agree",
+     "occurrences": 1,
+     "occurrence_share": 0.0013333333333333333,
+     "occurrence_share_ci": [
+      0.0,
+      0.004
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 1,
+     "sampled": 1,
+     "sampled_questions": 1,
+     "option_changed": 0,
+     "option_valid": 0,
+     "option_excluded": 1,
+     "option_rate_ci": null,
+     "option_rate_ci_method": null,
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 1,
+     "text_reasons_adjusted": 0,
+     "text_valid": 1,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.2065493117918027,
+      1.0
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_disagree",
+     "current_label": "leaning_disagree",
+     "occurrences": 65,
+     "occurrence_share": 0.08666666666666667,
+     "occurrence_share_ci": [
+      0.03866666666666667,
+      0.14133333333333334
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 11,
+     "sampled": 60,
+     "sampled_questions": 11,
+     "option_changed": 1,
+     "option_valid": 52,
+     "option_excluded": 8,
+     "option_rate_ci": [
+      0.0,
+      0.05454545454545454
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 1,
+     "text_reasons_adjusted": 1,
+     "text_valid": 60,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.05
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 0
+    }
+   ]
+  },
+  {
+   "setting": "same_family",
+   "title": "Same family (Luna / Terra / Sol)",
+   "questions": 50,
+   "pairable_replies": 750,
+   "pairable_missing_or_unlabeled": 0,
+   "sampled_events": 667,
+   "sampled_label_mismatch_vs_formal_records": 0,
+   "cells": [
+    {
+     "previous_peer_label": "strongly_agree",
+     "current_label": "strongly_agree",
+     "occurrences": 304,
+     "occurrence_share": 0.4053333333333333,
+     "occurrence_share_ci": [
+      0.34,
+      0.47333333333333333
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 47,
+     "sampled": 275,
+     "sampled_questions": 47,
+     "option_changed": 0,
+     "option_valid": 273,
+     "option_excluded": 2,
+     "option_rate_ci": [
+      0.0,
+      0.07555760526591085
+     ],
+     "option_rate_ci_method": "wilson_questions",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 0,
+     "text_reasons_adjusted": 3,
+     "text_valid": 275,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.07555760526591085
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "strongly_agree",
+     "current_label": "leaning_agree",
+     "occurrences": 106,
+     "occurrence_share": 0.14133333333333334,
+     "occurrence_share_ci": [
+      0.11866666666666667,
+      0.164
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 47,
+     "sampled": 93,
+     "sampled_questions": 43,
+     "option_changed": 0,
+     "option_valid": 92,
+     "option_excluded": 1,
+     "option_rate_ci": [
+      0.0,
+      0.08200980441345543
+     ],
+     "option_rate_ci_method": "wilson_questions",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 0,
+     "text_reasons_adjusted": 4,
+     "text_valid": 93,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.08200980441345543
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "strongly_agree",
+     "current_label": "leaning_disagree",
+     "occurrences": 4,
+     "occurrence_share": 0.005333333333333333,
+     "occurrence_share_ci": [
+      0.0013333333333333333,
+      0.010666666666666666
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 4,
+     "sampled": 4,
+     "sampled_questions": 4,
+     "option_changed": 3,
+     "option_valid": 4,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.0,
+      1.0
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 155,
+     "text_conclusion_changed": 3,
+     "text_reasons_adjusted": 0,
+     "text_valid": 4,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      1.0
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 155
+    },
+    {
+     "previous_peer_label": "leaning_agree",
+     "current_label": "strongly_agree",
+     "occurrences": 108,
+     "occurrence_share": 0.144,
+     "occurrence_share_ci": [
+      0.116,
+      0.172
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 40,
+     "sampled": 97,
+     "sampled_questions": 39,
+     "option_changed": 1,
+     "option_valid": 95,
+     "option_excluded": 2,
+     "option_rate_ci": [
+      0.0,
+      0.034482758620689655
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 1,
+     "text_reasons_adjusted": 5,
+     "text_valid": 97,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.033707865168539325
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_agree",
+     "current_label": "leaning_agree",
+     "occurrences": 52,
+     "occurrence_share": 0.06933333333333333,
+     "occurrence_share_ci": [
+      0.044,
+      0.09733333333333333
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 25,
+     "sampled": 44,
+     "sampled_questions": 22,
+     "option_changed": 1,
+     "option_valid": 44,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.0,
+      0.07020676691729277
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 0,
+     "text_reasons_adjusted": 3,
+     "text_valid": 44,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.14865487660514556
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_agree",
+     "current_label": "leaning_disagree",
+     "occurrences": 20,
+     "occurrence_share": 0.02666666666666667,
+     "occurrence_share_ci": [
+      0.012,
+      0.044
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 10,
+     "sampled": 18,
+     "sampled_questions": 10,
+     "option_changed": 0,
+     "option_valid": 15,
+     "option_excluded": 3,
+     "option_rate_ci": [
+      0.0,
+      0.299145051727044
+     ],
+     "option_rate_ci_method": "wilson_questions",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 0,
+     "text_reasons_adjusted": 1,
+     "text_valid": 18,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.2775328030260577
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_disagree",
+     "current_label": "strongly_agree",
+     "occurrences": 20,
+     "occurrence_share": 0.02666666666666667,
+     "occurrence_share_ci": [
+      0.013333333333333334,
+      0.04133333333333333
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 13,
+     "sampled": 19,
+     "sampled_questions": 12,
+     "option_changed": 19,
+     "option_valid": 19,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.7575059904469021,
+      1.0
+     ],
+     "option_rate_ci_method": "wilson_questions",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 17,
+     "text_reasons_adjusted": 0,
+     "text_valid": 19,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.6666666666666666,
+      1.0
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_disagree",
+     "current_label": "leaning_agree",
+     "occurrences": 15,
+     "occurrence_share": 0.02,
+     "occurrence_share_ci": [
+      0.009333333333333334,
+      0.032
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 12,
+     "sampled": 14,
+     "sampled_questions": 11,
+     "option_changed": 7,
+     "option_valid": 13,
+     "option_excluded": 1,
+     "option_rate_ci": [
+      0.25,
+      0.785902255639095
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 1,
+     "text_conclusion_changed": 7,
+     "text_reasons_adjusted": 0,
+     "text_valid": 14,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.25,
+      0.7272727272727273
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 1
+    },
+    {
+     "previous_peer_label": "leaning_disagree",
+     "current_label": "leaning_disagree",
+     "occurrences": 121,
+     "occurrence_share": 0.16133333333333333,
+     "occurrence_share_ci": [
+      0.10666666666666667,
+      0.22
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 24,
+     "sampled": 103,
+     "sampled_questions": 24,
+     "option_changed": 3,
+     "option_valid": 97,
+     "option_excluded": 6,
+     "option_rate_ci": [
+      0.0,
+      0.10228001165501155
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 0,
+     "text_reasons_adjusted": 2,
+     "text_valid": 103,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.13797620655132792
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    }
+   ]
+  },
+  {
+   "setting": "mixed_family",
+   "title": "Mixed family (Terra / Qwen / Inkling)",
+   "questions": 50,
+   "pairable_replies": 750,
+   "pairable_missing_or_unlabeled": 0,
+   "sampled_events": 667,
+   "sampled_label_mismatch_vs_formal_records": 0,
+   "cells": [
+    {
+     "previous_peer_label": "strongly_agree",
+     "current_label": "strongly_agree",
+     "occurrences": 268,
+     "occurrence_share": 0.35733333333333334,
+     "occurrence_share_ci": [
+      0.29463333333333336,
+      0.42133333333333334
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 45,
+     "sampled": 244,
+     "sampled_questions": 45,
+     "option_changed": 1,
+     "option_valid": 244,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.0,
+      0.013333333333333334
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 0,
+     "text_reasons_adjusted": 6,
+     "text_valid": 244,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.07865159987608598
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "strongly_agree",
+     "current_label": "leaning_agree",
+     "occurrences": 86,
+     "occurrence_share": 0.11466666666666667,
+     "occurrence_share_ci": [
+      0.09333333333333334,
+      0.136
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 42,
+     "sampled": 79,
+     "sampled_questions": 40,
+     "option_changed": 1,
+     "option_valid": 79,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.0,
+      0.04054054054054054
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 0,
+     "text_reasons_adjusted": 18,
+     "text_valid": 79,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.08762160245846368
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "strongly_agree",
+     "current_label": "leaning_disagree",
+     "occurrences": 17,
+     "occurrence_share": 0.02266666666666667,
+     "occurrence_share_ci": [
+      0.013333333333333334,
+      0.032
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 16,
+     "sampled": 14,
+     "sampled_questions": 14,
+     "option_changed": 1,
+     "option_valid": 14,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.0,
+      0.25
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 1,
+     "text_reasons_adjusted": 5,
+     "text_valid": 14,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.25
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_agree",
+     "current_label": "strongly_agree",
+     "occurrences": 74,
+     "occurrence_share": 0.09866666666666667,
+     "occurrence_share_ci": [
+      0.07733333333333334,
+      0.12133333333333333
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 38,
+     "sampled": 66,
+     "sampled_questions": 36,
+     "option_changed": 3,
+     "option_valid": 66,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.0,
+      0.09859154929577464
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 2,
+     "text_reasons_adjusted": 8,
+     "text_valid": 66,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.07462686567164178
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_agree",
+     "current_label": "leaning_agree",
+     "occurrences": 56,
+     "occurrence_share": 0.07466666666666667,
+     "occurrence_share_ci": [
+      0.05466666666666667,
+      0.096
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 29,
+     "sampled": 48,
+     "sampled_questions": 28,
+     "option_changed": 3,
+     "option_valid": 48,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.0,
+      0.16071428571428573
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 0,
+     "text_reasons_adjusted": 14,
+     "text_valid": 48,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.12064330643947074
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_agree",
+     "current_label": "leaning_disagree",
+     "occurrences": 47,
+     "occurrence_share": 0.06266666666666666,
+     "occurrence_share_ci": [
+      0.04133333333333333,
+      0.08533333333333333
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 27,
+     "sampled": 37,
+     "sampled_questions": 23,
+     "option_changed": 1,
+     "option_valid": 36,
+     "option_excluded": 1,
+     "option_rate_ci": [
+      0.0,
+      0.1
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 1,
+     "text_reasons_adjusted": 5,
+     "text_valid": 37,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.09523809523809523
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_disagree",
+     "current_label": "strongly_agree",
+     "occurrences": 20,
+     "occurrence_share": 0.02666666666666667,
+     "occurrence_share_ci": [
+      0.016,
+      0.03866666666666667
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 16,
+     "sampled": 20,
+     "sampled_questions": 16,
+     "option_changed": 11,
+     "option_valid": 20,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.3125,
+      0.76
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 11,
+     "text_reasons_adjusted": 2,
+     "text_valid": 20,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.3125,
+      0.76
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_disagree",
+     "current_label": "leaning_agree",
+     "occurrences": 42,
+     "occurrence_share": 0.056,
+     "occurrence_share_ci": [
+      0.037333333333333336,
+      0.076
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 26,
+     "sampled": 40,
+     "sampled_questions": 26,
+     "option_changed": 7,
+     "option_valid": 40,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.06451612903225806,
+      0.26785714285714285
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 6,
+     "text_reasons_adjusted": 14,
+     "text_valid": 40,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.06060606060606061,
+      0.22727272727272727
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "leaning_disagree",
+     "current_label": "leaning_disagree",
+     "occurrences": 137,
+     "occurrence_share": 0.18266666666666667,
+     "occurrence_share_ci": [
+      0.12133333333333333,
+      0.24933333333333332
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 27,
+     "sampled": 116,
+     "sampled_questions": 26,
+     "option_changed": 2,
+     "option_valid": 112,
+     "option_excluded": 4,
+     "option_rate_ci": [
+      0.0,
+      0.05194805194805195
+     ],
+     "option_rate_ci_method": "cluster_bootstrap",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 2,
+     "text_reasons_adjusted": 12,
+     "text_valid": 116,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.050010504201680524
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 0
+    },
+    {
+     "previous_peer_label": "strongly_disagree",
+     "current_label": "leaning_agree",
+     "occurrences": 2,
+     "occurrence_share": 0.0026666666666666666,
+     "occurrence_share_ci": [
+      0.0,
+      0.006666666666666667
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 2,
+     "sampled": 2,
+     "sampled_questions": 2,
+     "option_changed": 2,
+     "option_valid": 2,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.3423802239546494,
+      1.0
+     ],
+     "option_rate_ci_method": "wilson_questions",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 1,
+     "text_reasons_adjusted": 1,
+     "text_valid": 2,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      1.0
+     ],
+     "text_rate_ci_method": "cluster_bootstrap",
+     "text_ci_zero_denominator_draws": 1297
+    },
+    {
+     "previous_peer_label": "strongly_disagree",
+     "current_label": "leaning_disagree",
+     "occurrences": 1,
+     "occurrence_share": 0.0013333333333333333,
+     "occurrence_share_ci": [
+      0.0,
+      0.004
+     ],
+     "occurrence_share_ci_method": "cluster_bootstrap",
+     "occurrence_questions": 1,
+     "sampled": 1,
+     "sampled_questions": 1,
+     "option_changed": 0,
+     "option_valid": 1,
+     "option_excluded": 0,
+     "option_rate_ci": [
+      0.0,
+      0.7934506882081973
+     ],
+     "option_rate_ci_method": "wilson_questions",
+     "option_ci_zero_denominator_draws": 0,
+     "text_conclusion_changed": 0,
+     "text_reasons_adjusted": 0,
+     "text_valid": 1,
+     "text_excluded": 0,
+     "text_rate_ci": [
+      0.0,
+      0.7934506882081973
+     ],
+     "text_rate_ci_method": "wilson_questions",
+     "text_ci_zero_denominator_draws": 0
+    }
+   ]
+  }
+ ]
+}

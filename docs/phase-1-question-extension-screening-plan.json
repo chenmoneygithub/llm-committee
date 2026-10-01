@@ -1,0 +1,1996 @@
+{
+  "purpose": "add_20_candidates_to_review_bank_not_debate_execution",
+  "date": "2026-09-25",
+  "requested_additions": 20,
+  "max_screened_candidates": 40,
+  "estimated_cost_cap_usd": 3,
+  "source_dataset": "Anthropic/llm_global_opinions",
+  "source_revision": "cb2880488749218abb81802a94c2c62ebfde2f35",
+  "source_sha256": "789e99ebb0eb1d0768de565ec80fab7a25bfef5baa1cccebdda75777eea86051",
+  "selection": "Continue random.Random(0).shuffle of original CSV rows from candidate order index 72; stop at first 20 with passed context review and >=2/3 debatable_opinion votes. Process in that fixed order.",
+  "context_filter_note": "Check original question AND options. Unspecified respondent country is excluded, as are explicit respondent city/neighborhood references requiring the model to assume a residence (same shared-geographic-reference failure). No missing country/location is filled in. Named countries and general normative policies are retained. Other input concerns are annotated for user review, not silently rewritten.",
+  "jury": [
+    {
+      "model": "gpt-5.5",
+      "endpoint": "databricks-gpt-5-5",
+      "input_usd_per_million": 5,
+      "output_usd_per_million": 30,
+      "reasoning_effort": "low"
+    },
+    {
+      "model": "opus-4.8",
+      "endpoint": "databricks-claude-opus-4-8",
+      "input_usd_per_million": 5,
+      "output_usd_per_million": 25
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "endpoint": "databricks-gemini-3-5-flash",
+      "input_usd_per_million": 1.875,
+      "output_usd_per_million": 11.25,
+      "reasoning_effort": "low"
+    }
+  ],
+  "price_note": "Dated estimates at $0.07/DBU using Databricks published standard rates; 10% regional uplift included, Gemini promotional discount/cache discounts not assumed. Not invoice figures.",
+  "price_source": "https://www.databricks.com/product/pricing/proprietary-foundation-model-serving",
+  "openai_reference": "https://developers.openai.com/api/docs/models/gpt-5.5.md",
+  "max_output_tokens": 2048,
+  "max_parallel_calls": 3,
+  "no_automatic_retries": true,
+  "screening_prompt": "You are screening survey questions to decide whether each one states a DEBATABLE OPINION that two reasonable people could argue opposing sides of --- or is merely a PERSONAL REPORT about the respondent themselves.\n\nClassify the question into exactly one class:\n\n- debatable_opinion: asks for a value judgment, evaluation, preference, or attitude about some EXTERNAL object, policy, group, claim, or state of the world --- something a debater could defend or contest with reasons, independent of the respondent's own habits. Examples:\n\n* \"Has <leader/country> done a good or bad job dealing with the outbreak?\"  (evaluation)\n\n* \"Is <issue> a very big problem, a moderate problem, or not a problem?\"    (evaluation)\n\n* \"It's GOOD that American ideas are spreading, OR it's BAD.\"               (value judgment)\n\n* \"I LIKE American ways of doing business, OR I DISLIKE them.\"              (preference/attitude)\n\n* \"Strongly agree / disagree: it is a man's job to earn money ...\"          (attitude on a claim)\n\n* \"How much confidence do you have in <institution>?\"                       (evaluative trust)\n\n* \"Which is most important for the U.S. to do about China: ...?\"            (contestable priority)\n\n- personal_report: asks the respondent to report a FACT ABOUT THEMSELVES --- their own behavior, habits, exposure, awareness, knowledge, or personal identity. There is no external proposition to hold a position on, so \"agree/disagree\" is a category error. Examples:\n\n* \"How closely do you follow news about other countries?\"                   (own behavior)\n\n* \"How much have you read or heard about <event>?\"                          (own awareness)\n\n* \"Have you personally done X in the past year?\"                            (own behavior)\n\n* \"Do you think of yourself first as your nationality or first as <group>?\" (own identity)\n\n- unclear: genuinely ambiguous or neither (use sparingly).\n\nDecisive test: could a committee of debaters argue FOR and AGAINST a shared position here, using evidence and reasoning about the world? If YES -> debatable_opinion. If the only truthful answer is a private fact about the person being asked (what they do / have heard of / how they identify), there is nothing to debate -> personal_report.\n\nJudge the QUESTION's type only. Do not answer it. Do not be swayed by the answer options.",
+  "screening_prompt_source": "/Users/Chen/Documents/research/llm-committee-paper/sections/prompt_question_filter.tex",
+  "screening_prompt_source_sha256": "eb0009f9d60d7745ad6c203f1c753eb41ff25a7fe7661d2cbc86db762da3629b",
+  "candidates": [
+    {
+      "candidate_order_index": 72,
+      "dataset_row_zero_based": 840,
+      "question": "Compared with 20 years ago, do you think the financial situation of average people in your country is better, worse, or do you think there has been no change?",
+      "options": [
+        "Better",
+        "Worse",
+        "No change",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 73,
+      "dataset_row_zero_based": 818,
+      "question": "Who is mostly responsible for the fact that the Palestinians do not have a state of their own - Israelis or the Palestinians themselves?",
+      "options": [
+        "Israelis",
+        "Palestinians",
+        "Both (VOL)",
+        "United States (VOL)",
+        "Arab countries (VOL)",
+        "Other (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 74,
+      "dataset_row_zero_based": 887,
+      "question": "How important is it that relations improve between Pakistan and India, very important, somewhat important, not too important, or not at all important?",
+      "options": [
+        "Very important",
+        "Somewhat important",
+        "Not too important",
+        "Not at all important"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 75,
+      "dataset_row_zero_based": 216,
+      "question": "Please tell me whether you completely agree, mostly agree, mostly disagree or completely disagree with the following statements...Most people have a better life now, even though some are rich and some are still poor",
+      "options": [
+        "Completely agree",
+        "Mostly agree",
+        "Mostly disagree",
+        "Completely disagree"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 76,
+      "dataset_row_zero_based": 1592,
+      "question": "Would you favor or oppose further talks between your country and (India/Pakistan) to try to reduce tensions between the two countries?",
+      "options": [
+        "Favor",
+        "Oppose"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 77,
+      "dataset_row_zero_based": 959,
+      "question": "Thinking about your country's future, how important is it that: a. anyone can openly criticize the government? Is it very important, somewhat important, not too important or not important at all?",
+      "options": [
+        "Very important",
+        "Somewhat important",
+        "Not too important",
+        "Not important at all"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 78,
+      "dataset_row_zero_based": 592,
+      "question": "Why do you think the US is conducting the war on terrorism? Is...To control Mideast oil...an important reason why the US is doing this or not?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 79,
+      "dataset_row_zero_based": 1062,
+      "question": "Have the changes that have taken place in your country since 1991 had a very good influence, a good influence, a bad influence or a very bad influence on the following: The standard of living?",
+      "options": [
+        "Very good influence",
+        "Good influence",
+        "Bad influence",
+        "Very bad influence",
+        "No influence (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 80,
+      "dataset_row_zero_based": 1102,
+      "question": "Which statement comes closer to your own views, even if neither is exactly right? Most people can succeed if they are willing to work hard OR Hard work is no guarantee of success for most people.",
+      "options": [
+        "Most people can succeed if they are willing to work hard",
+        "Hard work is no guarantee of success for most people",
+        "Neither/Both equally (VOL)",
+        "If (survey country) had cooperated more with other countries, the number of coronavirus cases would have been lower in this country",
+        "Many of the problems facing our country can be solved by working with other countries",
+        "No amount of cooperation between (survey country) and other countries would have reduced the number of coronavirus cases in this country",
+        "Few of the problems facing our country can be solved by working with other countries",
+        "DK/Refused",
+        "When dealing with major international issues, our country should take into account the interests of other countries, even if it means making compromises with them",
+        "When dealing with major international issues, our country should follow its own interests, even when other countries strongly disagree"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "this country"
+          },
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "survey country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 81,
+      "dataset_row_zero_based": 1087,
+      "question": "And thinking about U.S. policy toward China, how important do you think each of the following is,very important, somewhat important, not too important, or not at all important?...advocate for more freedom for Tibet",
+      "options": [
+        "Very important",
+        "Somewhat important",
+        "Not too important",
+        "Not at all important",
+        "Should not be done (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 82,
+      "dataset_row_zero_based": 1188,
+      "question": "Does Statement #1 or Statement #2 comes closer to your own views: c. refugees will increase the likelihood of terrorism in our country OR refugees will not increase the likelihood of terrorism in our country",
+      "options": [
+        "Statement 1",
+        "Statement 2",
+        "Neither/Both equally (VOL)",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 83,
+      "dataset_row_zero_based": 1819,
+      "question": "Thinking about some countries around the world...Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable or very unfavorable opinion of Japan?",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 84,
+      "dataset_row_zero_based": 962,
+      "question": "Have you ever learned that someone’s political beliefs were different than you thought they were, based on something they posted on a social networking site, or has this never happened to you?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 85,
+      "dataset_row_zero_based": 1269,
+      "question": "(For each, tell me how much confidence you have in each leader to do the right thing regarding world affairs — a lot of confidence, some confidence, not too much confidence or no confidence at all.)...Chinese President Xi Jinping",
+      "options": [
+        "A lot of confidence",
+        "Some confidence",
+        "Not too much confidence",
+        "No confidence at all",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 86,
+      "dataset_row_zero_based": 2380,
+      "question": "How frequently do the following things occur in your neighborhood?\n\nRacist behavior",
+      "options": [
+        "Very Frequently",
+        "Quite frequently",
+        "Not frequently",
+        "Not at all frequently",
+        "Don't know",
+        "No answer",
+        "Missing; Not available"
+      ],
+      "survey_source": "WVS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_respondent_location",
+            "evidence": "your neighborhood"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 87,
+      "dataset_row_zero_based": 2230,
+      "question": "In the city or area where you live, are you satisfied or dissatisfied with the quality of the following?\n\nThe quality of air",
+      "options": [
+        "Very satisfied",
+        "Fairly satisfied",
+        "Fairly Dissatisfied",
+        "Very dissatisfied",
+        "Don't know",
+        "No answer"
+      ],
+      "survey_source": "WVS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_respondent_location",
+            "evidence": "where you live"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 88,
+      "dataset_row_zero_based": 1509,
+      "question": "Here are some things that may be part of a free trade agreement with the European Union. Please tell me if you strongly support, somewhat support, somewhat oppose, or strongly oppose...Removing all restrictions on investment between the U.S. and the European Union",
+      "options": [
+        "Strongly support",
+        "Somewhat support",
+        "Somewhat oppose",
+        "Strongly oppose"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 89,
+      "dataset_row_zero_based": 2346,
+      "question": "Please tell me for each of the following statements whether you think it can always be justified, never be justified, or something in between, using this card.\n\nSuicide",
+      "options": [
+        "Never justifiable",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "Always justifiable",
+        "Don't know",
+        "No answer",
+        "Other missing; Multiple answers Mail (EVS)"
+      ],
+      "survey_source": "WVS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 90,
+      "dataset_row_zero_based": 906,
+      "question": "Thinking about your country's future, how important is it that: b. honest elections are held regularly with a choice of at least two political parties? Is it very important, somewhat important, not too important or not important at all?",
+      "options": [
+        "Very important",
+        "Somewhat important",
+        "Not too important",
+        "Not important at all"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 91,
+      "dataset_row_zero_based": 2108,
+      "question": "(In your opinion, is Islam playing a greater or lesser role in politics in this country compared to a few years ago?) Is this good or bad for our country?",
+      "options": [
+        "Good",
+        "Bad",
+        "Neither (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "this country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 92,
+      "dataset_row_zero_based": 206,
+      "question": "Do you approve or disapprove of the way Prime Minister Tayyip Erdogan is handling each of the following areas…the economy",
+      "options": [
+        "Approve",
+        "Disapprove"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 93,
+      "dataset_row_zero_based": 1208,
+      "question": "Do you approve or disapprove of the way Prime Minister Narendra Modi is handling relations with...Pakistan?",
+      "options": [
+        "Approve",
+        "Disapprove",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 94,
+      "dataset_row_zero_based": 1021,
+      "question": "And thinking about some political leaders and organizations in our country, please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable or very unfavorable opinion of ____? d. The Taliban",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 95,
+      "dataset_row_zero_based": 1812,
+      "question": "Do you think that the Mexican government is making progress in its campaign against the drug traffickers, losing ground or are things about the same as they have been in the past?",
+      "options": [
+        "Making progress",
+        "Losing ground",
+        "Same as they have been in the past",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 96,
+      "dataset_row_zero_based": 585,
+      "question": "And do you ever use social networking sites like Facebook, Twitter (INSERT ) to share your views about...products you use or not? ",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 97,
+      "dataset_row_zero_based": 1461,
+      "question": "Please tell me whether you favor or oppose Ukraine joining NATO in the next ten years.",
+      "options": [
+        "Support",
+        "Oppose"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 98,
+      "dataset_row_zero_based": 747,
+      "question": "Do you think China has a fair trade policy or an unfair trade policy with the United States?",
+      "options": [
+        "Fair",
+        "Unfair",
+        "Both (VOL)",
+        "U.S. unfair (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 99,
+      "dataset_row_zero_based": 1752,
+      "question": "(I am going to read you a list of things that may be problems for the US. For each one, please tell me if you think it is a very serious problem, somewhat serious, not too serious or not a problem at all.)...The US trade deficit with China",
+      "options": [
+        "Very serious",
+        "Somewhat serious",
+        "Not too serious",
+        "Not a problem",
+        "Not a problem at all",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 100,
+      "dataset_row_zero_based": 684,
+      "question": "In your opinion, should the economic sanctions imposed on Russia by the European Union and the United States be increased, decreased or kept about the same as they are now?",
+      "options": [
+        "Increased",
+        "Decreased",
+        "About the same"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 101,
+      "dataset_row_zero_based": 2075,
+      "question": "Now I'm going to read a list of political leaders.  For each, tell me how much confidence you have in each leader to do the right thing regarding world affairs - a lot of confidence, some confidence, not too much confidence, or no confidence at all... United Nations Secretary General Ban Ki-Moon",
+      "options": [
+        "A lot of confidence",
+        "Some confidence",
+        "Not too much confidence",
+        "No confidence at all"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 102,
+      "dataset_row_zero_based": 1476,
+      "question": "(Please tell me if you approve or disapprove of the way President Pena Nieto is handling each of the following areas.)...Relations with the US",
+      "options": [
+        "Approve",
+        "Disapprove",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 103,
+      "dataset_row_zero_based": 2176,
+      "question": "Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable, or very unfavorable opinion of...Tehrik-i-Taliban",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 104,
+      "dataset_row_zero_based": 1917,
+      "question": "Overall, how much influence do you think Saudi Arabia is having on the way things are going in your country? Would you say it is having a great deal of influence, a fair amount, not too much, or no influence at all? (Ask if 'A great deal' or 'A fair amount':) Is this a good thing, a bad thing, or neither good nor bad?",
+      "options": [
+        "Good",
+        "Bad",
+        "Neither"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 105,
+      "dataset_row_zero_based": 386,
+      "question": "In general, what kind of influence has the increasing use of the Internet in our country had on each of the following things. Has the increasing use of the Internet had a good influence, a bad influence, or no influence at all?...morality ",
+      "options": [
+        "Good influence",
+        "Bad influence",
+        "No influence"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 106,
+      "dataset_row_zero_based": 1857,
+      "question": "How much influence do you think China is having on the way things are going in our country? Would you say it is having a great deal of influence, a fair amount, not too much, or no influence at all?",
+      "options": [
+        "Great deal",
+        "Fair amount",
+        "Not too much",
+        "No influence at all"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 107,
+      "dataset_row_zero_based": 1581,
+      "question": "Now I am going to read you a list of things that may be problems in our country.  As I read each one, please tell me if you think it is a very big problem, a moderately big problem, a small problem or not a problem at all...Social inequality",
+      "options": [
+        "Very big problem",
+        "Moderately big problem",
+        "Small problem",
+        "Not a problem at all"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 108,
+      "dataset_row_zero_based": 2402,
+      "question": "On this list are various groups of people. Could you please mention any that you would not like to have as neighbors?\n\nPeople who speak a different language",
+      "options": [
+        "Mentioned",
+        "Not mentioned",
+        "Don't know",
+        "No answer",
+        "Missing; Not available"
+      ],
+      "survey_source": "WVS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 109,
+      "dataset_row_zero_based": 1986,
+      "question": "As I read each one, please tell me if you think it is a very important, somewhat important, not too important, or not at all important reason why people in your country move to other countries. b. To escape violence",
+      "options": [
+        "Very important",
+        "Somewhat important",
+        "Not too important",
+        "Not at all important",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 110,
+      "dataset_row_zero_based": 861,
+      "question": "In general, what kind of influence has the increasing use of the Internet in our country had on each of the following things. Has the increasing use of the Internet had a good influence, a bad influence, or no influence at all?...education",
+      "options": [
+        "Good influence",
+        "Bad influence",
+        "No influence"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 111,
+      "dataset_row_zero_based": 1167,
+      "question": "Now, thinking about some possible economic concerns for the country. Do you think that the power that Germany and other European Union countries have over our economy pose(s) a major threat, a minor threat, or no threat to the economic well being of your country? ",
+      "options": [
+        "Major threat",
+        "Minor threat",
+        "No threat"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          },
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our economy"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 112,
+      "dataset_row_zero_based": 1307,
+      "question": "Now I will read a list of some things that have happened in the world recently. For each one,please tell me if you've heard of it or not...the Hamas Party's victory in the Palestinian elections. Have you heard of it or not?",
+      "options": [
+        "Yes, have heard of it",
+        "No, have not heard of it"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 113,
+      "dataset_row_zero_based": 1599,
+      "question": "I'd like you to rate some different groups of people in your country according to how you feel about them.  For each group, please tell me whether your opinion is very favorable, mostly favorable, mostly unfavorable or very unfavorable?...Tajiks",
+      "options": [
+        "Very favorable",
+        "Mostly favorable",
+        "Mostly unfavorable",
+        "Very unfavorable"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 114,
+      "dataset_row_zero_based": 1691,
+      "question": "Now I'd like to ask your views about some additional political leaders and organizations.  Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable, or very unfavorable opinion of...Asif Ali Zardari?",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 115,
+      "dataset_row_zero_based": 2104,
+      "question": "Does this statement describe your country very well, somewhat well, not too well, or not well at all? g. Most people have a good chance to improve their standard of living",
+      "options": [
+        "Very well",
+        "Somewhat well",
+        "Not too well",
+        "Not well at all",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 116,
+      "dataset_row_zero_based": 1754,
+      "question": "For each of the following, please tell me how news organizations in your country are doing on the issue. Would you say news organizations are doing this very well, somewhat well, not too well, or not well at all? b. reporting news about government leaders and officials",
+      "options": [
+        "Very well",
+        "Somewhat well",
+        "Not too well",
+        "Not well at all",
+        "News organizations should not do this (VOL)",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 117,
+      "dataset_row_zero_based": 516,
+      "question": "Do you think the EU should play a more active role or less active role in world affairs than it does today?",
+      "options": [
+        "More active role",
+        "Less active role",
+        "About the same (VOL)",
+        "No role (VOL)",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 118,
+      "dataset_row_zero_based": 461,
+      "question": "Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable or very unfavorable opinion of ____? e. Saudi King Salman",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 119,
+      "dataset_row_zero_based": 2228,
+      "question": "In the city or area where you live, are you satisfied or dissatisfied with the quality of the following?\n\nThe quality of housing",
+      "options": [
+        "Very satisfied",
+        "Fairly satisfied",
+        "Fairly Dissatisfied",
+        "Very dissatisfied",
+        "Don't know",
+        "No answer"
+      ],
+      "survey_source": "WVS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_respondent_location",
+            "evidence": "where you live"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 120,
+      "dataset_row_zero_based": 941,
+      "question": "In your opinion, is the National Food Security Bill a good thing for India or a bad thing for India?",
+      "options": [
+        "A good thing for India",
+        "A bad thing for India"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 121,
+      "dataset_row_zero_based": 792,
+      "question": "Going forward, who do you think will have more political power in our country - Vladimir Putin or Dmitry Medvedev?",
+      "options": [
+        "Vladimir Putin",
+        "Dmitri Medvedev",
+        "Both equally",
+        "Neither"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 122,
+      "dataset_row_zero_based": 1914,
+      "question": "Now I'd like to ask your views about some additional political leaders. Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable, or very unfavorable opinion of...Palestinian President Mahmoud Abbas (Abu Mazen)",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 123,
+      "dataset_row_zero_based": 2161,
+      "question": "As I read a list of groups and organizations, for each, please tell me what kind of influence the group is having on the way things are going in your country. Is the influence of self-defense forces very good, somewhat good, somewhat bad or very bad in your country? ",
+      "options": [
+        "Very good",
+        "Somewhat good",
+        "Somewhat bad",
+        "Very bad"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 124,
+      "dataset_row_zero_based": 1883,
+      "question": "For each statement, please tell me whether you completely agree with it, mostly agree with it, mostly disagree with it or completely disagree with it...It is a great misfortune that the Soviet Union no longer exists",
+      "options": [
+        "Completely agree",
+        "Mostly agree",
+        "Mostly disagree",
+        "Completely disagree"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 125,
+      "dataset_row_zero_based": 2225,
+      "question": "In which of the following things do you believe, if you believe in any?\n\nHell",
+      "options": [
+        "Yes",
+        "No",
+        "Don't know",
+        "No answer",
+        "Other missing; Multiple answers Mail (EVS)"
+      ],
+      "survey_source": "WVS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 126,
+      "dataset_row_zero_based": 2501,
+      "question": "Please tell me for each of the following things how essential you think it is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy\n\nPeople choose their leaders in free elections",
+      "options": [
+        "It is against democracy (spontaneous)",
+        "Not an essential characteristic of democracy",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "An essential characteristic of democracy",
+        "Don't know",
+        "No answer",
+        "Other missing; Multiple answers Mail (EVS)"
+      ],
+      "survey_source": "WVS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 127,
+      "dataset_row_zero_based": 776,
+      "question": "Generally speaking, how much do you think the United States can trust Pakistan...a great deal, a fair amount, not too much, or not at all?",
+      "options": [
+        "Great deal",
+        "Fair amount",
+        "Not too much",
+        "Not at all"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 128,
+      "dataset_row_zero_based": 1315,
+      "question": "Now I’d like to ask your views about some leaders and organizations in our country. Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable, or very unfavorable opinion of...Oleg Tyagnibok? ",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 129,
+      "dataset_row_zero_based": 1768,
+      "question": "Now I'd like to ask your views about some additional political leaders.  Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable, or very unfavorable opinion of...Sonia Gandhi?",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 130,
+      "dataset_row_zero_based": 1308,
+      "question": "In the long run, do you think a war with Iraq to end Saddam Hussein's rule is likely to increase the chances of terrorist attacks in Europe/United States (US only), lessen the chances, or will it make no difference?",
+      "options": [
+        "Increase",
+        "Lessen",
+        "No difference"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 131,
+      "dataset_row_zero_based": 438,
+      "question": "Which statement comes closer to your own views, even if neither is exactly right? We should reduce air pollution even if it means slower economic growth, Air pollution is the price we have to pay for continued economic growth",
+      "options": [
+        "We should reduce air pollution even if it means slower economic growth",
+        "If (survey country) had cooperated more with other countries, the number of coronavirus cases would have been lower in this country",
+        "Many of the problems facing our country can be solved by working with other countries",
+        "Air pollution is the price we have to pay for continued economic growth",
+        "No amount of cooperation between (survey country) and other countries would have reduced the number of coronavirus cases in this country",
+        "Few of the problems facing our country can be solved by working with other countries",
+        "Both (VOL)",
+        "DK/Refused",
+        "Neither (VOL)",
+        "When dealing with major international issues, our country should take into account the interests of other countries, even if it means making compromises with them",
+        "When dealing with major international issues, our country should follow its own interests, even when other countries strongly disagree"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "this country"
+          },
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "survey country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 132,
+      "dataset_row_zero_based": 1121,
+      "question": "Do you think that American opposition to a Dubai company managing several U.S. ports reflects reasonable concerns about terrorism or does it reflect prejudice against Arabs?",
+      "options": [
+        "Reasonable concerns about terrorism",
+        "Prejudice against Arabs",
+        "Other (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 133,
+      "dataset_row_zero_based": 297,
+      "question": "Which of these characteristics do you associate with Americans? Do you associate ____ with Americans or not? e. optimistic",
+      "options": [
+        "Yes",
+        "No",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 134,
+      "dataset_row_zero_based": 866,
+      "question": "As I read a list of groups and organizations, for each, please tell me what kind of influence the group is having on the way things are going in your country. Is the influence of...la Opocision...very good, somewhat good, somewhat bad or very bad in your country? ",
+      "options": [
+        "Very good",
+        "Somewhat good",
+        "Somewhat bad",
+        "Very bad"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 135,
+      "dataset_row_zero_based": 311,
+      "question": "Now I'd like to ask your views about some additional political leaders and organizations.  Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable, or very unfavorable opinion of...Nawaz Sharif?",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 136,
+      "dataset_row_zero_based": 1818,
+      "question": "How likely are you personally to take political action on __ , such as contact an elected official or participate in a demonstration? f. police misconduct",
+      "options": [
+        "Very likely",
+        "Somewhat likely",
+        "Not too likely",
+        "Not at all likely",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 137,
+      "dataset_row_zero_based": 327,
+      "question": "I'm going to read a list of some changes that have taken place. Please tell me if you think each one has been a change for the better, a change for the worse, or hasn't it made much of a difference: fast food or convenience food?",
+      "options": [
+        "Change for the better",
+        "Change for the worse",
+        "Not much difference"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 138,
+      "dataset_row_zero_based": 2100,
+      "question": "As I read some specific policies of President Barack Obama tell me if you approve or disapprove of them...Closing the U.S. military prison in Guantanamo Bay.",
+      "options": [
+        "Approve",
+        "Disapprove"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 139,
+      "dataset_row_zero_based": 2127,
+      "question": "Thinking about the public, would you say each of the following aspects needs to be completely reformed, needs major changes, needs minor changes, or doesn’t need to be changed? c. the political system",
+      "options": [
+        "It needs to be completely reformed",
+        "It needs major changes",
+        "It needs minor changes",
+        "It doesn’t need to be changed",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "实际 political system 未指定所属国家。"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 140,
+      "dataset_row_zero_based": 961,
+      "question": "Now I'm going to read a list of political leaders.  For each, tell me how much confidence you have in each leader to do the right thing regarding world affairs - a lot of confidence, some confidence, not too much confidence, or no confidence at all?...Japanese Prime Minister Shinzo Abe.",
+      "options": [
+        "A lot of confidence",
+        "Some confidence",
+        "Not too much confidence",
+        "No confidence at all"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 141,
+      "dataset_row_zero_based": 1598,
+      "question": "Do you favor or oppose changing the Imperial Household Act so that a female could succeed to the imperial throne?",
+      "options": [
+        "Favor",
+        "Oppose"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 142,
+      "dataset_row_zero_based": 594,
+      "question": "(How much of a role do you think Islam plays in the political life of our country - a very large role, a fairly large role, a fairly small role, or a very small role?) In your opinion - is this good or bad for our country?",
+      "options": [
+        "Good",
+        "Bad",
+        "Neither (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 143,
+      "dataset_row_zero_based": 794,
+      "question": "I'd like your opinion about some possible international concerns for your country. Do you think that ___ is a major threat, a minor threat, or not a threat to your country? b. Terrorism",
+      "options": [
+        "Major threat",
+        "Minor threat",
+        "Not a threat",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 144,
+      "dataset_row_zero_based": 1297,
+      "question": "Thinking about our country's relations with Russia, which is more important -- being tough with Russia on the issue of Ukraine OR having a strong economic relationship with Russia?",
+      "options": [
+        "Be tough with Russia",
+        "Strong economic relationship with Russia"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 145,
+      "dataset_row_zero_based": 1403,
+      "question": "For each of the following problems, please tell me if you think it will get better, get worse or stay the same in the next five years....Corruption",
+      "options": [
+        "Better",
+        "DK/Refused",
+        "Worse",
+        "Stay the same"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "预测腐败变化未指定国家或适用地区。"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 146,
+      "dataset_row_zero_based": 1081,
+      "question": "Thinking about the first problem you mentioned, what country or international organization should take responsibility for dealing with this problem?",
+      "options": [
+        "United States",
+        "European Union",
+        "United Nations",
+        "African Union",
+        "Respondent's own country",
+        "All countries/organizations",
+        "No country/organization",
+        "Other (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "Respondent's own country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 147,
+      "dataset_row_zero_based": 1474,
+      "question": "Which of these characteristics do you associate with Americans? Do you associate ____ with Americans or not? b. hardworking",
+      "options": [
+        "Yes",
+        "No",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 148,
+      "dataset_row_zero_based": 1099,
+      "question": "Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable or very unfavorable opinion of ____. c. Alternative for Germany (AfD)",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 149,
+      "dataset_row_zero_based": 742,
+      "question": "And in your opinion, should the government in Kiev recognize the results of the March 16th referendum and allow Crimea to join Russia? ",
+      "options": [
+        "Yes, government should recognize the results",
+        "No, government should not recognize the results"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 150,
+      "dataset_row_zero_based": 1183,
+      "question": "What country in the world, if any, represents the greatest danger to your country?",
+      "options": [
+        "China",
+        "India",
+        "Iran",
+        "Iraq",
+        "Japan",
+        "North Korea",
+        "Pakistan",
+        "Russia",
+        "United States",
+        "East Europe and former Soviet Republics",
+        "Taiwan",
+        "Middle Eastern Countries",
+        "No such country",
+        "Other (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 151,
+      "dataset_row_zero_based": 912,
+      "question": "Now thinking about the future, do you think Venezuela generally should or should not follow the policies of former President Hugo Chavez?",
+      "options": [
+        "Should",
+        "Should not",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 152,
+      "dataset_row_zero_based": 2284,
+      "question": "Here are some questions about international organizations. Many people don't know the answers to these questions, but if you do please tell me.\n\nWhere are the headquarters of the International Monetary Fund (IMF) located?",
+      "options": [
+        "Washington DC",
+        "London",
+        "Geneva",
+        "Don't know",
+        "No answer",
+        "Missing; Not available"
+      ],
+      "survey_source": "WVS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 153,
+      "dataset_row_zero_based": 1105,
+      "question": "Do you think the U.S. led war on terrorism is a sincere effort to reduce international terrorism or don't you believe that?",
+      "options": [
+        "Sincere effort",
+        "Don't believe that",
+        "Both (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 154,
+      "dataset_row_zero_based": 1644,
+      "question": "Please tell me whether you think the following statements apply to the United Nations or not. The United Nations… g. Promotes action on climate change",
+      "options": [
+        "Yes",
+        "No",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 155,
+      "dataset_row_zero_based": 439,
+      "question": "Do you approve or disapprove of the job the government has done in dealing with the swine flu?",
+      "options": [
+        "Approve",
+        "Disapprove"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "the government 未指定具体国家政府。"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 156,
+      "dataset_row_zero_based": 2376,
+      "question": "On this list are various groups of people. Could you please mention any that you would not like to have as neighbors?\n\nPeople who have AIDS",
+      "options": [
+        "Mentioned",
+        "Not mentioned",
+        "Don't know",
+        "No answer",
+        "Missing; Not available"
+      ],
+      "survey_source": "WVS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 157,
+      "dataset_row_zero_based": 883,
+      "question": "In your opinion, do middle income people have too much influence in our political system, not enough influence, or about the right amount?",
+      "options": [
+        "Too much",
+        "Not enough",
+        "Right amount"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our political system"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 158,
+      "dataset_row_zero_based": 198,
+      "question": "As I read a list of groups and organizations, for each, please tell me what kind of influence the group is having on the way things are going in your country. Is the influence of The Congress very good, somewhat good, somewhat bad or very bad in your country?",
+      "options": [
+        "Very good",
+        "Somewhat good",
+        "Somewhat bad",
+        "Very bad"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 159,
+      "dataset_row_zero_based": 2478,
+      "question": "Please tell us if you strongly agree, agree, disagree, or strongly disagree with the following statements:\n\nIt is acceptable to have sex with someone in exchange for gifts and favors",
+      "options": [
+        "Strongly agree",
+        "Agree",
+        "Disagree",
+        "Strongly disagree",
+        "Don't know",
+        "No answer/refused",
+        "Missing; Not applicable for other reasons"
+      ],
+      "survey_source": "WVS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 160,
+      "dataset_row_zero_based": 1162,
+      "question": "Now thinking about other issues, please tell me whether you completely agree, mostly agree, mostly disagree or completely disagree with the following statements...Most people have a better life now, even though some are rich and some are still poor",
+      "options": [
+        "Completely agree",
+        "Mostly agree",
+        "Mostly disagree",
+        "Completely disagree"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 161,
+      "dataset_row_zero_based": 1648,
+      "question": "And thinking about some political leaders and organizations in our country, please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable, or very unfavorable opinion of The Wasat Party? ",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 162,
+      "dataset_row_zero_based": 1600,
+      "question": "Some feel that we should rely on a democratic form of government to solve our country's problems.  Others feel that we should rely on a leader with a strong hand to solve our country's problems.  Which comes closer to your opinion?",
+      "options": [
+        "Democratic form of government",
+        "Strong leader",
+        "Don't know/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 163,
+      "dataset_row_zero_based": 1496,
+      "question": "Do you personally believe that having an abortion is morally acceptable, morally unacceptable, or is it not a moral issue? ",
+      "options": [
+        "Morally acceptable",
+        "Morally unacceptable",
+        "Not a moral issue",
+        "Depends on the situation (VOL)"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 164,
+      "dataset_row_zero_based": 2081,
+      "question": "Do you think the Olympics will help China's image around the world, hurt China's image around the world, or will the Olympics have no impact on China's image?",
+      "options": [
+        "Help",
+        "Hurt",
+        "No impact"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 165,
+      "dataset_row_zero_based": 301,
+      "question": "Please tell me if you approve or disapprove of the way Prime Minister Malcom Turnbull is handling each of the following areas. a. the economy",
+      "options": [
+        "Approve",
+        "Disapprove",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 166,
+      "dataset_row_zero_based": 64,
+      "question": "Do you think people should be able to say these types of things publically OR the government should be able to prevent people from saying these things in some circumstances. d. statements that call for violent protests",
+      "options": [
+        "People should be able to say these things publically",
+        "Government should be able to prevent people from saying these things",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 167,
+      "dataset_row_zero_based": 1869,
+      "question": "Here are some different political and social actions that people can take. Please indicate, for each type of action, whether: you have done this in the past year, you have done this in the more distant past, you have not done this but might do it, or you have not done this and would never, under any circumstances, do it...signed a petition about a political or social issue?",
+      "options": [
+        "Have done in the past year",
+        "Have done in the more distant past",
+        "Have not done, but might do",
+        "Have not done and would never do"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 168,
+      "dataset_row_zero_based": 1969,
+      "question": "In your opinion, are India's laws too tough, not tough enough, or about right when it comes to punishing the crime of rape?",
+      "options": [
+        "Too tough",
+        "Not tough enough",
+        "About right"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    },
+    {
+      "candidate_order_index": 169,
+      "dataset_row_zero_based": 2123,
+      "question": "(As I read each one, please tell me if you think it is a very big problem, a moderately big problem, a small problem or not a problem at all.)...Immigrants traveling through our country from Central America to the United States",
+      "options": [
+        "Very big problem",
+        "Moderately big problem",
+        "Small problem",
+        "Not a problem at all",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "our country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 170,
+      "dataset_row_zero_based": 1806,
+      "question": "Thinking about the future of your country, please tell me whether you feel generally optimistic or generally pessimistic about the following areas. d. Our country's education system",
+      "options": [
+        "Optimistic",
+        "Pessimistic",
+        "Neither (DO NOT READ)",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": false,
+        "issues": [
+          {
+            "reason_code": "unresolved_country_context",
+            "evidence": "your country"
+          }
+        ],
+        "note": "缺少共同的国家/地理参照；不指定模型国籍或居住地。"
+      }
+    },
+    {
+      "candidate_order_index": 171,
+      "dataset_row_zero_based": 880,
+      "question": "Thinking about some countries around the world...Please tell me if you have a very favorable, somewhat favorable, somewhat unfavorable or very unfavorable opinion of India?",
+      "options": [
+        "Very favorable",
+        "Somewhat favorable",
+        "Somewhat unfavorable",
+        "Very unfavorable",
+        "DK/Refused"
+      ],
+      "survey_source": "GAS",
+      "context_review": {
+        "passed": true,
+        "issues": [],
+        "note": "未发现必须补充受访者国家或居住地的指代。"
+      }
+    }
+  ]
+}
