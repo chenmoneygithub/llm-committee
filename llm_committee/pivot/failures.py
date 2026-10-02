@@ -125,12 +125,12 @@ def retryable_format_record(request: dict, row: dict) -> bool:
 def local_transport_record(request: dict, row: dict, closed_provider: str) -> bool:
     """Recognize a retryable connection/timeout failure without claiming zero usage.
 
-    Scope is the direct Databricks HTTP adapter. Native Tinker parsing/provenance
+    Scope is the Databricks/OpenRouter HTTP adapters. Native Tinker parsing/provenance
     exceptions must not be swallowed as network errors. Old rows retained the
     exception class only, so use a narrow list of HTTP connection/timeout classes.
     """
     return (
-        closed_provider == "databricks"
+        closed_provider in ("databricks", "openrouter")
         and (request["model"].startswith("gpt-5.6-") or request["model"] == "gemini-3.8-flash")
         and row["status"] == "uncertain"
         and row.get("response") is None

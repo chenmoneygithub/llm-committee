@@ -196,6 +196,9 @@ class TriadicGraph(QuestionGraph):
         if manifest["protocol_version"] != VERSION or manifest["design"]["explicit_position_feedback"]:
             raise ValueError("Not a public-history A/B/E protocol")
         self.context, self.plan, self.manifest = context, plan, manifest
+        self.arms = tuple(manifest["design"].get("active_arms", ARMS))
+        if not self.arms or len(set(self.arms)) != len(self.arms) or not set(self.arms) <= set(ARMS):
+            raise ValueError("Invalid active tone assignments")
         self.question = Question.from_dict(context["question"])
         self.config = PilotConfig(**manifest["config"])
         self.config.validate()
@@ -308,7 +311,7 @@ class TriadicGraph(QuestionGraph):
                 effort=cfg.debate_effort,
                 tokens=cfg.initial_tokens,
             )
-        for arm in ARMS:
+        for arm in self.arms:
             for n in self.route.nodes:
                 path = self.route.path(n.id)
                 deps = {self.key(arm, f"initial/{m}") for m in (n.receiver, path[0].sender)} | {
@@ -361,7 +364,7 @@ class TriadicGraph(QuestionGraph):
                         lambda v, b=before, a=after: prompts.c_messages(q, v[b]["position"], v[a]["position"]),
                         prompts.C_SCHEMA,
                     )
-        for arm in ("baseline", *ARMS):
+        for arm in ("baseline", *self.arms):
             deps = initial_keys + (
                 [] if arm == "baseline" else [self.key(arm, f"debate/{n.id}") for n in self.route.nodes]
             )
@@ -377,7 +380,7 @@ class TriadicGraph(QuestionGraph):
                 tokens=cfg.chairman_tokens,
                 parse=parse_answer,
             )
-        for arm in ARMS:
+        for arm in self.arms:
             baseline, debate = self.key("baseline", "E2/baseline"), self.key(arm, f"E2/{arm}")
             for order in range(2):
                 left = self.plan["first_debate_left"][arm] if order == 0 else not self.plan["first_debate_left"][arm]
@@ -393,7 +396,7 @@ class TriadicGraph(QuestionGraph):
                     prompts.E_SCHEMA,
                 )
         arm = self.plan["calibration_arm"]
-        if arm:
+        if arm in self.arms:
             source = self.key(arm, f"E2/{arm}")
             for kind in CALIBRATION_KINDS:
                 variant = self.key(arm, f"calibration/{kind}/variant")
@@ -450,7 +453,7 @@ class TriadicGraph(QuestionGraph):
     def report(self, count):
         branches, trajectories, positions, endpoints, b_events = {}, [], {}, [], []
         seen_b = set()
-        for arm in ARMS:
+        for arm in self.arms:
             history = self.history(self.values, arm)
             branches[arm] = {"replies": history, "tones": self.plan["tones"][arm]}
             for nid in self.plan["sampled_b_nodes"]:
@@ -530,7 +533,7 @@ class TriadicGraph(QuestionGraph):
                     )
                 positions[f"{arm}/{leaf.id}"] = states
         quality = []
-        for arm in ARMS:
+        for arm in self.arms:
             base = self.values.get(self.key("baseline", "E2/baseline"))
             debated = self.values.get(self.key(arm, f"E2/{arm}"))
             pref = self.preferences(arm, "E2", self.plan["first_debate_left"][arm])
@@ -551,7 +554,7 @@ class TriadicGraph(QuestionGraph):
                 }
             )
         calibration = None
-        if arm := self.plan["calibration_arm"]:
+        if (arm := self.plan["calibration_arm"]) in self.arms:
             calibration = {
                 "arm": arm,
                 "source": self.values.get(self.key(arm, f"E2/{arm}")),

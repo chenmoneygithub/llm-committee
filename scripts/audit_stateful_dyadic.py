@@ -125,7 +125,7 @@ def audit(root):
             graph.accept(task, request, value)
             tasks += 1
         assert canonical(graph.report(count)) == canonical(record)
-        for pair in ("AB", "CA", "BC"):
+        for pair in (("AB", "CA", "BC") if len(graph.arms) == 2 else ()):
             a, b = [
                 json.loads(saved[graph.key(arm, f"turn_level/debate/{pair}-3")][0]) for arm in ("original", "alternate")
             ]
@@ -165,6 +165,7 @@ def audit(root):
         "argument_control_pairs_differ_only_in_incoming": pairs,
         "frozen_code_and_plan_verified": True,
         "old_outputs_reused": False,
+        "active_tone_assignments": manifest["design"].get("active_arms", ["original", "alternate"]),
         "native_checks_are_synthetic": mock,
     }
 

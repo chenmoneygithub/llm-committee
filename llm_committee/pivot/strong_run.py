@@ -166,7 +166,11 @@ def _run(
             "trajectory_statuses": dict(Counter(t["status"] for t in trajectories)),
             "call_status_counts": dict(Counter(row[2] for row in rows)),
             "charged_or_reserved_usd": sum(row[3] for row in rows),
-            "cost_note": "Token-based estimate including retries/reservations, not a provider invoice",
+            "cost_note": (
+                "Response-reported OpenRouter charges when available, otherwise token estimates; includes unresolved reservations"
+                if manifest["config"]["closed_provider"] == "openrouter"
+                else "Token-based estimate including retries/reservations, not a provider invoice"
+            ),
             "max_inflight_requests": request_limit,
             "question_workers": workers,
             "task_failures": failures,

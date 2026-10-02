@@ -9,6 +9,7 @@ https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash
 
 from __future__ import annotations
 
+import math
 import os
 from dataclasses import dataclass
 from typing import Protocol
@@ -74,6 +75,13 @@ def reservation_usd(request: Request, *, closed_provider: str = "direct") -> flo
 
 
 def cost_usd(model: str, completion: Completion, *, closed_provider: str = "direct") -> float:
+    if closed_provider == "openrouter":
+        raw = completion.raw or {}
+        value = (raw.get("response", {}).get("usage") or {}).get("cost")
+        # Reuse a cost already present in the response. Missing cost metadata is
+        # not an endpoint failure: fall through to the existing token estimate.
+        if raw.get("provider") == "openrouter" and type(value) in (int, float) and math.isfinite(value) and value >= 0:
+            return float(value)
     p = PRICES[model]
     counts = (
         completion.input_tokens,
@@ -227,7 +235,7 @@ class LiveProviders:
         closed_provider: str = "databricks",
         databricks_profile: str = "un",
     ):
-        self.databricks = self.openai = self.gemini = None
+        self.databricks = self.openai = self.gemini = self.openrouter = None
         if closed_provider == "databricks":
             from .databricks_provider import DatabricksProvider
 
@@ -235,6 +243,12 @@ class LiveProviders:
         elif closed_provider == "direct":
             self.openai = OpenAIProvider()
             self.gemini = GeminiProvider() if judge else None
+        elif closed_provider == "openrouter":
+            if mixed:
+                raise ValueError("OpenRouter mixed-family native probability reads are not implemented; no Tinker fallback")
+            from .openrouter_provider import OpenRouterProvider
+
+            self.openrouter = OpenRouterProvider()
         else:
             raise ValueError("Unknown closed-model transport; no fallback")
         self.judge = judge
@@ -246,6 +260,10 @@ class LiveProviders:
             self.tinker.prepare(debate_effort)
 
     def generate(self, request: Request) -> Completion:
+        if self.openrouter:
+            if request.model == "gemini-3.8-flash" and not self.judge:
+                raise ValueError("Judge access was not enabled")
+            return self.openrouter.generate(request)
         if self.databricks and (
             request.model.startswith("gpt-5.6-") or (request.model == "gemini-3.8-flash" and self.judge)
         ):
@@ -264,6 +282,8 @@ class LiveProviders:
         return self.tinker.token_count(model, text)
 
     def close(self, status: str = "interrupted") -> None:
+        if self.openrouter:
+            self.openrouter.close(status)
         if self.databricks:
             self.databricks.close()
         if self.openai:

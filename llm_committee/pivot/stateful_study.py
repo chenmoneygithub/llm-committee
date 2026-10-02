@@ -133,10 +133,13 @@ class StatefulGraph(QuestionGraph):
         self.config = PilotConfig(**manifest["config"])
         self.config.validate()
         self.context, self.plan, self.manifest = context, plan, manifest
+        self.arms = tuple(manifest["design"].get("active_arms", ARMS))
+        if not self.arms or len(set(self.arms)) != len(self.arms) or not set(self.arms) <= set(ARMS):
+            raise ValueError("Invalid active tone assignments")
         self.route = make_route()
         self.tasks, self.values, self.failed, self.blocked = {}, {}, {}, {}
         self.submitted = set()
-        self.arm_keys = {a: set() for a in ARMS}
+        self.arm_keys = {a: set() for a in self.arms}
         self.cache_after = {}
         self.shared = set()
         for n in self.route.nodes:
@@ -250,7 +253,7 @@ class StatefulGraph(QuestionGraph):
             )
             return key
 
-        for arm in ARMS:
+        for arm in self.arms:
             plan = self.plan["arms"][arm]
             for m, model in enumerate(cfg.members):
                 add(
@@ -392,7 +395,7 @@ class StatefulGraph(QuestionGraph):
             )
 
         branches, trajectories, positions = {}, [], {}
-        for arm in ARMS:
+        for arm in self.arms:
             plan = self.plan["arms"][arm]
             events = []
             for e in plan["events"]:

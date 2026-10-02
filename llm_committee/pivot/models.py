@@ -120,12 +120,14 @@ class PilotConfig:
         return ROSTERS[self.roster]
 
     def validate(self) -> None:
-        if self.closed_provider not in ("databricks", "direct"):
-            raise ValueError("Select Databricks or direct closed-model access explicitly")
+        if self.closed_provider not in ("databricks", "direct", "openrouter"):
+            raise ValueError("Select Databricks, direct, or OpenRouter access explicitly")
         if not self.databricks_profile.strip():
             raise ValueError("Databricks profile cannot be blank")
         if self.closed_provider == "databricks" and self.cache:
             raise ValueError("Explicit cache breakpoints are not supported by this Databricks adapter")
+        if self.closed_provider == "openrouter" and self.cache:
+            raise ValueError("OpenRouter uses automatic caching; explicit cache breakpoints are not implemented")
         if self.roster not in ROSTERS:
             raise ValueError("Unknown roster")
         if self.debate_effort not in ("low", "medium", "high", "xhigh", "max"):

@@ -3,11 +3,32 @@
 ## Repository contents and local artifacts
 
 This repository includes the experiment code, tests, protocol documents, frozen
-question/routing plans, and lightweight summaries. Raw run archives (`runs/`),
-databases, caches, credentials, and large generated HTML/JSON reports stay local
-and are not backed up by Git. Links to those reports below work only when the
-local artifacts are available. Report-generation scripts are included; some
-artifact-dependent integration tests also require the original local archives.
+question/routing plans, and lightweight summaries. Raw run archives (`runs/`)
+and large generated HTML/JSON reports are excluded from this code repository;
+their private paper-repository archive is linked below. Caches and credentials
+are never included. Links to local reports below work only after the artifacts
+are restored. Report-generation scripts are included; some artifact-dependent
+integration tests also require the original local archives.
+
+## OpenRouter
+
+Set `OPENROUTER_API_KEY` on your own machine, then run the GPT experiment with:
+
+```sh
+python -m scripts.run_openrouter --members 2 --roster same_family --questions 10 --live --output runs/my-openrouter-run
+```
+
+Use `--members 3` for three-member routing or `--roster same_model` for three
+Terra slots. This entry point uses one frozen turn-level tone assignment and
+OpenRouter for every member/judge request. Omit `--live` to inspect the plan
+without calling any endpoint. There are no account-balance checks or separate
+billing queries; ordinary responses and retry/resume records are still saved.
+Historical entry points retain their original provider defaults, so use this
+OpenRouter entry point for new GPT runs. Mixed-family native probability reads
+are not supported through this adapter; there is no automatic Tinker fallback.
+
+Research data and the complete HTML reports are preserved in the private
+[paper repository](https://github.com/chenmoneygithub/llm-committee-paper/tree/main/artifacts/2026-09-redesign).
 
 ## September 2026 redesign
 
